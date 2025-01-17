@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -15,35 +17,16 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #151316;
-  font-family: Arial, sans-serif;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  width:100%;
-  padding: 10px 30px 0 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.container .content {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  font-family: "Poppins", sans-serif;
 }
 
 .background {
-  position: fixed;
-  top: 180px;
+  position: absolute;
+  top: 80px;
   left: 0;
   width: 100%;
-  height: 100%;
-  z-index: 0;
+  height: 100vh;
+  z-index: -1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -51,8 +34,35 @@ header {
   gap: 150px;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 30px 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top_content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .decoration {
-  width: 60%;
+  width: 90%;
   opacity: 0.9;
 }
 
@@ -67,7 +77,7 @@ header {
   color: #141414;
   text-align: center;
   text-decoration: none;
-  padding: 12px;
+  padding: 8px;
   font-size: 14px;
   font-weight: 700;
   border-radius: 18px;
@@ -92,11 +102,11 @@ header {
 .hero_section {
   width: 500px;
   height: 485px;
-  /*  background-color: #5aea96; */
-  margin-bottom: 200px;
+  z-index: 10;
+  margin: 480px auto 400px auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 20px;
 }
@@ -121,15 +131,14 @@ header {
   top: 310px;
   letter-spacing: 1.8px;
   line-height: 0.9;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .hero_section_text {
   width: 660px;
   color: white;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 100;
-  letter-spacing: 1.6px;
+  letter-spacing: 0.5px;
   text-align: center;
   z-index: 99;
 }
@@ -139,4 +148,81 @@ header {
   height: 40px;
   z-index: 99;
   margin-top: 20px;
+}
+
+.main_content {
+  height: 40px;
+}
+
+.cards_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  /*  background-color: #1a1a1a */
+}
+
+.card {
+  flex: 1;
+  width: 440px;
+  margin: 10px;
+  height: 400px;
+  background-color: #0f4410;
+  border-radius: 14px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  border: solid 1px rgb(255, 255, 255, 0.2);
+}
+
+.card_content_bottom {
+  margin-top: 22px;
+  margin-left: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0px;
+}
+
+.card_content_bottom h4 {
+  font-size: 46px;
+  margin-bottom: 48px;
+  transform: translateX(24px);
+  font-weight: 600;
+}
+
+.arrow {
+  font-size: 22px;
+  color: white;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  transform: translateX(34px);
+}
+
+.arrow:hover {
+  color: yellow;
+}
+
+.card_img {
+  height: 300px;
+  margin-right: 54px;
+  margin-top: 10px;
+}
+
+.card_content_top {
+  margin-top: 36px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 140px;
+}
+
+.card_content_top p {
+  font-weight: 600;
 }
