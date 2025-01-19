@@ -87,7 +87,6 @@ header {
   font-weight: 700;
   border-radius: 18px;
   cursor: pointer;
-  
 }
 
 .signinBtn {
@@ -117,7 +116,6 @@ header {
   height: 40px;
   transition: all 0.3s ease;
 }
-
 
 .hoverBtn:hover {
   background-color: rgb(234, 238, 238);
@@ -181,8 +179,6 @@ header {
   text-align: center;
   z-index: 99;
 }
-
-
 
 .main_content {
   height: 40px;
@@ -316,8 +312,6 @@ header {
   line-height: 1.05;
 }
 
-
-
 .banner_container {
   border-radius: 14px;
   background-color: rgb(255, 255, 255, 0.03);
@@ -385,12 +379,13 @@ header {
   margin: auto;
   width: 84%;
   gap: 50px;
+  overflow: hidden;
+  margin-bottom: 150px;
 }
 
 .big_cards_container h4 {
   font-size: 40px;
-  margin-bottom: 48px;
-  font-weight: 300;
+  font-weight: 600;
   line-height: 1.05;
   color: white;
   text-align: center;
@@ -423,7 +418,6 @@ header {
 
 .big_card_img {
   width: 580px;
-  
 }
 
 .big_card p {
@@ -434,14 +428,12 @@ header {
   margin-top: 80px;
 }
 
-
-
 .big_card_img1 {
-  transform: translate(-10px, -16px);
+  transform: translate(-34px, -4px);
 }
 
 .big_card_img2 {
-  transform: translate(50px, -15px);
+  transform: translate(50px, -4px);
   margin-top: 38px;
 }
 
@@ -455,7 +447,7 @@ header {
 .buy_registerBtn:hover {
   scale: 1.01;
   background-color: beige;
-  font-size:16px
+  font-size: 16px;
 }
 
 .big_card:hover {
@@ -463,4 +455,62 @@ header {
   box-shadow: 8px 8px 8px rgba(175, 172, 172, 0.1);
   scale: 1.01;
   border: none;
+}
+
+.rules_container {
+  margin: auto;
+  width: 88%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 0 26px;
+  
+}
+
+.rules_container_right {
+ margin-left: 20px;
+  width: 64%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.rules_container h4 {
+  align-self: flex-start;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.05;
+  color: white;
+  width: 30%;
+}
+
+.rules_container_right_up {
+  margin-left: 36px;
+  width: 97%;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: white;
+  word-spacing: 0;
+  
+}
+
+.rules_container span {
+  font-size: 22px;
+}
+
+.rules_container_right_img {
+  margin: 40px 20px 20px 0;
+  width: 680px;
+ }
+
+.rules_container_right_down {
+  margin-left: 36px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: white;
+  word-spacing: 0;
+
 }
