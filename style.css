@@ -1,5 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --main-color: #151316;
+  --secondary-color: #ffffff;
+  --desc-font--color: #077708;
+  --cards--Bkg-color: rgb(31, 37, 36, 0.6);
+  --hoverCards-bkg--color: rgb(15, 68, 16);
+  --hoverBtn-bkg--color: rgb(234, 238, 238);
+  --link--font-color: rgb(4, 156, 4);
+  --footer-bkg-color: rgb(0, 0, 0, 0.2);
+  --h4-font-size-small: 38px;
+  --h4-font-size-medium: 40px;
+  --h4-font-size-large: 46px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,18 +26,19 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: #151316;
+  background-color: var(--main-color);
   font-family: "Poppins", sans-serif;
 }
 
 .background {
   position: absolute;
-  top: 80px;
+  top: 5em;
   left: 0;
-  width: 100%;
+  max-width: 100%;
   height: 100vh;
   z-index: -1;
   display: flex;
@@ -37,8 +53,8 @@ header {
   top: 0;
   right: 0;
   left: 0;
-  width: 100%;
-  padding: 10px 30px 0 30px;
+  max-width: 100%;
+  padding: 0.625em 1.875em 0 1.875em;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -57,11 +73,10 @@ header {
 
 .top_content {
   width: 100%;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.25em;
 }
 
 .decoration {
@@ -70,19 +85,19 @@ header {
 }
 
 .decoration2 {
-  margin-left: 1000px;
-  margin-bottom: 380px;
+  margin-left: 62.5em;
+  margin-bottom: 23.75em;
 }
 
 .logoDepzon {
-  width: 175px;
+  max-width: 175px;
 }
 
 .button {
   display: inline-block;
   border-color: transparent;
-  background-color: white;
-  color: #141414;
+  background-color: var(--secondary-color);
+  color: var(--main-color);
   text-align: center;
   text-decoration: none;
   font-weight: 700;
@@ -91,16 +106,16 @@ header {
 }
 
 .signinBtn {
-  width: 180px;
-  height: 40px;
+  width: 11.25em;
+  height: 2.5em;
   padding: 8px;
   font-size: 14px;
   transition: all 0.3s ease;
 }
 
 .discoverMoreBtn {
-  width: 180px;
-  height: 40px;
+  width: 12.25em;
+  height: 2.5em;
   z-index: 99;
   margin-top: 20px;
   padding: 8px;
@@ -110,49 +125,46 @@ header {
 
 .discoverRulesBtn {
   align-self: flex-start;
-  margin-top: 10px;
-  font-size: 12px;
-  padding: 12px;
-  width: 350px;
-  height: 40px;
+  margin-top: 0.625em;
+  font-size: 0.75rem;
+  padding: 0.95em;
   transition: all 0.3s ease;
 }
 
+.discoverRulesBtn1 {
+  width: 27.875em;
+  height: 40px;
+}
+
+.discoverRulesBtn2 {
+  width: 14.875rem;
+  height: 2.5rem;
+}
+
 .hoverBtn:hover {
-  background-color: rgb(234, 238, 238);
-  color: rgb(1, 6, 6);
+  background-color: var(--hoverBtn-bkg--color);
+  color: var(--main-color);
   box-shadow: 5px 5px 5px rgba(136, 144, 92, 0.3);
-  font-size: 13px;
   scale: 1.1;
 }
 
 .hero_section {
-  width: 500px;
-  height: 485px;
+  max-width: 500px;
+  max-height: 485px;
   z-index: 10;
-  margin: 130px auto 400px auto;
+  margin: 8.125rem auto 20rem auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 .hero_img {
   width: 90%;
   transition: transform 0.3s ease;
-  /* animation: rotateImage 500s  */
 }
 
-/* @keyframes rotateImage {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
- */
 .overflow_box {
   display: flex;
   flex-direction: column;
@@ -163,60 +175,61 @@ header {
 
 .hero_section_title {
   text-align: center;
-  color: white;
-  font-size: 70px;
+  color: var(--secondary-color);
+  font-size: 84px;
   position: absolute;
-  top: 310px;
-  letter-spacing: 1.8px;
+  top: 19.375rem;
+  letter-spacing: 0.113rem;
   line-height: 0.9;
 }
 
 .hero_section_text {
-  width: 660px;
-  color: white;
-  font-size: 20px;
-  font-weight: 100;
-  letter-spacing: 0.5px;
+  width: 41.25rem;
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  font-weight: 200;
+  letter-spacing: 0.031rem;
   text-align: center;
   z-index: 99;
+  margin-top: 1.25rem;
 }
 
 .main_content {
   flex: 1;
-  padding-bottom: 50px;
-  padding-top: 20px;
+  padding-bottom: 3.125rem;
+  padding-top: 1.25rem;
 }
 
 .cards_container {
-  width: 84%;
+  max-width: 84%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 20px;
-  margin: auto auto 120px auto;
+  padding: 1.25rem;
+  margin: auto auto 7.5rem auto;
 }
 
 .card {
   flex: 1;
-  width: 440px;
-  margin: 10px;
-  height: 400px;
-  background-color: rgb(31, 37, 36, 0.6);
+  max-width: 440px;
+  margin: 0.625rem;
+  max-height: 400px;
+  background-color: var(--cards--Bkg-color);
   border-radius: 14px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
-  color: white;
+  color: var(--secondary-color);
   border: solid 1px rgb(255, 255, 255, 0.1);
   cursor: pointer;
 }
 
 .card:hover {
-  background-color: rgb(15, 68, 16);
+  background-color: var(--hoverCards-bkg--color);
   box-shadow: 8px 8px 8px rgba(175, 172, 172, 0.1);
   scale: 1.05;
   border: none;
@@ -232,8 +245,8 @@ header {
 }
 
 .card_content_bottom {
-  margin-top: 22px;
-  margin-left: 70px;
+  margin-top: 1.375rem;
+  margin-left: 4.375rem;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -241,31 +254,31 @@ header {
 }
 
 .card_content_bottom h4 {
-  font-size: 46px;
-  margin-bottom: 48px;
-  transform: translateX(24px);
+  font-size: var(--h4-font-size-large);
+  margin-bottom: 3rem;
+  margin-left: 0.5rem;
   font-weight: 600;
 }
 
 .arrow {
-  font-size: 22px;
-  color: white;
+  font-size: 1.375rem;
+  color: var(--secondary-color);
   transition: transform 0.3s ease;
   text-decoration: none;
 }
 
 .arrow:hover {
   color: yellow;
+  scale: 1.4;
 }
 
 .card_img {
-  height: 300px;
-  margin-right: 54px;
-  margin-top: 10px;
+  height: 18.75rem;
+  transform: translateX(-2rem);
 }
 
 .card_content_top {
-  margin-top: 36px;
+  margin-top: 2.25rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -281,16 +294,16 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-left: 20px;
-  margin: auto auto 120px auto;
+  padding-left: 1.25rem;
+  margin: auto auto 7.5rem auto;
   color: white;
 }
 
 .tournament_container h4 {
-  font-size: 38px;
+  font-size: var(--h4-font-size-small);
   font-weight: 600;
   flex: 1;
-  margin-bottom: 150px;
+  margin-bottom: 9.375rem;
 }
 
 .tournament_container_desc {
@@ -298,43 +311,42 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 30px;
-  margin-left: 40px;
+  gap: 1.875rem;
+  margin-left: 2.5rem;
 }
 
 .tournament_container_desc_p1 {
   font-weight: 200;
-  width: 820px;
-  font-size: 20px;
-  letter-spacing: 1.4;
+  width: 51.25rem;
+  font-size: 1.25rem;
 }
 
 .tournament_container_desc_p2 {
-  color: #077708;
-  font-size: 22px;
+  color: var(--desc-font--color);
+  font-size: 1.375rem;
   line-height: 1.05;
 }
 
 .banner_container {
   border-radius: 14px;
   background-color: rgb(255, 255, 255, 0.03);
-  width: 84%;
-  margin: auto auto 220px auto;
+  max-width: 84%;
+  margin: auto auto 13.75rem auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 80px 320px;
+  padding: 5rem 20rem;
   gap: 60px;
 }
-
+/* -------------------------------------arrivati qui */
 .banner_container_top {
   margin: auto;
   text-align: center;
 }
 
 .banner_container_top h4 {
-  font-size: 40px;
+  font-size: var(--h4-font-size-medium);
   margin-bottom: 48px;
   font-weight: 300;
   line-height: 1.05;
@@ -367,7 +379,12 @@ header {
 .banner_container_bottom_desc span {
   text-decoration: underline;
   font-weight: bold;
-  color: rgb(4, 156, 4);
+  color: var(--link--font-color);
+}
+
+.banner_container_bottom_desc span a {
+  text-decoration: none;
+  color: var(--link--font-color);
 }
 
 .gold_card_img {
@@ -387,7 +404,7 @@ header {
 }
 
 .big_cards_container h4 {
-  font-size: 40px;
+  font-size: var(--h4-font-size-medium);
   font-weight: 600;
   line-height: 1.05;
   color: white;
@@ -411,7 +428,7 @@ header {
   justify-content: center;
   align-items: center;
   margin: auto;
-  background-color: rgb(31, 37, 36, 0.6);
+  background-color: var(--cards--Bkg-color);
   border-radius: 14px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   color: white;
@@ -424,7 +441,7 @@ header {
 }
 
 .big_card p {
-  color: white;
+  color: var(--secondary-color);
   font-size: 22px;
   width: 88%;
   line-height: 1.2;
@@ -449,12 +466,12 @@ header {
 
 .buy_registerBtn:hover {
   scale: 1.01;
-  background-color: beige;
+  background-color: var(--hoverBtn-bkg--color);
   font-size: 16px;
 }
 
 .big_card:hover {
-  background-color: rgb(15, 68, 16);
+  background-color: var(--hoverCards-bkg--color);
   box-shadow: 8px 8px 8px rgba(175, 172, 172, 0.1);
   scale: 1.01;
   border: none;
@@ -465,7 +482,7 @@ header {
   width: 88%;
   display: flex;
   justify-content: space-between;
-  padding: 0 0 0 26px;
+  padding: 30px 0 30px 26px;
 }
 
 .rules_container_right {
@@ -479,10 +496,10 @@ header {
 }
 .rules_container h4 {
   align-self: flex-start;
-  font-size: 40px;
+  font-size: var(--h4-font-size-medium);
   font-weight: 500;
   line-height: 1.05;
-  color: white;
+  color: var(--secondary-color);
   width: 30%;
 }
 
@@ -492,7 +509,7 @@ header {
   font-size: 20px;
   font-weight: 300;
   line-height: 1.2;
-  color: white;
+  color: var(--secondary-color);
   word-spacing: 0;
 }
 
@@ -511,7 +528,7 @@ header {
   font-size: 20px;
   font-weight: 300;
   line-height: 1.2;
-  color: white;
+  color: var(--secondary-color);
   word-spacing: 0;
 }
 
@@ -526,7 +543,7 @@ footer {
   gap: 10px;
   color: white;
   padding: 20px;
-  background-color: rgb(0, 0, 0, 0.2);
+  background-color: var(--footer-bkg-color);
 }
 
 footer ul {
@@ -545,7 +562,7 @@ footer ul {
 
 .footer_links_item {
   text-decoration: none;
-  color: white;
+  color: var(--secondary-color);
   font-weight: bolder;
 }
 
@@ -562,7 +579,11 @@ footer ul {
 }
 
 .thinner_text {
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Archivo", serif;
   font-weight: 100;
+}
+
+.purple {
+  color: rgb(192, 75, 192);
 }
