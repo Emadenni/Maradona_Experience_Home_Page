@@ -27,7 +27,6 @@
   z-index: 1000;
 }
 
-
 * {
   margin: 0;
   padding: 0;
@@ -63,6 +62,7 @@ body {
 }
 
 header {
+  background-color: rgb(21, 19, 22, 0.9);
   position: fixed;
   top: 0;
   right: 0;
@@ -72,7 +72,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 10;
+  z-index: 100;
 }
 
 .container {
@@ -190,7 +190,6 @@ header {
 }
 
 .discoverRulesBtn {
-  align-self: flex-start;
   margin-top: 0.625em;
   font-size: 0.75rem;
   padding: 0.95em;
@@ -198,6 +197,7 @@ header {
 }
 
 .discoverRulesBtn1 {
+  align-self: flex-start;
   width: 27.875em;
   height: 40px;
 }
@@ -205,6 +205,7 @@ header {
 .discoverRulesBtn2 {
   width: 14.875rem;
   height: 2.5rem;
+  align-self: flex-start;
 }
 
 .hoverBtn:hover {
@@ -290,8 +291,6 @@ header {
   align-items: center;
   padding: 1.25rem;
   margin: auto auto 7.5rem auto;
-  
-  
 }
 
 .card {
@@ -336,18 +335,15 @@ header {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  
-  
 }
 
 .card_content_bottom h4 {
   font-size: var(--h4-font-size-large);
   margin-bottom: 1.6rem;
- margin-left: 1.8rem;
- margin-right: -2rem;
- 
+  margin-left: 1.8rem;
+  margin-right: -2rem;
+
   font-weight: 600;
-  
 }
 
 .arrow {
@@ -365,10 +361,9 @@ header {
 .card_img {
   /* height: 18.75rem; */
   height: auto;
-  width: 73%; 
- margin-top: 0.4rem;
- margin-right: 3.4rem;
-  
+  width: 73%;
+  margin-top: 0.4rem;
+  margin-right: 3.4rem;
 }
 
 .card_content_top {
@@ -384,9 +379,9 @@ header {
 }
 
 .tournament_container {
-  width: 84%;
+  max-width: 84%;
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   padding-left: 1.25rem;
@@ -412,13 +407,13 @@ header {
 
 .tournament_container_desc_p1 {
   font-weight: 200;
-  width: 51.25rem;
+  width: 55.25rem;
   font-size: 1.25rem;
 }
 
 .tournament_container_desc_p2 {
   color: var(--desc-font--color);
-  font-size: 1.375rem;
+  font-size: 1.475rem;
   line-height: 1.05;
 }
 
@@ -449,7 +444,8 @@ header {
 }
 
 .banner_container_top p {
-  width: 53.75rem;
+  max-width: 53.75rem;
+  min-width: 30rem;
   font-size: 1.25rem;
   color: var(--secondary-color);
 }
@@ -489,17 +485,6 @@ header {
 }
 
 
- .big_cards_container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  width: 84%;
-  gap: 3.125rem;
-  overflow: hidden;
-  margin-bottom: 9.375rem;
-}
 
 .big_cards_container h4 {
   font-size: var(--h4-font-size-medium);
@@ -508,7 +493,6 @@ header {
   color: var(--secondary-color);
   text-align: center;
 }
-
 
 .big_cards_container_box {
   width: 100%;
@@ -540,7 +524,6 @@ header {
   text-align: center;
 }
 
-
 .big_cards_container_box {
   width: 100%;
   margin: 0 auto;
@@ -565,58 +548,52 @@ header {
   position: relative;
   overflow: hidden;
   flex: 1 1 48%;
-  min-height: 400px; 
+  min-height: 400px;
   display: flex;
   flex-direction: column;
 }
 
 .big_card_img_wrapper {
   width: 100%;
-  flex-grow: 1; 
+  flex-grow: 1;
   display: flex;
   justify-content: center;
-  align-items: flex-end; 
+  align-items: flex-end;
   overflow: hidden;
-  
 }
 
 .big_card_img1,
 .big_card_img2 {
   width: 70%;
   height: auto;
-  
 }
 
-
 .big_card p {
-  margin-top: 1rem; 
+  margin-top: 1rem;
   color: var(--secondary-color);
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   line-height: 1.4;
   max-width: 75.5%;
   word-wrap: break-word;
   overflow: hidden;
   white-space: normal;
- 
 }
 
 .big_card2 p {
-  margin-top: 1rem; 
+  margin-top: 1rem;
   color: var(--secondary-color);
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   line-height: 1.4;
-  max-width: 71%;
+  max-width: 70%;
   word-wrap: break-word;
   overflow: hidden;
   white-space: normal;
- 
 }
-
 
 .buy_registerBtn {
   z-index: 50;
   width: 88%;
-  padding: 0.75rem 1rem;
+  padding: 0.35rem 1rem;
   background-color: var(--secondary-color);
   color: var(--main-color);
   text-align: center;
@@ -626,14 +603,13 @@ header {
   border-radius: 20px;
   transition: transform 0.3s, background-color 0.3s;
   position: absolute;
-  bottom: 4.5rem; /* Posizionato al fondo della card */
+  bottom: 2.6rem; 
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%);
 }
 
 .buy_registerBtn:hover {
-  transform: scale(1.05); 
-  background-color: var(--hoverBtn-bkg--color);
+  background-color: rgba(223, 223, 122, 0.9);
 }
 
 .big_card:hover {
@@ -650,7 +626,6 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 4.6rem 0 1.875rem 1.625rem;
-
 }
 
 .rules_container_right {
@@ -757,55 +732,342 @@ footer ul {
   color: rgb(192, 75, 192);
 }
 
-/* @media (min-width: 2150px) { 
-
-
-  .card_img {
- 
-    
-  }
-} 
-
- /* @media (min-width: 1850px) { 
- .card {
-    max-width: 540px;
-    height: 505px;
-    margin: 10px;
-  } 
-  .card_content_bottom h4 {
-    font-size: var(--h4-font-size-medium);
-  }
-} 
- 
-
-
-/* @media (max-width: 1700px) { 
-  .card {
-    max-width: 440px;
-    height: 400px;
-    margin: 0;
+@media (max-width: 1340px) {
+  .big_cards_container_box {
+    flex-direction: column;
+    max-width: 50%;
+    justify-content: center;
+    align-items: center;
   }
 
- 
-} 
-
-/* @media (max-width: 1660px) { 
-  .card {
-    max-width: 400px;
-    height: 365px;
-    margin: 0;
+  .banner_container {
+    max-width: 80%;
   }
 
-  .card_img {
-    max-height: 18.75rem;
-    transform: translateX(-6rem);
+  .rules_container {
+    max-width: 80%;
+  }
+
+  .big_card p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    max-width: 86%;
+  }
+
+  .big_card2 p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    max-width: 86%;
+  }
+
+  .buy_registerBtn {
+    bottom: 1.7rem;
+
+}
+}
+
+@media (max-width: 1290px) {
+  .cards_container {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .tournament_container {
+    width: 76%;
+  }
+
+  .banner_container {
+    max-width: 80%;
   }
 }
- 
-@media (max-width: 1426px) {
-  .container {
-    max-width: 80%;
-    margin: auto;
-    padding: auto 20px;
+
+@media (max-width: 1284px) {
+  .banner_container {
+    width: 70%;
   }
+
+  .banner_container_top {
+    max-width: 100%;
+  }
+
+  .banner_container_top p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1205px) {
+  header {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .tournament_container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tournament_container h4 {
+    font-size: var(--h4-font-size-small);
+    font-weight: 600;
+    flex: 1;
+    margin-bottom: 2rem;
+  }
+
+  .tournament_container_desc {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .discoverRulesBtn1 {
+    align-self: center;
+  }
+
+  .rules_container {
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    /* text-align: center; */
+  }
+
+  .rules_container h4 {
+    align-self: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .rules_container p {
+    max-width: 80%;
+  }
+
+  .rules_container_right_up,
+  .rules_container_right_down {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  .banner_container_bottom {
+    flex-direction: column;
+  }
+
+  .banner_container_bottom p {
+    font-size: smaller;
+  }
+
+  .banner_container_top {
+    width: 80rem;
+
+    text-align: center;
+  }
+
+  .banner_container_top h4 {
+    width: 100%;
+  }
+
+  .banner_container_top p {
+    width: 100%;
+  }
+
+  .banner_container {
+    padding: 10rem;
+    width: 50%;
+    margin: 50px auto 130px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-center;
+    gap: 0;
+  }
+
+  .discoverRulesBtn2 {
+    align-self: center;
+  }
+
+  .tournament_container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tournament_container p {
+    max-width: 50rem;
+  }
+
+  .rules_container p {
+    max-width: 70%;
+  }
+
+  .big_card {
+    width: 80%;
+  }
+}
+
+@media (max-width: 900px) {
+  .banner_container {
+    padding: 5rem;
+    width: 50%;
+  }
+
+  .tournament_container p {
+    width: 100%;
+    flex-wrap: wrap;
+    max-width: 40rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .tournament_container p {
+    max-width: 34rem;
+  }
+
+  .banner_container {
+    width: 36%;
+  }
+
+  .banner_container_top {
+    width: 86rem;
+    text-align: center;
+  }
+
+  .banner_container_top p {
+    font-size: 1rem;
+    width: 1rem;
+    margin-left: -50px;
+  }
+
+  .big_cards_container h4 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 700px) {
+
+footer {
+  width: 100%;
+ margin: 3.125rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.325rem;
+  color: white;
+  padding: 1.25rem;
+  background-color: var(--footer-bkg-color);
+}
+
+.footer_accepted-payments {
+  gap: 1.5rem;
+  justify-content: center;
+  width: 100%;
+}
+
+}
+
+@media (max-width: 670px) {
+  .tournament_container p {
+    max-width: 20rem;
+  }
+
+  .rules_container p {
+    max-width: 55%;
+  }
+
+  .rules_container_right_img {
+    width: 70%;
+  }
+}
+
+@media (max-width: 595px) {
+
+  .big_cards_container h4 {
+    font-size: 1.6rem;
+  }
+  .rules_container p {
+    max-width: 45%;
+  }
+
+  .rules_container h4 {
+    font-size: 2rem;
+  }
+
+  .rules_container_right_img {
+    width: 70%;
+  }
+
+  .banner_container_top {
+    width: 76rem;
+    text-align: center;
+  }
+
+  .banner_container_top h4 {
+    font-size: 1.65rem;
+  }
+  .banner_container_top p {
+    font-size: 1rem;
+    width: 1rem;
+    margin-left: -58px;
+  }
+
+  .hero_section {
+    max-width: 300px;
+    max-height: 485px;
+    margin: 7.125rem auto 20rem auto;
+    gap: 1.1rem;
+  }
+
+  .hero_img {
+    width: 100%;
+  }
+
+  .hero_section_title {
+    font-size: 64px;
+
+    top: 11.875rem;
+  }
+
+  .hero_section_text {
+    width: 38.25rem;
+    font-size: 1.3rem;
+  }
+
+  .footer_accepted-payments {
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .footer_accepted-payments img {
+   width: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero_section {
+    max-width: 260px;
+    max-height: 485px;
+    margin: 7.125rem auto 20rem auto;
+    gap: 0.6rem;
+  }
+
+  .hero_img {
+    width: 100%;
+  }
+
+  .hero_section_title {
+    font-size: 56px;
+
+    top: 10.5rem;
+  }
+
+  .hero_section_text {
+    width: 38.25rem;
+    font-size: 1.05rem;
+  }
+
+  .footer_accepted-payments img {
+    width: 40px;
+   }
 }
