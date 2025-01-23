@@ -17,6 +17,9 @@
 
 a { 
   z-index: 1000 !important;
+  display: block; 
+  text-align: center;
+  position: relative; 
 }
 /* 
 #viewport-size {
@@ -777,7 +780,7 @@ footer ul {
 
   .buy_registerBtn {
     bottom: 1.7rem;
-    z-index: 1000;
+ 
   }
 }
 
