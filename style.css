@@ -15,12 +15,13 @@
   --h4-font-size-large: 2.875rem;
 }
 
-a { 
+a {
   z-index: 1000 !important;
-  display: inline-block; 
-  text-align: center;
-  position: relative; 
-  -webkit-tap-highlight-color: transparent;
+  display: inline-block !important;
+  text-align: center !important;
+  position: relative !important;
+  -webkit-tap-highlight-color: transparent !important;
+  touch-action: manipulation !important;
 }
 /* 
 #viewport-size {
@@ -158,7 +159,7 @@ header {
   background: radial-gradient(circle, rgba(52, 152, 219, 0.3), transparent);
   opacity: 0;
   animation: glowEffect 3s infinite ease-in-out;
-  z-index: 1000
+  z-index: 1000;
 }
 
 @keyframes pulseGlow {
@@ -211,7 +212,6 @@ header {
   font-size: 0.75rem;
   padding: 0.95em;
   transition: all 0.3s ease;
- 
 }
 
 .discoverRulesBtn1 {
@@ -233,7 +233,6 @@ header {
   color: var(--main-color);
   box-shadow: 5px 5px 5px rgba(136, 144, 92, 0.3);
   scale: 1.1;
- 
 }
 
 .hero_section {
@@ -781,7 +780,6 @@ footer ul {
 
   .buy_registerBtn {
     bottom: 1.7rem;
- 
   }
 }
 
@@ -840,7 +838,6 @@ footer ul {
 
   .discoverRulesBtn1 {
     align-self: center;
-   
   }
 
   .rules_container {
@@ -926,6 +923,12 @@ footer ul {
 }
 
 @media (max-width: 900px) {
+
+  a {
+    transform: none !important; 
+    opacity: 1 !important;
+  }
+
   .banner_container {
     padding: 5rem;
     width: 50%;
@@ -1015,7 +1018,6 @@ footer ul {
   }
 
   .banner_container_top {
-   
     text-align: center;
   }
 
@@ -1074,7 +1076,6 @@ footer ul {
 
   .hero_section_title {
     font-size: 56px;
-
     top: 10.5rem;
   }
 
