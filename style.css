@@ -149,7 +149,7 @@ header {
   z-index: 1000;
 }
 
-.signinBtn::before {
+/* .signinBtn::before {
   content: "";
   position: absolute;
   top: -50%;
@@ -160,7 +160,8 @@ header {
   opacity: 0;
   animation: glowEffect 3s infinite ease-in-out;
   z-index: 1000;
-}
+  pointer-events: none; 
+} */
 
 @keyframes pulseGlow {
   0%,
