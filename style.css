@@ -15,6 +15,10 @@
   --h4-font-size-large: 2.875rem;
 }
 
+a { 
+  z-index: 1000 !important;
+}
+
 #viewport-size {
   position: fixed;
   bottom: 10px;
