@@ -18,7 +18,7 @@
 a { 
   z-index: 1000 !important;
 }
-
+/* 
 #viewport-size {
   position: fixed;
   bottom: 10px;
@@ -29,7 +29,7 @@ a {
   border-radius: 5px;
   font-size: 14px;
   z-index: 1000;
-}
+} */
 
 * {
   margin: 0;
@@ -141,6 +141,7 @@ header {
   cursor: pointer;
   transition: all 0.3s ease;
   animation: pulseGlow 2s infinite ease-in-out;
+  z-index: 1000
 }
 
 .signinBtn::before {
@@ -153,6 +154,7 @@ header {
   background: radial-gradient(circle, rgba(52, 152, 219, 0.3), transparent);
   opacity: 0;
   animation: glowEffect 3s infinite ease-in-out;
+  z-index: 1000
 }
 
 @keyframes pulseGlow {
@@ -193,7 +195,7 @@ header {
 .discoverMoreBtn {
   width: 12.25em;
   height: 2.5em;
-  z-index: 99;
+  z-index: 1000;
   margin-top: 20px;
   padding: 8px;
   font-size: 14px;
@@ -205,18 +207,21 @@ header {
   font-size: 0.75rem;
   padding: 0.95em;
   transition: all 0.3s ease;
+ 
 }
 
 .discoverRulesBtn1 {
   align-self: flex-start;
   width: 27.875em;
   height: 40px;
+  z-index: 1000;
 }
 
 .discoverRulesBtn2 {
   width: 14.875rem;
   height: 2.5rem;
   align-self: flex-start;
+  z-index: 1000;
 }
 
 .hoverBtn:hover {
@@ -224,6 +229,7 @@ header {
   color: var(--main-color);
   box-shadow: 5px 5px 5px rgba(136, 144, 92, 0.3);
   scale: 1.1;
+ 
 }
 
 .hero_section {
@@ -600,7 +606,7 @@ header {
 }
 
 .buy_registerBtn {
-  z-index: 50;
+  z-index: 1000;
   width: 88%;
   padding: 0.35rem 1rem;
   background-color: var(--secondary-color);
@@ -771,6 +777,7 @@ footer ul {
 
   .buy_registerBtn {
     bottom: 1.7rem;
+    z-index: 1000;
   }
 }
 
@@ -829,6 +836,7 @@ footer ul {
 
   .discoverRulesBtn1 {
     align-self: center;
+   
   }
 
   .rules_container {
