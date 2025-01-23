@@ -925,8 +925,8 @@ footer ul {
 
 @media (max-width: 900px) {
 
-  .discoverMoreBtn:hover,.discoverRulesBtn:hover, .hero_img:hover {
-    all: unset;  
+  .discoverMoreBtn:hover,.discoverRulesBtn:hover, .hero_img:ho {
+    transform: none;
   }
 
   .banner_container {
