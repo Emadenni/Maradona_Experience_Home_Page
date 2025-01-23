@@ -35,7 +35,7 @@
 
 html,
 body {
-  max-width: 100%;
+  max-width: 100vw;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -50,7 +50,7 @@ body {
 
 .banner_container {
   position: relative;
-  max-width: 100%;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -58,8 +58,8 @@ body {
   position: absolute;
   top: 5em;
   left: 0;
-  width: 100%; 
-  height: 100%; 
+  width: 100vw; 
+  height: 100vh; 
   z-index: -1;
   display: flex;
   flex-direction: column;
@@ -75,7 +75,7 @@ header {
   top: 0;
   right: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   padding: 0.625em 2vw;
   display: flex;
   align-items: center;
@@ -108,7 +108,6 @@ header {
 .decoration2 {
   margin-left: 62.5em;
   margin-bottom: 23.75em;
-  overflow: hidden;
 }
 
 .logoDepzon {
