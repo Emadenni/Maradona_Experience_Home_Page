@@ -265,8 +265,8 @@ header {
   transition: all 0.32s ease;
   /*  text-shadow: 5px 5px 10px rgba(38, 132, 137, 0.3); */
   color: beige;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1), /* Ombra di base */ 4px 4px 6px rgba(0, 0, 0, 0.2),
-    /* Ombra media */ 6px 6px 10px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1), 4px 4px 6px rgba(0, 0, 0, 0.2),
+   6px 6px 10px rgba(0, 0, 0, 0.3);
 }
 
 .overflow_box {
@@ -925,7 +925,7 @@ footer ul {
 
 @media (max-width: 900px) {
 
-  *:hover {
+  .discoverMoreBtn:hover,.discoverRulesBtn:hover, .hero_img:hover {
     all: unset;  
   }
 
