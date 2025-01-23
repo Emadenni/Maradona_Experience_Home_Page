@@ -40,7 +40,7 @@ body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
 body {
@@ -58,8 +58,8 @@ body {
   position: absolute;
   top: 5em;
   left: 0;
-  width: 100vw; 
-  height: 100vh; 
+  width: 100vw;
+  height: 100vh;
   z-index: -1;
   display: flex;
   flex-direction: column;
@@ -67,7 +67,6 @@ body {
   align-items: center;
   gap: 12.5rem;
 }
-
 
 header {
   background-color: rgb(21, 19, 22, 0.9);
@@ -492,8 +491,6 @@ header {
   margin-top: 2.625rem;
 }
 
-
-
 .big_cards_container h4 {
   font-size: var(--h4-font-size-medium);
   font-weight: 600;
@@ -611,7 +608,7 @@ header {
   border-radius: 20px;
   transition: transform 0.3s, background-color 0.3s;
   position: absolute;
-  bottom: 2.6rem; 
+  bottom: 2.6rem;
   left: 50%;
   transform: translate(-50%);
 }
@@ -770,8 +767,7 @@ footer ul {
 
   .buy_registerBtn {
     bottom: 1.7rem;
-
-}
+  }
 }
 
 @media (max-width: 1290px) {
@@ -952,26 +948,24 @@ footer ul {
 }
 
 @media (max-width: 700px) {
+  footer {
+    width: 100%;
+    margin: 3.125rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.325rem;
+    color: white;
+    padding: 1.25rem;
+    background-color: var(--footer-bkg-color);
+  }
 
-footer {
-  width: 100%;
- margin: 3.125rem auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0.325rem;
-  color: white;
-  padding: 1.25rem;
-  background-color: var(--footer-bkg-color);
-}
-
-.footer_accepted-payments {
-  gap: 1.5rem;
-  justify-content: center;
-  width: 100%;
-}
-
+  .footer_accepted-payments {
+    gap: 1.5rem;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 @media (max-width: 670px) {
@@ -989,7 +983,6 @@ footer {
 }
 
 @media (max-width: 595px) {
-
   .big_cards_container h4 {
     font-size: 1.6rem;
   }
@@ -1006,7 +999,7 @@ footer {
   }
 
   .banner_container_top {
-    width: 76rem;
+   
     text-align: center;
   }
 
@@ -1032,7 +1025,6 @@ footer {
 
   .hero_section_title {
     font-size: 64px;
-
     top: 11.875rem;
   }
 
@@ -1048,7 +1040,7 @@ footer {
   }
 
   .footer_accepted-payments img {
-   width: 50px;
+    width: 50px;
   }
 }
 
@@ -1077,5 +1069,5 @@ footer {
 
   .footer_accepted-payments img {
     width: 40px;
-   }
+  }
 }
