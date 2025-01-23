@@ -149,7 +149,7 @@ header {
   z-index: 1000;
 }
 
-/* .signinBtn::before {
+.signinBtn::before {
   content: "";
   position: absolute;
   top: -50%;
@@ -161,7 +161,7 @@ header {
   animation: glowEffect 3s infinite ease-in-out;
   z-index: 1000;
   pointer-events: none; 
-} */
+}
 
 @keyframes pulseGlow {
   0%,
@@ -925,9 +925,8 @@ footer ul {
 
 @media (max-width: 900px) {
 
-  a {
-    transform: none !important; 
-    opacity: 1 !important;
+  *:hover {
+    all: unset;  
   }
 
   .banner_container {
