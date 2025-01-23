@@ -17,9 +17,10 @@
 
 a { 
   z-index: 1000 !important;
-  display: block; 
+  display: inline-block; 
   text-align: center;
   position: relative; 
+  -webkit-tap-highlight-color: transparent;
 }
 /* 
 #viewport-size {
@@ -144,7 +145,7 @@ header {
   cursor: pointer;
   transition: all 0.3s ease;
   animation: pulseGlow 2s infinite ease-in-out;
-  z-index: 1000
+  z-index: 1000;
 }
 
 .signinBtn::before {
