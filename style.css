@@ -277,7 +277,7 @@ header {
   color: var(--secondary-color);
   font-size: clamp(2rem, 8vw, 5.25rem); /* Font dinamico */
   position: absolute;
-  top: 19.375rem;
+  top: 17.375rem;
   letter-spacing: 0.113rem;
   line-height: 0.9;
   transform-origin: center;
@@ -285,9 +285,10 @@ header {
 
 .hero_section_text {
   width: 100%;
-  max-width: 41.25rem;
+  min-width: 41.5rem;
+  max-width: 48.25rem;
   color: var(--secondary-color);
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 200;
   letter-spacing: 0.031rem;
   text-align: center;
@@ -749,17 +750,6 @@ footer ul {
 
 @media (max-width: 1340px) {
 
-  a {
-    position: relative !important;
-    z-index: 1000 !important;
-    pointer-events: auto !important;
-    touch-action: auto !important;
-    min-width: 48px !important;
-    min-height: 48px !important;
-    cursor: pointer !important;
-    background: white !important; 
-    -webkit-tap-highlight-color: transparent !important;
-}
 
 
   .big_cards_container_box {
