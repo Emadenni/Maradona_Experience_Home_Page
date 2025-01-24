@@ -943,6 +943,7 @@ footer ul {
     max-width: 40rem;
   }
 }
+  */
 
 @media (max-width: 750px) {
   .tournament_container p {
@@ -968,7 +969,7 @@ footer ul {
     font-size: 2rem;
   }
 }
-  */
+  
 
 @media (max-width: 700px) {
   footer {
