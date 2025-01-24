@@ -15,6 +15,9 @@
   --h4-font-size-large: 2.875rem;
 }
 
+
+
+
 /* 
 #viewport-size {
   position: fixed;
@@ -248,12 +251,13 @@ header {
   gap: 1.25rem;
   padding: 1rem;
   box-sizing: border-box;
-  pointer-events: none;
+ pointer-events: none;
 }
 
 .hero_img {
   width: 90%;
-  /*   transition: transform 1s ease; */
+/*   transition: transform 1s ease; */
+  
 }
 
 /* .hero_img:hover {
@@ -752,7 +756,7 @@ footer ul {
   color: rgb(192, 75, 192);
 }
 
-@media (max-width: 1340px) {
+ @media (min-with:1291px) and (max-width: 1340px) {
   .big_cards_container_box {
     flex-direction: column;
     max-width: 50%;
@@ -784,8 +788,9 @@ footer ul {
     bottom: 1.7rem;
   }
 }
+  
 
-@media (max-width: 1290px) {
+@media (min-with:1285px) and (max-width: 1290px) {
   .cards_container {
     flex-direction: column;
     max-width: 100%;
@@ -800,7 +805,7 @@ footer ul {
   }
 }
 
-@media (max-width: 1284px) {
+@media (min-with:1206px) and (max-width: 1284px) {
   .banner_container {
     width: 70%;
   }
@@ -813,8 +818,9 @@ footer ul {
     text-align: center;
   }
 }
+  
 
-@media (max-width: 1205px) {
+@media (min-with:1101px) and (max-width: 1205px) {
   header {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -851,8 +857,8 @@ footer ul {
     justify-content: center;
     margin: auto;
     align-items: center;
-  }
-
+}
+ 
   .rules_container h4 {
     align-self: center;
     text-align: center;
@@ -869,8 +875,9 @@ footer ul {
     margin-left: 0;
   }
 }
+  
 
-@media (max-width: 1100px) {
+@media (min-with:901px) and (max-width: 1100px) {
   .banner_container_bottom {
     flex-direction: column;
   }
@@ -927,7 +934,7 @@ footer ul {
   }
 }
 
-@media (max-width: 900px) {
+@media (min-with:751px) and  (max-width: 900px) {
   .banner_container {
     padding: 5rem;
     width: 50%;
@@ -939,8 +946,9 @@ footer ul {
     max-width: 40rem;
   }
 }
+ 
 
-@media (max-width: 750px) {
+@media (min-with:671px) and (max-width: 750px) {
   .tournament_container p {
     max-width: 34rem;
   }
@@ -964,6 +972,7 @@ footer ul {
     font-size: 2rem;
   }
 }
+  
 
 @media (max-width: 700px) {
   footer {
@@ -985,8 +994,9 @@ footer ul {
     width: 100%;
   }
 }
+  
 
-@media (max-width: 670px) {
+@media (min-with:596px) and (max-width: 670px) {
   .tournament_container p {
     max-width: 20rem;
   }
@@ -999,8 +1009,9 @@ footer ul {
     width: 70%;
   }
 }
+  
 
-@media (max-width: 595px) {
+@media (min-with:551px) and (max-width: 595px) {
   .big_cards_container h4 {
     font-size: 1.6rem;
   }
@@ -1063,8 +1074,9 @@ footer ul {
     width: 50px;
   }
 }
+   
 
-@media (max-width: 550px) {
+ @media (min-with:501px) and (max-width: 550px) {
   .banner_container {
     width: 26%;
   }
@@ -1118,9 +1130,10 @@ footer ul {
     max-width: 90%;
     padding: 0;
   }
-}
+} 
+  
 
-@media (max-width: 500px) {
+@media (min-with:446px) and (max-width: 500px) {
   .hero_section {
     max-width: 260px;
     max-height: 485px;
@@ -1203,8 +1216,9 @@ footer ul {
     margin-right: 10px;
   }
 }
+ 
 
-@media (max-width: 445px) {
+@media (min-with:416px) and (max-width: 445px) {
   .card {
     width: 22%;
   }
@@ -1238,7 +1252,7 @@ footer ul {
   }
 }
 
-@media (max-width: 415px) {
+@media (min-with:401px) and (max-width: 415px) {
   .rules_container h4 {
     font-size: 1.4rem;
     margin-left: -30px;
@@ -1302,9 +1316,9 @@ footer ul {
   .cards_container {
     margin: auto auto 2.5rem auto;
   }
-}
+} 
 
-@media (max-width: 400px) {
+@media (min-with:371px) and (max-width: 400px) {
   .big_cards_container h4 {
     font-size: 1rem;
   }
@@ -1342,7 +1356,7 @@ footer ul {
   }
 }
 
-@media (max-width: 370px) {
+@media (min-with:341px) and (max-width: 370px) {
   .footer_accepted-payments img {
     width: 28px;
   }
