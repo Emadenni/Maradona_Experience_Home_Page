@@ -15,9 +15,8 @@
   --h4-font-size-large: 2.875rem;
 }
 
-* {
-  outline: 1px solid red !important; 
-}
+
+
 
 /* 
 #viewport-size {
@@ -258,21 +257,21 @@ header {
 
 .hero_img {
   width: 90%;
-  transition: transform 1s ease;
-  transform-origin: center;
+/*   transition: transform 1s ease; */
+  
 }
 
-.hero_img:hover {
-  transform: rotate(360deg) scale(1.05); /* Scaling ridotto */
+/* .hero_img:hover {
+  transform: rotate(360deg) scale(1.05);
   cursor: pointer;
   border-radius: 50%;
-}
+} */
 
-.hero_img:hover + .hero_section_title {
+/* .hero_img:hover + .hero_section_title {
   transition: all 0.32s ease;
   color: beige;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1), 4px 4px 6px rgba(0, 0, 0, 0.2), 6px 6px 10px rgba(0, 0, 0, 0.3);
-}
+} */
 
 .overflow_box {
   display: flex;
