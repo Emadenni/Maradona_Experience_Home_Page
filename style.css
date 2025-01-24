@@ -1241,7 +1241,7 @@ footer ul {
     margin: auto auto 4.5rem auto;
   }
 }
-
+*/
 @media (max-width: 415px) {
   .rules_container h4 {
     font-size: 1.4rem;
@@ -1306,7 +1306,7 @@ footer ul {
   .cards_container {
     margin: auto auto 2.5rem auto;
   }
-}
+} 
 
 @media (max-width: 400px) {
   .big_cards_container h4 {
@@ -1420,4 +1420,3 @@ footer ul {
     max-width: 60rem;
   }
 }
- */
