@@ -788,6 +788,7 @@ footer ul {
     bottom: 1.7rem;
   }
 }
+  */
 
 @media (max-width: 1290px) {
   .cards_container {
@@ -817,7 +818,7 @@ footer ul {
     text-align: center;
   }
 }
-  */
+  
 
 @media (max-width: 1205px) {
   header {
