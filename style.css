@@ -1123,6 +1123,7 @@ footer ul {
     padding: 0;
   }
 }
+   */
 
 @media (max-width: 500px) {
   .hero_section {
@@ -1207,7 +1208,7 @@ footer ul {
     margin-right: 10px;
   }
 }
-  */
+ 
 
 @media (max-width: 445px) {
   .card {
