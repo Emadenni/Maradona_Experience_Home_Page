@@ -15,14 +15,14 @@
   --h4-font-size-large: 2.875rem;
 }
 
-a {
+/* a {
   z-index: 1000 !important;
   display: inline-block !important;
   text-align: center !important;
   position: relative !important;
   -webkit-tap-highlight-color: transparent !important;
   touch-action: manipulation !important;
-}
+} */
 /* 
 #viewport-size {
   position: fixed;
@@ -1012,6 +1012,10 @@ footer ul {
     width: 70%;
   }
 
+  .banner_container {
+    width: 34%;
+  }
+
   .banner_container_top {
     text-align: center;
   }
@@ -1021,8 +1025,7 @@ footer ul {
   }
   .banner_container_top p {
     font-size: 1rem;
-    width: 1rem;
-    margin-left: -58px;
+    margin-left: -68px;
   }
 
   .hero_section {
@@ -1057,6 +1060,12 @@ footer ul {
   }
 }
 
+@media (max-width: 550px) {
+  .banner_container {
+    width: 28%;
+  }
+}
+
 @media (max-width: 500px) {
   .hero_section {
     max-width: 260px;
@@ -1081,5 +1090,51 @@ footer ul {
 
   .footer_accepted-payments img {
     width: 40px;
+  }
+
+  .card {
+    width: 27%;
+  }
+
+  .banner_container {
+    width: 26%;
+
+  }
+
+  .banner_container_top h4 {
+    font-size: 1.3rem;
+  }
+  .banner_container_top p {
+    padding: 0 12px;
+    font-size: 0.9rem;
+    min-width: 300px;
+    margin-left: -18px;
+    
+  }
+  .banner_container_bottom_desc p {
+    margin-left: 75px;
+    font-size: 0.9rem;
+    max-width: 300px;
+    
+    
+  }
+
+  .gold_card_img {
+    width: 350px;
+  }
+}
+
+@media (max-width: 445px) {
+  .card {
+    width: 22%;
+  }
+
+  .card_img {
+    width: 60%;
+  }
+
+  .card_content_bottom h4 {
+    font-size: 2.2rem;
+    margin-right: 10px;
   }
 }
