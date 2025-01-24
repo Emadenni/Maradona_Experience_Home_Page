@@ -756,7 +756,7 @@ footer ul {
   color: rgb(192, 75, 192);
 }
 
-/* @media (max-width: 1340px) {
+ @media (max-width: 1340px) {
   .big_cards_container_box {
     flex-direction: column;
     max-width: 50%;
@@ -788,7 +788,7 @@ footer ul {
     bottom: 1.7rem;
   }
 }
-  */
+  
 
 @media (max-width: 1290px) {
   .cards_container {
