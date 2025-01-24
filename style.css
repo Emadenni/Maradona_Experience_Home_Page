@@ -192,6 +192,7 @@ header {
 }
 
 .discoverMoreBtn {
+  position: relative;
   width: 12.25em;
   height: 2.5em;
   z-index: 1000;
@@ -202,6 +203,7 @@ header {
 }
 
 .discoverRulesBtn {
+  position: relative;
   margin-top: 0.625em;
   font-size: 0.75rem;
   padding: 0.95em;
@@ -239,7 +241,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: 1.25rem;
-  overflow: hidden;
+  
 }
 
 .hero_img {
