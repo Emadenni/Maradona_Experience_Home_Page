@@ -1067,6 +1067,7 @@ footer ul {
     width: 50px;
   }
 }
+   */
 
 @media (max-width: 550px) {
   .banner_container {
@@ -1123,7 +1124,7 @@ footer ul {
     padding: 0;
   }
 }
-   */
+  
 
 @media (max-width: 500px) {
   .hero_section {
