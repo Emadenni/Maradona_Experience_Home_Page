@@ -15,14 +15,7 @@
   --h4-font-size-large: 2.875rem;
 }
 
-a {
-  z-index: 1000 !important;
-  display: inline-block !important;
-  text-align: center !important;
-  position: relative !important;
-  -webkit-tap-highlight-color: transparent !important;
-  touch-action: manipulation !important;
-}
+
 /* 
 #viewport-size {
   position: fixed;
@@ -785,6 +778,10 @@ footer ul {
 }
 
 @media (max-width: 1290px) {
+*:hover {
+  all:unset
+}
+
   .cards_container {
     flex-direction: column;
     max-width: 100%;
