@@ -15,14 +15,14 @@
   --h4-font-size-large: 2.875rem;
 }
 
-/* a {
+a {
   z-index: 1000 !important;
   display: inline-block !important;
   text-align: center !important;
   position: relative !important;
   -webkit-tap-highlight-color: transparent !important;
   touch-action: manipulation !important;
-} */
+}
 /* 
 #viewport-size {
   position: fixed;
