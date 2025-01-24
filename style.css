@@ -15,7 +15,6 @@
   --h4-font-size-large: 2.875rem;
 }
 
-
 /* 
 #viewport-size {
   position: fixed;
@@ -241,7 +240,6 @@ header {
   justify-content: center;
   align-items: center;
   gap: 1.25rem;
-  
 }
 
 .hero_img {
@@ -747,24 +745,7 @@ footer ul {
   color: rgb(192, 75, 192);
 }
 
-@media (max-width: 1340px) {
-
-  a {
-    position: relative !important;
-    z-index: 1000 !important;
-    pointer-events: auto !important;
-    touch-action: auto !important;
-    min-width: 48px !important;
-    min-height: 48px !important;
-    cursor: pointer !important;
-    background: white !important; /* Puoi togliere se non serve */
-    -webkit-tap-highlight-color: transparent !important;
-}
-
-a:hover {
-    all: unset !important;
-    pointer-events: auto !important;
-}
+/* @media (max-width: 1340px) {
   .big_cards_container_box {
     flex-direction: column;
     max-width: 50%;
@@ -798,8 +779,6 @@ a:hover {
 }
 
 @media (max-width: 1290px) {
-
-
   .cards_container {
     flex-direction: column;
     max-width: 100%;
@@ -865,8 +844,11 @@ a:hover {
     justify-content: center;
     margin: auto;
     align-items: center;
-    /* text-align: center; */
-  }
+    /* text-align: center; 
+    
+    }
+   
+  
 
   .rules_container h4 {
     align-self: center;
@@ -1431,7 +1413,4 @@ a:hover {
     max-width: 60rem;
   }
 }
-
-
-
-
+ */
