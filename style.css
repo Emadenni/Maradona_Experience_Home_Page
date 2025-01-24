@@ -15,7 +15,6 @@
   --h4-font-size-large: 2.875rem;
 }
 
-
 /* 
 #viewport-size {
   position: fixed;
@@ -114,6 +113,15 @@ header {
 .logoDepzon {
   max-width: 175px;
   transform: translate(-1rem);
+}
+
+.signinBtn,
+.discoverMoreBtn {
+  transform: translateZ(0);
+  will-change: transform;
+  pointer-events: auto !important;
+  touch-action: manipulation !important;
+  -webkit-tap-highlight-color: transparent !important;
 }
 
 .button {
@@ -259,9 +267,7 @@ header {
 .hero_img:hover + .hero_section_title {
   transition: all 0.32s ease;
   color: beige;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1), 
-               4px 4px 6px rgba(0, 0, 0, 0.2),
-               6px 6px 10px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1), 4px 4px 6px rgba(0, 0, 0, 0.2), 6px 6px 10px rgba(0, 0, 0, 0.3);
 }
 
 .overflow_box {
@@ -749,9 +755,6 @@ footer ul {
 }
 
 @media (max-width: 1340px) {
-
-
-
   .big_cards_container_box {
     flex-direction: column;
     max-width: 50%;
@@ -785,8 +788,6 @@ footer ul {
 }
 
 @media (max-width: 1290px) {
-
-
   .cards_container {
     flex-direction: column;
     max-width: 100%;
@@ -1418,7 +1419,3 @@ footer ul {
     max-width: 60rem;
   }
 }
-
-
-
-
