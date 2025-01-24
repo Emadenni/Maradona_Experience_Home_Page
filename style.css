@@ -16,7 +16,7 @@
 }
 
 * {
-  outline: 1px solid red !important; /* Cambia colore per vedere meglio le sovrapposizioni */
+  outline: 1px solid red !important; 
 }
 
 /* 
@@ -253,7 +253,7 @@ header {
   gap: 1.25rem;
   padding: 1rem;
   box-sizing: border-box;
-  z-index: 10;
+ pointer-events: none;
 }
 
 .hero_img {
