@@ -239,6 +239,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: 1.25rem;
+  overflow: hidden;
 }
 
 .hero_img {
@@ -778,9 +779,7 @@ footer ul {
 }
 
 @media (max-width: 1290px) {
-*:hover {
-  all:unset
-}
+
 
   .cards_container {
     flex-direction: column;
