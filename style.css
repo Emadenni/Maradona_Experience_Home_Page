@@ -153,7 +153,7 @@ header {
   z-index: 1000;
 }
 
-.signinBtn::before {
+/* .signinBtn::before {
   content: "";
   position: absolute;
   top: -50%;
@@ -163,10 +163,9 @@ header {
   background: radial-gradient(circle, rgba(52, 152, 219, 0.3), transparent);
   opacity: 0;
   animation: glowEffect 3s infinite ease-in-out;
-  z-index: 1000;
-  pointer-events: none;
+ pointer-events: none;
 }
-
+ */
 @keyframes pulseGlow {
   0%,
   100% {
@@ -235,12 +234,12 @@ header {
   z-index: 1000;
 }
 
-.hoverBtn:hover {
+/* .hoverBtn:hover {
   background-color: var(--hoverBtn-bkg--color);
   color: var(--main-color);
   box-shadow: 5px 5px 5px rgba(136, 144, 92, 0.3);
   scale: 1.1;
-}
+} */
 
 .hero_section {
   max-width: 500px;
