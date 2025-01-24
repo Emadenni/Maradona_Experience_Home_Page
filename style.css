@@ -191,14 +191,20 @@ header {
 }
 
 .discoverMoreBtn {
-  position: relative;
-  width: 12.25em;
-  height: 2.5em;
-  z-index: 1000;
-  margin-top: 20px;
-  padding: 8px;
-  font-size: 14px;
-  transition: all 0.3s ease;
+  position: relative !important;
+  width: 12.25em !important;
+  height: 2.5em !important;
+  z-index: 9999 !important; /* Forziamo il massimo z-index */
+  margin-top: 20px !important;
+  padding: 8px !important;
+  font-size: 14px !important;
+  pointer-events: auto !important; /* Per essere sicuri che sia cliccabile */
+  touch-action: auto !important;  /* Gestisce i tocchi su dispositivi touch */
+  cursor: pointer !important;
+  -webkit-tap-highlight-color: transparent !important; /* Rimuove il flash sui dispositivi touch */
+  background: var(--secondary-color) !important;
+  min-width: 48px !important;
+  min-height: 48px !important;
 }
 
 .discoverRulesBtn {
