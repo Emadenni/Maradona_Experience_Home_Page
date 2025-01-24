@@ -1003,6 +1003,7 @@ footer ul {
     width: 70%;
   }
 }
+  */
 
 @media (max-width: 595px) {
   .big_cards_container h4 {
@@ -1067,9 +1068,9 @@ footer ul {
     width: 50px;
   }
 }
-   */
+   
 
-@media (max-width: 550px) {
+/* @media (max-width: 550px) {
   .banner_container {
     width: 26%;
   }
@@ -1123,7 +1124,7 @@ footer ul {
     max-width: 90%;
     padding: 0;
   }
-}
+} */
   
 
 @media (max-width: 500px) {
