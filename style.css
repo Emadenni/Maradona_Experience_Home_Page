@@ -756,7 +756,7 @@ footer ul {
   color: rgb(192, 75, 192);
 }
 
-@media (max-width: 1340px) {
+/* @media (max-width: 1340px) {
   .big_cards_container_box {
     flex-direction: column;
     max-width: 50%;
@@ -855,7 +855,7 @@ footer ul {
     justify-content: center;
     margin: auto;
     align-items: center;
-    /* text-align: center; */
+    /* text-align: center; 
   }
 
   .rules_container h4 {
@@ -1421,3 +1421,4 @@ footer ul {
     max-width: 60rem;
   }
 }
+ */
