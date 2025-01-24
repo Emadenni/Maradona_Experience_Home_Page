@@ -15,6 +15,7 @@
   --h4-font-size-large: 2.875rem;
 }
 
+
 /* 
 #viewport-size {
   position: fixed;
@@ -191,20 +192,14 @@ header {
 }
 
 .discoverMoreBtn {
-  position: relative !important;
-  width: 12.25em !important;
-  height: 2.5em !important;
-  z-index: 9999 !important; /* Forziamo il massimo z-index */
-  margin-top: 20px !important;
-  padding: 8px !important;
-  font-size: 14px !important;
-  pointer-events: auto !important; /* Per essere sicuri che sia cliccabile */
-  touch-action: auto !important;  /* Gestisce i tocchi su dispositivi touch */
-  cursor: pointer !important;
-  -webkit-tap-highlight-color: transparent !important; /* Rimuove il flash sui dispositivi touch */
-  background: var(--secondary-color) !important;
-  min-width: 48px !important;
-  min-height: 48px !important;
+  position: relative;
+  width: 12.25em;
+  height: 2.5em;
+  z-index: 1000;
+  margin-top: 20px;
+  padding: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
 }
 
 .discoverRulesBtn {
@@ -238,14 +233,15 @@ header {
 
 .hero_section {
   max-width: 500px;
-  max-height: 485px;
-  z-index: 10;
   margin: 8.125rem auto 15rem auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1.25rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  z-index: 10;
 }
 
 .hero_img {
@@ -255,18 +251,17 @@ header {
 }
 
 .hero_img:hover {
-  transform: rotate(360deg) scale(1.1);
+  transform: rotate(360deg) scale(1.05); /* Scaling ridotto */
   cursor: pointer;
   border-radius: 50%;
-  bottom: 10px;
 }
 
 .hero_img:hover + .hero_section_title {
   transition: all 0.32s ease;
-  /*  text-shadow: 5px 5px 10px rgba(38, 132, 137, 0.3); */
   color: beige;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1), /* Ombra di base */ 4px 4px 6px rgba(0, 0, 0, 0.2),
-    /* Ombra media */ 6px 6px 10px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1), 
+               4px 4px 6px rgba(0, 0, 0, 0.2),
+               6px 6px 10px rgba(0, 0, 0, 0.3);
 }
 
 .overflow_box {
@@ -280,7 +275,7 @@ header {
 .hero_section_title {
   text-align: center;
   color: var(--secondary-color);
-  font-size: 84px;
+  font-size: clamp(2rem, 8vw, 5.25rem); /* Font dinamico */
   position: absolute;
   top: 19.375rem;
   letter-spacing: 0.113rem;
@@ -289,7 +284,8 @@ header {
 }
 
 .hero_section_text {
-  width: 41.25rem;
+  width: 100%;
+  max-width: 41.25rem;
   color: var(--secondary-color);
   font-size: 1.5rem;
   font-weight: 200;
@@ -751,7 +747,21 @@ footer ul {
   color: rgb(192, 75, 192);
 }
 
-/* @media (max-width: 1340px) {
+@media (max-width: 1340px) {
+
+  a {
+    position: relative !important;
+    z-index: 1000 !important;
+    pointer-events: auto !important;
+    touch-action: auto !important;
+    min-width: 48px !important;
+    min-height: 48px !important;
+    cursor: pointer !important;
+    background: white !important; 
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+
   .big_cards_container_box {
     flex-direction: column;
     max-width: 50%;
@@ -785,6 +795,8 @@ footer ul {
 }
 
 @media (max-width: 1290px) {
+
+
   .cards_container {
     flex-direction: column;
     max-width: 100%;
@@ -850,11 +862,8 @@ footer ul {
     justify-content: center;
     margin: auto;
     align-items: center;
-    /* text-align: center; 
-    
-    }
-   
-  
+    /* text-align: center; */
+  }
 
   .rules_container h4 {
     align-self: center;
@@ -1419,4 +1428,7 @@ footer ul {
     max-width: 60rem;
   }
 }
- */
+
+
+
+
