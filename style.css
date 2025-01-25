@@ -240,18 +240,32 @@ header {
   gap: 1.25rem;
   padding: 1rem;
   box-sizing: border-box;
-  
+  pointer-events: none;
 }
 
 .hero_img {
   width: 90%;
-    transition: transform 1s ease;
+  position: relative; 
+  z-index: 1; 
 }
 
 .hero_img:hover {
   transform: rotate(360deg) scale(1.05);
   cursor: pointer;
   border-radius: 50%;
+}
+
+.hero_section_title {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, 46%);
+  color: var(--secondary-color);
+  font-size: clamp(2rem, 8vw, 5.25rem);
+  letter-spacing: 0.113rem;
+  line-height: 0.9;
+  z-index: 2;
+  text-align: center;
 }
 
 .hero_img:hover + .hero_section_title {
@@ -268,19 +282,7 @@ header {
   position: relative;
 }
 
-.hero_section_title {
-  
-  top: 66%; 
-  left: 0;
-  right: 0; 
-  margin: 0 auto; 
-  color: var(--secondary-color);
-  font-size: clamp(2rem, 8vw, 5.25rem);
-  text-align: center;
-  letter-spacing: 0.113rem;
-  line-height: 0.9;
-  
-}
+
 .hero_section_text {
   width: 100%;
   min-width: 41.5rem;
@@ -290,9 +292,7 @@ header {
   font-weight: 200;
   letter-spacing: 0.031rem;
   text-align: center;
-  z-index: 99;
   margin-top: 1.25rem;
-  
 }
 
 /*------------------------------*/
