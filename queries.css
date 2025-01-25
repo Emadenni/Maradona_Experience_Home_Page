@@ -9,10 +9,11 @@
   }
 
 
-
-
-
-
+  .discoverMoreBtn {
+    width: 60%;
+    margin: 20px auto;
+    border-radius: 0px;
+  }
 
 }
 
