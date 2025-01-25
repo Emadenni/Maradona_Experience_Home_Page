@@ -269,7 +269,7 @@ header {
 }
 
 .hero_section_title {
-  position: absolute; 
+  
   top: 66%; 
   left: 0;
   right: 0; 
@@ -279,7 +279,7 @@ header {
   text-align: center;
   letter-spacing: 0.113rem;
   line-height: 0.9;
-  pointer-events: none;
+  
 }
 .hero_section_text {
   width: 100%;
@@ -292,7 +292,7 @@ header {
   text-align: center;
   z-index: 99;
   margin-top: 1.25rem;
-  pointer-events: none;
+  
 }
 
 /*------------------------------*/
