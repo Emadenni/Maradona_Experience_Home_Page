@@ -3,24 +3,24 @@
     flex-wrap: nowrap;
   }
 
+  .tournament_container {
+    margin: 9.5rem auto 8.5rem auto;
+  }
 }
-
-
 
 @media (max-width: 1380px) {
-.top_content {
-  margin-bottom: 2.25em;
-}
+  .top_content {
+    margin-bottom: 2.25em;
+  }
 
   .hero_section {
     width: 100%;
-  gap: 0px;
+    gap: 0px;
   }
 
   .hero_img {
     width: 80%;
   }
-
 
   .discoverMoreBtn {
     width: 60%;
@@ -28,32 +28,16 @@
     border-radius: 50px;
   }
 
-
-
-
-
-
   .tournament_container_title {
     text-align: center;
   }
-
-
 }
 
 @media (max-width: 1274px) {
-
-
-
-
-.tournament_container h4 {
-  margin-bottom: 1rem;
+  .tournament_container h4 {
+    margin-bottom: 1rem;
+  }
 }
-}
-
-
-
-
-
 
 @media (max-width: 1024px) {
   .hero_img {
@@ -184,11 +168,10 @@
 @media screen and (max-width: 768px) {
   .hero_section {
     max-width: 100%;
-    margin:auto;
+    margin: auto;
   }
   .hero_section_title {
     font-size: 2.85srem;
-    
   }
   .hero_section_text {
     font-size: 0.8rem;
@@ -335,8 +318,6 @@
   .hero_section_title {
     font-size: 2rem;
   }
-
-  
 
   .hero_img {
     width: 75%;
