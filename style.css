@@ -199,8 +199,8 @@ header {
 
 .hero_content {
   position: relative;
-  width: 100%;
-  max-width: 600px;
+  width: 90%;
+  max-width: 580px;
   margin: 0 auto;
 }
 
@@ -223,7 +223,7 @@ header {
 }
 
 .hero_section_text {
-  margin-top: 1.5rem;
+ 
   font-size: 1.6rem;
   color: var(--secondary-color);
 }
@@ -231,8 +231,6 @@ header {
 .discoverMoreBtn {
   margin-top: 1rem;
   padding: 10px 20px;
-  background-color: var(--main-color);
-  color: white;
   border: none;
   border-radius: 5px;
   font-size: 1rem;
