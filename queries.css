@@ -1,4 +1,8 @@
 @media (max-width: 1380px) {
+.top_content {
+  margin-bottom: 2.25em;
+}
+
   .hero_section {
     width: 100%;
   gap: 0px;
