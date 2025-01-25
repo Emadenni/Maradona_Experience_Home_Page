@@ -1,3 +1,12 @@
+@media (max-width: 1530px) {
+  .rules_container {
+    flex-wrap: nowrap;
+  }
+
+}
+
+
+
 @media (max-width: 1380px) {
 .top_content {
   margin-bottom: 2.25em;
@@ -28,9 +37,6 @@
     text-align: center;
   }
 
-  .rules_container {
-    flex-wrap: nowrap;
-  }
 
 }
 
