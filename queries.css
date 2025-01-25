@@ -28,13 +28,17 @@
     text-align: center;
   }
 
+  .rules_container {
+    flex-wrap: nowrap;
+  }
+
 }
 
 @media (max-width: 1274px) {
 
 
 
-  
+
 .tournament_container h4 {
   margin-bottom: 1rem;
 }
