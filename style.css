@@ -123,6 +123,8 @@ header {
   cursor: pointer;
 }
 
+
+
 .signinBtn {
   width: 11.25em;
   height: 2.5em;
@@ -350,6 +352,22 @@ header {
 
 .card_content_top p {
   font-weight: 600;
+}
+
+/*---------------*/
+
+.discoverRulesBtn1 {
+  width: 40%;
+  height: 46px;
+  font-size: 0.89rem;
+  padding: 12px;
+}
+
+.discoverRulesBtn2 {
+  width: 70%;
+  height: 44px;
+  font-size: 0.84rem;
+  padding: 13px;
 }
 
 .tournament_container {
