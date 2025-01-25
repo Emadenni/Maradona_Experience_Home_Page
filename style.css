@@ -227,7 +227,7 @@ header {
 }
 
 .hero_section_text {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
  font-size: 1.6rem;
   color: var(--secondary-color);
 }
