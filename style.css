@@ -190,107 +190,61 @@ header {
   }
 }
 
-.discoverMoreBtn {
-  position: relative;
-  width: 12.25em;
-  height: 2.5em;
-  z-index: 1000;
-  margin-top: 20px;
-  padding: 8px;
-  font-size: 14px;
-  transition: all 0.3s ease;
-}
-
-.discoverRulesBtn {
-  position: relative;
-  margin-top: 0.625em;
-  font-size: 0.75rem;
-  padding: 0.95em;
-  transition: all 0.3s ease;
-}
-
-.discoverRulesBtn1 {
-  align-self: flex-start;
-  width: 27.875em;
-  height: 40px;
-  z-index: 1000;
-}
-
-.discoverRulesBtn2 {
-  width: 14.875rem;
-  height: 2.5rem;
-  align-self: flex-start;
-  z-index: 1000;
-}
-
-.hoverBtn:hover {
-  background-color: var(--hoverBtn-bkg--color);
-  color: var(--main-color);
-  box-shadow: 5px 5px 5px rgba(136, 144, 92, 0.3);
-  scale: 1.1;
-}
-
 .hero_section {
-  max-width: 500px;
-  margin: 8.125rem auto 15rem auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1.25rem;
-  padding: 1rem;
-  box-sizing: border-box;
-  pointer-events: none;
+  width: 100%;
+  text-align: center;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+.hero_content {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .hero_img {
-  width: 90%;
-  /*   transition: transform 1s ease; */
-}
-
-.hero_img:hover {
-  transform: rotate(360deg) scale(1.05);
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-.hero_img:hover + .hero_section_title {
-  transition: all 0.32s ease;
-  color: beige;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1), 4px 4px 6px rgba(0, 0, 0, 0.2), 6px 6px 10px rgba(0, 0, 0, 0.3);
-}
-
-.overflow_box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .hero_section_title {
-  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: var(--secondary-color);
-  font-size: clamp(2rem, 8vw, 5.25rem);
-  top: 17.375rem;
-  letter-spacing: 0.113rem;
-  line-height: 0.9;
-  transform-origin: center;
+  font-size: clamp(2.5rem, 5vw, 6rem);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
 }
 
 .hero_section_text {
-  width: 100%;
-  min-width: 41.5rem;
-  max-width: 48.25rem;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
   color: var(--secondary-color);
-  font-size: 1.6rem;
-  font-weight: 200;
-  letter-spacing: 0.031rem;
-  text-align: center;
-  z-index: 99;
-  margin-top: 1.25rem;
 }
 
+.discoverMoreBtn {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  z-index: 10;
+  position: relative;
+}
+
+.discoverMoreBtn:hover {
+  background-color: var(--hoverBtn-bkg--color);
+  transform: scale(1.05);
+}
 /*------------------------------*/
 
 .main_content {
