@@ -1,6 +1,16 @@
 @media (max-width: 1024px) {
+  .hero_section {
+    display: flex;
+    flex-direction: column;
+    gap: 300px;
+  }
+
   .hero_img {
-    width: 70%;
+    width: 100%;
+  }
+
+  .top_content {
+    gap: 40px;
   }
 
   .hero_section_text {
@@ -123,11 +133,10 @@
 @media screen and (max-width: 768px) {
   .hero_section {
     max-width: 100%;
-    margin:auto;
+    margin: auto;
   }
   .hero_section_title {
     font-size: 2.85srem;
-    
   }
   .hero_section_text {
     font-size: 0.8rem;
@@ -274,8 +283,6 @@
   .hero_section_title {
     font-size: 2rem;
   }
-
-  
 
   .hero_img {
     width: 75%;
