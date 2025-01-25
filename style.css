@@ -212,18 +212,19 @@ header {
 
 .hero_section_title {
   position: absolute;
-  top: 50%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--secondary-color);
   font-size: clamp(2.5rem, 5vw, 6rem);
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   pointer-events: none;
+  line-height: 0.9;
 }
 
 .hero_section_text {
   margin-top: 1.5rem;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   color: var(--secondary-color);
 }
 
