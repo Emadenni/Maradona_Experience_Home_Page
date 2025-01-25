@@ -1,4 +1,14 @@
 @media (max-width: 1024px) {
+.hero_img {
+  width: 70%;
+}
+
+.hero_section_text {
+  font-size: 1rem;
+}
+
+
+
   .card {
     flex: 1 1 45%; 
   }
@@ -150,18 +160,18 @@
     margin: 4.125rem auto 10rem auto;
   }
   .hero_section_title {
-    font-size: clamp(2rem, 12vw, 4rem);
+    font-size: 2.85srem;
   }
   .hero_section_text {
-    font-size: 1.4rem;
+    font-size: 0.8rem;
   }
-  .signinBtn,
+  
   .discoverMoreBtn {
     width: 100%;
     font-size: 16px;
   }
   .hero_img {
-    width: 80%;
+    width: 50%;
   }
 
 
@@ -309,7 +319,7 @@
 
 @media screen and (max-width: 480px) {
   .hero_section_text {
-    font-size: 1.2rem;
+    font-size: 0.6rem;
   }
   .signinBtn,
   .discoverMoreBtn {
