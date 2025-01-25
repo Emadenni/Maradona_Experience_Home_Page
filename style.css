@@ -198,7 +198,7 @@ header {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
 }
 
 .hero_content {
