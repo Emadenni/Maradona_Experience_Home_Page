@@ -127,6 +127,10 @@ header {
   cursor: pointer;
 }
 
+.button:active {
+  background-color: blue;
+}
+
 .signinBtn {
   width: 11.25em;
   height: 2.5em;
