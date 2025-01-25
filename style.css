@@ -88,7 +88,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 1.25em;
+  
 }
 
 .decoration {
@@ -198,7 +198,7 @@ header {
   margin-top: 20px;
   padding: 8px;
   font-size: 14px;
-  transition: all 0.3s ease;
+ /*  transition: all 0.3s ease; */
 }
 
 .discoverRulesBtn {
@@ -206,7 +206,7 @@ header {
   margin-top: 0.625em;
   font-size: 0.75rem;
   padding: 0.95em;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
 }
 
 .discoverRulesBtn1 {
@@ -231,13 +231,13 @@ header {
 }
 
 .hero_section {
-  max-width: 500px;
-  margin: 8.125rem auto 15rem auto;
+  max-width: 00px;
+  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.25rem;
+  gap:1.25rem;
   padding: 1rem;
   box-sizing: border-box;
   pointer-events: none;
@@ -272,10 +272,11 @@ header {
   text-align: center;
   color: var(--secondary-color);
   font-size: clamp(2rem, 8vw, 5.25rem);
-  top: 17.375rem;
+  position: absolute;
+  top: 21.375rem;
   letter-spacing: 0.113rem;
   line-height: 0.9;
-  transform-origin: center;
+  
 }
 
 .hero_section_text {

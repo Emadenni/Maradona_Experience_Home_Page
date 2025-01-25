@@ -155,9 +155,9 @@
     .hero_section_text {
       font-size: 1.4rem;
     }
-    .signinBtn,
+    
     .discoverMoreBtn {
-      width: 100%;
+      width: 80%;
       font-size: 16px;
     }
     .hero_img {
