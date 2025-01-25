@@ -200,7 +200,7 @@ header {
 .hero_content {
   position: relative;
   width: 90%;
-  max-width: 580px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -223,8 +223,8 @@ header {
 }
 
 .hero_section_text {
- 
-  font-size: 1.6rem;
+  margin-top: 1rem;
+ font-size: 1.6rem;
   color: var(--secondary-color);
 }
 
