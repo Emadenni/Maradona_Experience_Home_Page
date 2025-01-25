@@ -89,6 +89,7 @@ header {
   flex-direction: column;
   justify-content: center;
   margin-bottom: 1.25em;
+ 
 }
 
 .decoration {
@@ -195,6 +196,9 @@ header {
   text-align: center;
   padding: 2rem 1rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .hero_content {
