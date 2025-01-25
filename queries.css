@@ -1,3 +1,24 @@
+@media (max-width: 1380px) {
+  .hero_section {
+    width: 100%;
+  gap: 0px;
+  }
+
+  .hero_img {
+    width: 80%;
+  }
+
+
+
+
+
+
+
+}
+
+
+
+
 @media (max-width: 1024px) {
   .hero_img {
     width: 100%;
