@@ -188,21 +188,21 @@
     font-size: 0.85rem;
   }
 
-  .decoration2 {
+ /*  .decoration2 {
     margin-left: 900px;
     position: absolute;
     top: 1650px;
     width: 2200px;
-  }
+  } */
 }
 
 @media screen and (max-width: 768px) {
-  .decoration2 {
+/*   .decoration2 {
     margin-left: 1300px;
     position: absolute;
     top: 2250px;
     width: 1700px;
-  }
+  } */
 
   header {
     padding-right: 1rem;
