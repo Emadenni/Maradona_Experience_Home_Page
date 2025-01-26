@@ -368,8 +368,8 @@
 @media screen and (max-width: 480px) {
   .discoverRulesBtn {
     width: 100%;
-    height: 55px;
-    font-size: 16px;
+    height: 60px;
+    font-size: 18px;
     margin: 20px auto;
     border-radius: 50px;
   }
@@ -572,7 +572,7 @@
 
 @media screen and (max-width: 480px) {
   .discoverRulesBtn2 {
-    font-size: 14px;
-    padding: 14px;
+    font-size: 18px;
+    padding: 10px;
   }
 }
