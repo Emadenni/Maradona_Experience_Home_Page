@@ -2,15 +2,6 @@
   .rules_container {
     flex-wrap: nowrap;
   }
-
-/*   .tournament_container {
-    margin: 9.5rem auto 8.5rem auto;
-  } */
-
-  /* .tournament_container_desc {
-    align-items: center;
-    gap: 40px;
-  } */
 }
 
 @media (max-width: 1380px) {
@@ -36,6 +27,10 @@
   .tournament_container_title {
     text-align: center;
   }
+
+  header {
+    padding-left: 2rem;
+  }
 }
 
 @media (max-width: 1274px) {
@@ -45,6 +40,16 @@
 }
 
 @media (max-width: 1024px) {
+ 
+  .discoverRulesBtn2 {
+    width: 100%;
+    margin: auto;
+  }
+
+  .discoverRulesBtn1 {
+    width: 60%;
+  }
+
   .hero_img {
     width: 100%;
   }
@@ -61,7 +66,7 @@
     flex: 1 1 45%;
   }
   .card_content_bottom {
-    margin-left: 3.5rem;
+    margin-left: 4.5rem;
     padding: 0 1.5rem;
   }
   .card_content_bottom h4 {
@@ -73,18 +78,18 @@
 
   .tournament_container {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding-left: 0.625rem;
   }
 
   .tournament_container h4 {
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
     text-align: center;
   }
 
   .tournament_container_desc {
     margin-left: 0;
-    gap: 1.5rem;
+    gap: 2.5rem;
   }
 
   .tournament_container_desc_p1,
@@ -95,7 +100,7 @@
 
   .banner_container {
     padding: 4rem 8rem;
-    gap: 6rem;
+    gap: 4rem;
   }
 
   .banner_container_top {
@@ -114,6 +119,7 @@
   .banner_container_bottom_desc {
     width: 100%;
     text-align: center;
+    gap: 3rem;
   }
 
   .gold_card_img {
@@ -171,9 +177,14 @@
 }
 
 @media screen and (max-width: 768px) {
+  header {
+    padding-right: 1rem;
+    
+  }
+
   .hero_section {
     max-width: 100%;
-    margin: auto;
+    margin: 6rem auto;
   }
   .hero_section_title {
     font-size: 2.85srem;
@@ -196,7 +207,7 @@
     margin: 0.5rem 0;
   }
   .card_content_bottom {
-    margin-left: 1rem;
+    margin-left: 5rem;
     padding: 0 1rem;
   }
   .card_content_bottom h4 {
@@ -231,7 +242,6 @@
 
   .banner_container {
     padding: 3rem 4rem;
-    gap: 10rem;
   }
 
   .banner_container_top {
@@ -325,7 +335,7 @@
   }
 
   .hero_img {
-    width: 75%;
+    width: 70%;
   }
 
   .hero_content {
@@ -333,11 +343,11 @@
   }
 
   .card_content_bottom {
-    margin-left: 0.5rem;
+    margin-left: 6rem;
     padding: 0 0.5rem;
   }
   .card_content_bottom h4 {
-    font-size: var(--h4-font-size-medium);
+    font-size: var(--h4-font-size-small);
     margin: 0 0 1rem 0;
   }
   .card_img {
@@ -356,7 +366,7 @@
   }
 
   .tournament_container_desc {
-    gap: 1rem;
+    gap: 1.5rem;
     padding: 0 0.5rem;
   }
 
@@ -367,10 +377,11 @@
     text-align: center;
   }
 
-  .button.hoverBtn {
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
+  .discoverRulesBtn1 {
+    width: 76%;
   }
+
+ 
 
   .banner_container {
     padding: 2rem 2rem;
@@ -392,7 +403,7 @@
 
   .banner_container_bottom_desc {
     font-size: 0.85rem;
-    gap: 1rem;
+    gap: 1.6rem;
   }
 
   .gold_card_img {
@@ -401,8 +412,13 @@
 
   .big_card {
     flex: 1 1 100%;
-    min-height: 400px;
-    padding: 2rem 1rem;
+    min-height: 300px;
+    padding: 0 0.2rem;
+  }
+
+  .big_card p {
+    font-size: 14px;
+    width: 100%;
   }
 
   .rules_container {
@@ -451,5 +467,9 @@
 
   .thinner_text {
     font-size: 0.75rem;
+  }
+
+  .rules_container {
+    flex-direction: column;
   }
 }
