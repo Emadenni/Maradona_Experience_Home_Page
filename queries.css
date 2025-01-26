@@ -4,13 +4,13 @@
   }
 
   .decoration1 {
-    top: 0px;
+    margin-bottom: 00px;
   }
 
   .decoration2 {
-    top: 1400px;
-    left: 30%;
-  }
+    margin-bottom: 500px;
+    
+   }
 }
 
 @media (max-width: 1380px) {
@@ -23,16 +23,14 @@
 
 
   .decoration1 {
-    position: absolute; /* Aggiungi questa proprietà se non è già presente */
-    top: 0; /* Verifica che il valore di top funzioni correttamente */
-    left: 50%; /* Puoi utilizzare anche questa proprietà per centrarlo orizzontalmente */
-    transform: translateX(-50%); /* Per centrare esattamente l'elemento */
+    top: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
   }
 
     
   .decoration2 {
-    top: 1550px; 
-    left: 20%; 
+   margin-bottom: 500px;
    
   }
   
