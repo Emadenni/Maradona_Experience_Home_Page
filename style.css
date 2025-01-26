@@ -44,6 +44,7 @@ body {
 
 .background {
   position: absolute;
+  pointer-events: none;
   top: 5em;
   left: 0;
   width: 100vw;
@@ -97,6 +98,7 @@ header {
 .decoration2 {
 margin-left: 1100px;
 position: absolute;
+pointer-events: none;
 top: 1560px;
 }
 
@@ -220,6 +222,7 @@ top: 1560px;
 
 .hero_section_title {
   position: absolute;
+  pointer-events: none;
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
