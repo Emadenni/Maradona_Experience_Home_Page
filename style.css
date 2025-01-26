@@ -33,7 +33,7 @@ body {
 
 body {
  /*  background-color: var(--main-color); */
-  background-color: rgb(106, 26, 72);
+  background-color: rgb(39, 209, 24);
   font-family: "Poppins", sans-serif;
 }
 
@@ -82,7 +82,7 @@ header {
   justify-content: center;
   align-items: center;
   position: relative;
-  overflow-x: hidden;
+ 
 }
 
 .top_content {
