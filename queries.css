@@ -7,9 +7,14 @@
     margin-left: 900px;
     position: absolute;
     top: 1500px;
-    }
+  }
 
-
+  .banner_container,
+  .banner_container_bottom_desc,
+  .tournament_container,
+  .tournament_container_desc {
+    overflow: hidden;
+  }
 }
 
 @media (max-width: 1380px) {
@@ -48,7 +53,6 @@
 }
 
 @media (max-width: 1024px) {
- 
   .discoverRulesBtn2 {
     width: 100%;
     margin: auto;
@@ -188,21 +192,19 @@
     position: absolute;
     top: 1650px;
     width: 2200px;
-    }
+  }
 }
 
 @media screen and (max-width: 768px) {
-
   .decoration2 {
     margin-left: 1300px;
     position: absolute;
     top: 2250px;
     width: 1700px;
-    }
+  }
 
   header {
     padding-right: 1rem;
-    
   }
 
   .hero_section {
@@ -349,29 +351,28 @@
 }
 
 @media screen and (max-width: 480px) {
-
   .decoration {
     width: 560px;
   }
 
-  /* .decoration2 {
+  .decoration2 {
     margin-left: 1300px;
     position: fixed;
     top: 1650px;
     width: 1700px;
-    } */
+  }
 
   .logoDepzon {
     width: 80%;
   }
 
   .signinBtn {
-   width: 7rem;
+    width: 7rem;
   }
 
-.big_card p {
-  font-size: 12px;
-}
+  .big_card p {
+    font-size: 12px;
+  }
 
   .big_card_img {
     width: 70%;
@@ -442,14 +443,10 @@
     font-size: 12px;
   }
 
-
-
- 
-
   .banner_container {
     padding: 2rem 2rem;
     gap: 3rem;
-    margin: auto auto 6.75rem auto;;
+    margin: auto auto 6.75rem auto;
   }
 
   .banner_container_top {
