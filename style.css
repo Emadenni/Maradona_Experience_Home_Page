@@ -33,7 +33,7 @@ body {
 
 body {
   /* background-color: var(--main-color); */
-  background-color: rgb(17, 68, 109);
+  background-color: rgb(183, 77, 53);
   font-family: "Poppins", sans-serif;
 }
 
@@ -127,6 +127,7 @@ top: 1560px;
   font-weight: 700;
   border-radius: 18px;
   cursor: pointer;
+  position: absolute;
 }
 
 
