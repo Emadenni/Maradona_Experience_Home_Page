@@ -405,7 +405,7 @@ top: 1560px;
   justify-content: center;
   gap: 1.875rem;
   margin-left: 2.5rem;
-  
+  overflow: visible;
 }
 
 .tournament_container_desc_p1 {
