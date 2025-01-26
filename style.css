@@ -371,6 +371,7 @@ header {
 }
 
 .tournament_container {
+  scroll-margin-top: 100px;
   max-width: 84%;
   display: flex;
   flex-wrap: wrap;
@@ -592,6 +593,7 @@ header {
 /*-------------------------------------------------------*/
 
 .rules_container {
+  scroll-margin-top: 50px;
   margin: auto;
   max-width: 88%;
   display: flex;
