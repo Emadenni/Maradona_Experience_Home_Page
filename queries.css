@@ -327,11 +327,12 @@
 
 @media screen and (max-width: 480px) {
   .hero_section_text {
-    font-size: 0.8rem;
+/*     font-size: 0.82rem;
+    margin-top: -8px; */
   }
 
   .hero_section_title {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .hero_img {
@@ -379,8 +380,14 @@
   }
 
   .discoverRulesBtn1 {
-    width: 76%;
+    width: 84%;
   }
+
+  .discoverRulesBtn2 {
+    font-size: 12px;
+  }
+
+
 
  
 
