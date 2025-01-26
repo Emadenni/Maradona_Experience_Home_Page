@@ -354,12 +354,12 @@
     width: 560px;
   }
 
-  .decoration2 {
+  /* .decoration2 {
     margin-left: 1300px;
-    position: absolute;
+    position: fixed;
     top: 1650px;
     width: 1700px;
-    }
+    } */
 
   .logoDepzon {
     width: 80%;
