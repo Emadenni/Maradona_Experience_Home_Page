@@ -49,7 +49,7 @@ body {
   width: 100%;
   overflow: hidden;
 }
-
+/* 
 .background {
   position: absolute;
   top: 5em;
@@ -62,7 +62,7 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 12.5rem;
-}
+} */
 
 header {
   background-color: rgb(21, 19, 22, 0.9);
@@ -95,7 +95,7 @@ header {
   margin-bottom: 8.25em;
 }
 
-.decoration {
+/* .decoration {
   width: 90%;
   opacity: 0.9;
 }
@@ -104,7 +104,7 @@ header {
   margin-left: 62.5em;
   margin-bottom: 23.75em;
 }
-
+ */
 .logoDepzon {
   max-width: 175px;
   transform: translate(-1rem);
