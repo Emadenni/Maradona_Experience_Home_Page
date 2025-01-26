@@ -415,6 +415,7 @@
   .banner_container {
     padding: 2rem 2rem;
     gap: 3rem;
+    margin: auto auto 6.75rem auto;;
   }
 
   .banner_container_top {
@@ -437,6 +438,14 @@
 
   .gold_card_img {
     max-width: 14rem;
+  }
+
+  .big_cards_container {
+    margin-bottom: 4rem;
+  }
+
+  .big_cards_container h4 {
+    font-size: 1.2rem;
   }
 
   .big_card {
