@@ -1,4 +1,11 @@
 @media (max-width: 1530px) {
+  .tournament_container {
+    gap: 20px;
+  }
+
+  .tournament_container_desc {
+    .tournament_container
+  }
   .rules_container {
     flex-wrap: nowrap;
   }
@@ -104,7 +111,7 @@
 
   .tournament_container_desc {
     margin-left: 0;
-    gap: 2.5rem;
+    gap: 4.5rem;
   }
 
   .tournament_container_desc_p1,
@@ -257,7 +264,7 @@
   }
 
   .tournament_container_desc {
-    gap: 1.25rem;
+    gap: 4.25rem;
     align-items: center;
   }
 
@@ -427,7 +434,7 @@
   }
 
   .tournament_container_desc {
-    gap: 1.5rem;
+    gap: 4.5rem;
     padding: 0 0.5rem;
   }
 
@@ -467,7 +474,7 @@
 
   .banner_container_bottom_desc {
     font-size: 0.85rem;
-    gap: 1.6rem;
+    gap: 3.6rem;
   }
 
   .gold_card_img {
