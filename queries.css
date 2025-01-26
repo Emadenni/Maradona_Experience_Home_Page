@@ -7,7 +7,6 @@
     margin-left: 900px;
     position: absolute;
     top: 1500px;
-    
   }
 
   .banner_container,
@@ -19,7 +18,6 @@
     isolation: isolate;
   }
 
-  
   .discoverRulesBtn {
     width: 400px;
     height: 60px;
@@ -32,8 +30,6 @@
   .discoverRulesBtn2 {
     padding: 16px;
   }
-
-
 }
 
 @media (max-width: 1380px) {
@@ -206,7 +202,7 @@
     font-size: 0.85rem;
   }
 
- /*  .decoration2 {
+  /*  .decoration2 {
     margin-left: 900px;
     position: absolute;
     top: 1650px;
@@ -215,7 +211,6 @@
 }
 
 @media screen and (max-width: 768px) {
-
   .decoration2 {
     margin-left: 1300px;
     position: absolute;
@@ -371,18 +366,20 @@
 }
 
 @media screen and (max-width: 480px) {
-
   .discoverRulesBtn {
     width: 100%;
-    height: 60px;
-    font-size: 16px;
+    height: 40px;
+    font-size: 14px;
     margin: 20px auto;
     border-radius: 50px;
-    
+  }
+
+  .discoverRulesBtn1 {
+    padding: 11px;
   }
 
   .discoverRulesBtn2 {
-    padding: 16px;
+    padding: 14px;
   }
 
   .decoration {
@@ -467,10 +464,6 @@
     font-size: 0.9rem;
     line-height: 1.2;
     text-align: center;
-  }
-
-  .discoverRulesBtn1 {
-    width: 84%;
   }
 
   .discoverRulesBtn2 {
