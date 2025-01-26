@@ -2,6 +2,14 @@
   .rules_container {
     flex-wrap: nowrap;
   }
+
+  .decoration2 {
+    margin-left: 900px;
+    position: absolute;
+    top: 1500px;
+    }
+
+
 }
 
 @media (max-width: 1380px) {
@@ -174,9 +182,24 @@
   .thinner_text {
     font-size: 0.85rem;
   }
+
+  .decoration2 {
+    margin-left: 900px;
+    position: absolute;
+    top: 1650px;
+    width: 2200px;
+    }
 }
 
 @media screen and (max-width: 768px) {
+
+  .decoration2 {
+    margin-left: 1300px;
+    position: absolute;
+    top: 2250px;
+    width: 1700px;
+    }
+
   header {
     padding-right: 1rem;
     
@@ -326,6 +349,17 @@
 }
 
 @media screen and (max-width: 480px) {
+
+  .decoration {
+    width: 560px;
+  }
+
+  .decoration2 {
+    margin-left: 1300px;
+    position: absolute;
+    top: 1650px;
+    width: 1700px;
+    }
 
   .logoDepzon {
     width: 80%;
