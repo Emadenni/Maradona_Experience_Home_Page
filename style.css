@@ -110,8 +110,7 @@ header {
   transform: translate(-1rem);
 }
 
-.signinBtn,
-.discoverMoreBtn {
+.signinBtn {
   transform: translateZ(0);
   will-change: transform;
   pointer-events: auto !important;
@@ -248,7 +247,7 @@ header {
   border-radius: 50px;
   font-size: 1rem;
   cursor: pointer;
-  z-index: 10;
+  z-index: 97;
   position: relative;
   width: 60%;
   margin: auto;
