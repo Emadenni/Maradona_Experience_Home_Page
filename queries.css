@@ -3,14 +3,7 @@
     flex-wrap: nowrap;
   }
 
-  .decoration1 {
-    margin-bottom: 00px;
-  }
 
-  .decoration2 {
-    margin-bottom: 500px;
-    
-   }
 }
 
 @media (max-width: 1380px) {
@@ -30,7 +23,8 @@
 
     
   .decoration2 {
-   margin-bottom: 500px;
+    top: 2550px; 
+    left: 1400px; 
    
   }
   
