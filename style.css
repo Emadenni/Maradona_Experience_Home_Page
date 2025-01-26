@@ -93,8 +93,7 @@ header {
 }
 
 .decoration2 {
-  margin-left: 62.5em;
-  margin-bottom: 23.75em;
+ align-self: flex-end;
 }
 
 .logoDepzon {
