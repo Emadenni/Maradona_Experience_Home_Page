@@ -327,8 +327,8 @@
 
 @media screen and (max-width: 480px) {
   .hero_section_text {
-/*     font-size: 0.82rem;
-    margin-top: -8px; */
+    font-size: 0.82rem;
+    margin-top: -8px;
   }
 
   .hero_section_title {
