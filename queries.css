@@ -568,3 +568,11 @@
     flex-direction: column;
   }
 }
+
+
+@media screen and (max-width: 480px) {
+  .discoverRulesBtn2 {
+    font-size: 14px;
+    padding: 14px;
+  }
+}

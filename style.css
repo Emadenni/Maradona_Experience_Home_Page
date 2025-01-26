@@ -33,14 +33,14 @@ body {
 
 body {
  /*  background-color: var(--main-color); */
-  background-color: rgb(190, 201, 41);
+  background-color: rgb(13, 116, 76);
   font-family: "Poppins", sans-serif;
 }
 
 .banner_container {
   position: relative;
   width: 100%;
-  clip-path: inset(0 0 0 0);
+ /*  clip-path: inset(0 0 0 0); */
 
 }
 
