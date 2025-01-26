@@ -4,9 +4,10 @@
   }
 
   .decoration2 {
-    margin-left: 900px;
+   /*  margin-left: 900px;
     position: absolute;
-    top: 1500px;
+    top: 1500px; */
+    display: none;
   }
 
   .banner_container,
@@ -355,12 +356,12 @@
     width: 560px;
   }
 
-  .decoration2 {
+ /*  .decoration2 {
     margin-left: 1300px;
-    position: fixed;
+    position: absolute;
     top: 1650px;
     width: 1700px;
-  }
+  } */
 
   .logoDepzon {
     width: 80%;
