@@ -242,39 +242,39 @@ header {
 
 .discoverMoreBtn {
   display: inline-block;
-  width: 60%; /* Mantieni la larghezza relativa */
-  max-width: 300px; /* Impedisce che il bottone diventi troppo largo */
-  padding: 15px 20px; /* Aumenta l'area cliccabile */
-  margin: 20px auto; /* Centra il bottone */
+  width: 60%;
+  max-width: 300px; 
+  padding: 15px 20px; 
+  margin: 20px auto;
   border: none;
   border-radius: 50px;
-  background-color: var(--secondary-color); /* Colore di sfondo */
-  color: var(--main-color); /* Colore del testo */
+  background-color: var(--secondary-color); 
+  color: var(--main-color); 
   font-size: 1rem;
   font-weight: 700;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  outline: none; /* Rimuove il contorno focus */
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Transizione per gli effetti */
+  outline: none; 
+  transition: background-color 0.3s ease, transform 0.3s ease; 
   z-index: 97;
   position: relative;
 }
 
-/* Hover per il bottone */
+
 .discoverMoreBtn:hover {
-  background-color: var(--hoverBtn-bkg--color); /* Colore durante l'hover */
-  transform: scale(1.05); /* Effetto di ingrandimento */
+  background-color: var(--hoverBtn-bkg--color); 
+  transform: scale(1.05); 
 }
 
-/* Aggiungi un effetto di pressione quando cliccato */
+
 .discoverMoreBtn:active {
-  transform: scale(0.98); /* Leggero effetto di riduzione */
+  transform: scale(0.98); 
 }
 
-/* Opzionale, migliorare l'interazione su touch */
+
 .discoverMoreBtn:focus {
-  outline: none; /* Rimuove l'outline quando il bottone è attivato via tastiera */
+  outline: none; 
 }
 /*------------------------------*/
 
