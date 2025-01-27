@@ -206,13 +206,14 @@
   .hero_section {
     max-width: 100%;
     margin: 6rem auto;
+    
   }
   .hero_section_title {
-    font-size: 2.85srem;
+    font-size: clamp(3.2rem, 5vw, 6rem)
   }
   .hero_section_text {
     font-size: 0.8rem;
-    padding: 20px;
+    padding: 0px;
   }
 
   .discoverMoreBtn {
@@ -220,7 +221,7 @@
     font-size: 16px;
   }
   .hero_img {
-    width: 50%;
+    width: 65%;
   }
 
   .card {
@@ -368,12 +369,14 @@
   }
 
   .hero_section_text {
-    font-size: 0.82rem;
-    margin-top: -8px;
+    font-size: 0.89rem;
+    
   }
 
   .hero_section_title {
-    font-size: 2.5rem;
+    .hero_section_title {
+      font-size: clamp(3rem, 5vw, 6rem)
+    }
   }
 
   .hero_img {
@@ -382,6 +385,10 @@
 
   .hero_content {
     width: 100%;
+  }
+
+  .hero_section {
+    gap: 0.7rem;
   }
 
   .card_content_bottom {

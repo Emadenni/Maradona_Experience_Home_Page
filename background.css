@@ -86,3 +86,34 @@
     left: 25%;
   }
 }
+
+@media (max-width: 768px) {
+ 
+  .decoration1 {
+    top: 80px;
+    width: 800px;
+    height: 800px;
+  }
+
+  .decoration2 {
+    width: 1700px;
+    height: 1700px;
+    top: 1420px;
+    left: 0%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+    .decoration1 {
+        top: 40px;
+        width: 800px;
+        height: 800px;
+      }
+    
+      .decoration2 {
+        width: 1400px;
+        height: 2200px;
+        top: 920px;
+        left: -10%;
+      }
+}
