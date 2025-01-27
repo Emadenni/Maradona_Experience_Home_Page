@@ -335,6 +335,10 @@
    width: 7rem;
   }
 
+  .big_cards_container {
+    margin-bottom: 4rem;
+  }
+
 .big_card p {
   font-size: 12px;
 }
