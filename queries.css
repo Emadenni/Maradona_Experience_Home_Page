@@ -369,14 +369,12 @@
   }
 
   .hero_section_text {
-    font-size: 0.89rem;
-    
+    font-size: 0.82rem;
+    margin-top: -8px;
   }
 
   .hero_section_title {
-    .hero_section_title {
-      font-size: clamp(3rem, 5vw, 6rem)
-    }
+    font-size: 2.5rem;
   }
 
   .hero_img {
@@ -387,9 +385,6 @@
     width: 100%;
   }
 
-  .hero_section {
-    gap: 0.7rem;
-  }
 
   .card_content_bottom {
     margin-left: 3rem;
