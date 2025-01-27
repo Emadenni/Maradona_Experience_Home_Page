@@ -1,0 +1,508 @@
+@media (max-width: 1530px) {
+  .rules_container {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 1380px) {
+  .top_content {
+    margin-bottom: 2.25em;
+  }
+
+  .hero_section {
+    width: 100%;
+    gap: 0px;
+  }
+
+  .hero_img {
+    width: 80%;
+  }
+
+  .discoverMoreBtn {
+    width: 60%;
+    margin: 20px auto;
+    border-radius: 50px;
+  }
+
+  .tournament_container_title {
+    text-align: center;
+  }
+
+  header {
+    padding-left: 2rem;
+  }
+}
+
+@media (max-width: 1274px) {
+  .tournament_container h4 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+ 
+  .discoverRulesBtn2 {
+    width: 100%;
+    margin: auto;
+  }
+
+  .discoverRulesBtn1 {
+    width: 60%;
+  }
+
+  .hero_img {
+    width: 100%;
+  }
+
+  .top_content {
+    gap: 40px;
+  }
+
+  .hero_section_text {
+    font-size: 1rem;
+  }
+
+  .card {
+    flex: 1 1 45%;
+  }
+  .card_content_bottom {
+    margin-left: 4.5rem;
+    padding: 0 1.5rem;
+  }
+  .card_content_bottom h4 {
+    margin: 0 -3.5rem 1.6rem 0;
+  }
+  .card_img {
+    margin-left: 3.5rem;
+  }
+
+  .tournament_container {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0.625rem;
+  }
+
+  .tournament_container h4 {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .tournament_container_desc {
+    margin-left: 0;
+    gap: 2.5rem;
+  }
+
+  .tournament_container_desc_p1,
+  .tournament_container_desc_p2 {
+    width: 90%;
+    font-size: 1.15rem;
+  }
+
+  .banner_container {
+    padding: 4rem 8rem;
+    gap: 4rem;
+  }
+
+  .banner_container_top {
+    max-width: 80%;
+  }
+
+  .banner_container_top p {
+    max-width: 36rem;
+  }
+
+  .banner_container_bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner_container_bottom_desc {
+    width: 100%;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .gold_card_img {
+    max-width: 18rem;
+    margin-top: -1rem;
+  }
+
+  .big_card {
+    flex: 1 1 45%;
+    min-height: 400px;
+  }
+
+  .big_card p {
+    font-size: smaller;
+  }
+
+  .rules_container {
+    padding: 4rem 0 1.75rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .rules_container_right {
+    max-width: 60%;
+  }
+
+  .rules_container h4 {
+    width: 35%;
+    margin-right: 1rem;
+  }
+
+  .rules_container_right_img {
+    width: 90%;
+    margin: 2.5rem 1.25rem 1.25rem 0;
+  }
+
+  .footer_links {
+    gap: 1.25rem;
+  }
+
+  .footer_accepted-payments {
+    gap: 1.5rem;
+  }
+
+  .footer_logo {
+    width: 7rem;
+  }
+
+  .footer_18img {
+    width: 1.8rem;
+  }
+
+  .thinner_text {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding-right: 1rem;
+    
+  }
+
+  .hero_section {
+    max-width: 100%;
+    margin: 6rem auto;
+  }
+  .hero_section_title {
+    font-size: 2.85srem;
+  }
+  .hero_section_text {
+    font-size: 0.8rem;
+    padding: 20px;
+  }
+
+  .discoverMoreBtn {
+    width: 100%;
+    font-size: 16px;
+  }
+  .hero_img {
+    width: 50%;
+  }
+
+  .card {
+    flex: 1 1 80%;
+    margin: 0.5rem 0;
+  }
+  .card_content_bottom {
+    margin-left: 5rem;
+    padding: 0 1rem;
+  }
+  .card_content_bottom h4 {
+    margin: 0 0 1rem 0;
+  }
+  .card_img {
+    margin-left: 1rem;
+  }
+
+  .tournament_container {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .tournament_container h4 {
+    font-size: var(--h4-font-size-small);
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .tournament_container_desc {
+    gap: 1.25rem;
+    align-items: center;
+  }
+
+  .tournament_container_desc_p1,
+  .tournament_container_desc_p2 {
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .banner_container {
+    padding: 3rem 4rem;
+  }
+
+  .banner_container_top {
+    max-width: 90%;
+  }
+
+  .banner_container_top p {
+    font-size: 0.95rem;
+    max-width: 30rem;
+  }
+
+  .banner_container_bottom_desc {
+    font-size: 0.9rem;
+    line-height: 1.25;
+  }
+
+  .gold_card_img {
+    max-width: 16rem;
+  }
+
+  .big_card {
+    flex: 1 1 100%;
+    min-height: 420px;
+    font-size: larger;
+  }
+
+  .big_card {
+    max-width: 38rem;
+  }
+
+  .rules_container {
+    padding: 3rem 0 1.5rem 1.25rem;
+  }
+
+  .rules_container_right {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .rules_container h4 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .rules_container_right_up,
+  .rules_container_right_down {
+    margin-left: 0;
+    width: 100%;
+    font-size: 1.3rem;
+  }
+
+  .rules_container_right_img {
+    width: 100%;
+    max-width: none;
+    margin: auto;
+  }
+
+  footer {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .footer_links {
+    gap: 1.5rem;
+  }
+
+  .footer_accepted-payments {
+    gap: 1.5rem;
+  }
+
+  .footer_logo {
+    width: 6.5rem;
+  }
+
+  .footer_18img {
+    width: 1.5rem;
+  }
+
+  .thinner_text {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .logoDepzon {
+    width: 80%;
+  }
+
+  .signinBtn {
+   width: 7rem;
+  }
+
+  .big_cards_container {
+    margin-bottom: 4rem;
+  }
+
+.big_card p {
+  font-size: 12px;
+}
+
+  .big_card_img {
+    width: 70%;
+  }
+
+  .big_card_img2 {
+    margin-right: 40px;
+  }
+
+  .hero_section_text {
+    font-size: 0.82rem;
+    margin-top: -8px;
+  }
+
+  .hero_section_title {
+    font-size: 2.5rem;
+  }
+
+  .hero_img {
+    width: 70%;
+  }
+
+  .hero_content {
+    width: 100%;
+  }
+
+  .card_content_bottom {
+    margin-left: 3rem;
+    padding: 0 0.5rem;
+  }
+  .card_content_bottom h4 {
+    font-size: var(--h4-font-size-small);
+    margin: 0 0 1rem 0;
+  }
+  .card_img {
+    margin-left: 0rem;
+    width: 50%;
+  }
+
+  .tournament_container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .tournament_container h4 {
+    font-size: var(--h4-font-size-medium);
+    margin-bottom: 3rem;
+  }
+
+  .tournament_container_desc {
+    gap: 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .tournament_container_desc_p1,
+  .tournament_container_desc_p2 {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .discoverRulesBtn1 {
+    width: 84%;
+  }
+
+  .discoverRulesBtn2 {
+    font-size: 12px;
+  }
+
+
+
+ 
+
+  .banner_container {
+    padding: 2rem 2rem;
+    gap: 3rem;
+  }
+
+  .banner_container_top {
+    max-width: 100%;
+  }
+
+  .banner_container_top h4 {
+    font-size: var(--h4-font-size-small);
+  }
+
+  .banner_container_top p {
+    font-size: 0.85rem;
+    max-width: 100%;
+  }
+
+  .banner_container_bottom_desc {
+    font-size: 0.85rem;
+    gap: 1.6rem;
+  }
+
+  .gold_card_img {
+    max-width: 14rem;
+  }
+
+  .big_card {
+    flex: 1 1 100%;
+    min-height: 300px;
+    padding: 0 0.2rem;
+  }
+
+  .big_card p {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .rules_container {
+    padding: 2.5rem 0 1.25rem 1rem;
+  }
+
+  .rules_container h4 {
+    width: 100%;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .rules_container_right_up,
+  .rules_container_right_down {
+    font-size: 1.2rem;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .rules_container_right_img {
+    width: 100%;
+    height: auto;
+  }
+
+  footer {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .footer_links {
+    gap: 1rem;
+  }
+
+  .footer_accepted-payments {
+    gap: 1rem;
+  }
+
+  .footer_logo {
+    width: 5rem;
+  }
+
+  .footer_18img {
+    width: 1.2rem;
+  }
+
+  .thinner_text {
+    font-size: 0.75rem;
+  }
+
+  .rules_container {
+    flex-direction: column;
+  }
+}

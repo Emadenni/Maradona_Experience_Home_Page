@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maradona Experience</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+    <link rel="stylesheet" href="background.css" />
   </head>
 
   <body>
-    <div id="viewport-size"></div>
+    <!--  <div id="viewport-size"></div> -->
 
-    <div class="background">
-      <img src="./images/bg_gradient.png" alt="background" class="decoration decoration1" />
-      <img src="./images/bg_gradient.png" alt="background" class="decoration decoration2" />
+    <div class="background-container">
+      <div class="background">
+        <img src="./images/bg_gradient.png" alt="background" class="decoration decoration1" />
+        <img src="./images/bg_gradient.png" alt="background" class="decoration decoration2" />
+      </div>
     </div>
 
     <div class="container">
@@ -24,27 +28,24 @@
             </a>
           </aside>
           <nav>
-            <a class="button hoverBtn signinBtn">Accedi </a>
+            <a class="button hoverBtn signinBtn">Accedi</a>
           </nav>
         </header>
 
         <section class="hero_section">
-          <div class="overflow_box">
+          <div class="hero_content">
             <img src="./images/maradona_soccerball.png" alt="maradona_soccerball" class="hero_img" />
-            <h1 class="hero_section_title">
-              Maradona <br />
-              Experience
-            </h1>
+            <h1 class="hero_section_title">Maradona Experience</h1>
           </div>
           <p class="hero_section_text">
             Partecipa ai giochi a tema Diego Armando <br />
             Maradona e vinci fantastici premi
           </p>
-          <a href="#anchor" class="button hoverBtn discoverMoreBtn">scopri </a>
+          <a href="#anchor" class="discoverMoreBtn">Scopri</a>
         </section>
       </div>
 
-      <main class="main_content" id="anchor">
+      <main class="main_content">
         <section class="cards_container">
           <article class="card card1">
             <a href="https://maradonaexperience.depzon.com/" class="card_link">
@@ -98,7 +99,7 @@
           </article>
         </section>
 
-        <section class="tournament_container">
+        <section class="tournament_container" id="anchor">
           <h4 class="tournament_container_title">I tornei</h4>
           <article class="tournament_container_desc">
             <p class="tournament_container_desc_p1">
@@ -165,7 +166,8 @@
             <article class="big_card big_card2">
               <p>
                 Possiedi già una delle due card? Premi il pulsante e registrala subito sul sito di Maradona Soccerball.
-                Riceverai una email con tutte le istruzioni.
+                Riceverai una email <br />
+                con tutte le istruzioni.
               </p>
               <div class="big_card_img_wrapper">
                 <img
@@ -242,12 +244,12 @@
         <p class="thinner_text">Depzon</p>
         <p class="thinner_text">Accettiamo solo clienti di età superiore ai 18 anni.</p>
 
-        <img src="./images/18+.png" alt="18+" />
+        <img src="./images/18+.png" alt="18+" class="footer_18img" />
 
         <p class="thinner_text"><span class="purple">&copy;</span> Depzon. Tutti i diritti riservati.</p>
       </footer>
     </div>
-    <script>
+    <!--  <script>
       function updateViewportSize() {
         const viewportSize = `${window.innerWidth}px x ${window.innerHeight}px`;
         document.getElementById("viewport-size").textContent = viewportSize;
@@ -255,6 +257,6 @@
 
       window.addEventListener("resize", updateViewportSize);
       updateViewportSize();
-    </script>
+    </script> -->
   </body>
 </html>
