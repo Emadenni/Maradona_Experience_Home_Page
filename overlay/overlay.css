@@ -33,9 +33,11 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-  width: 30%;
+  min-width: 30%;
+  height: auto;
+  max-width: 80%;
   background-color: #151316;
-  padding: 20px;
+  padding: 40px 20px;
   border-radius: 20px;
   font-style: italic;
 }
@@ -49,7 +51,8 @@
 }
 
 .overlay_img {
-  max-width: 200px;
+  min-width: 20px;
+  max-width: 300px;
 }
 
 .overlay-content {
@@ -73,6 +76,7 @@
   text-align: center;
   margin-bottom: 1rem;
   width: 100%;
+  filter: contrast(250%);
 }
 
 .name {
@@ -115,6 +119,8 @@
   color: #007bff;
   text-decoration: none;
   font-size: 16px;
+  width: 75%;
+  text-align: center;
 }
 
 .continue-link:hover {
@@ -142,7 +148,7 @@
   transform: scaleY(1);
 }
 
-/* Form styling */
+
 .form-row {
   display: flex;
   gap: 20px;
@@ -154,12 +160,47 @@
   flex: 1;
 }
 
+.username-password-group {
+  margin: auto;
+  background-color: var(--hoverBtn-bkg--color);
+  border-radius: 10px;
+  padding:30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.password-container {
+  display: flex; 
+  align-items: center; 
+  position: relative; 
+}
+
+.password-container input {
+  flex-grow: 1; 
+  padding-right: 40px; 
+}
+
+.password-container button {
+  position: absolute;
+  right: 10px; 
+  background: none;
+  border: none; 
+  cursor: pointer; 
+}
+
+.password-container i {
+  font-size: 18px; 
+}
+
+
 input {
   width: 100%;
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin-bottom: 15px;
 }
 
 label {
@@ -174,8 +215,8 @@ label {
 
 input:focus + label,
 input:not(:placeholder-shown) + label {
-  top: -10px;
-  font-size: 12px;
+  top: -22px;
+  font-size: 14px;
   color: #007bff;
 }
 

@@ -1,23 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("overlay/overlay.html")
-    .then((response) => response.text())
-    .then((data) => {
-      document.getElementById("overlay-container").innerHTML = data;
+  document.body.classList.add("blur");
+  
 
       const overlay = document.querySelector(".overlay");
       const closeButton = document.querySelector(".close-overlay");
       const toggleRegisterButton = document.querySelector("#toggle-register");
 
-      overlay.classList.remove("hidden");
+      
+     
 
-      // Listener per chiudere l'overlay
+      
       if (closeButton) {
         closeButton.addEventListener("click", () => {
           overlay.classList.add("hidden");
         });
       }
 
-      // Listener per aprire/chiudere il form di registrazione
+
       if (toggleRegisterButton) {
         toggleRegisterButton.addEventListener("click", () => {
           const form = document.getElementById("registration-form");
@@ -40,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch((error) =>
       console.error("Errore nel caricamento dell'overlay:", error)
     );
-});
+
 
 function togglePassword() {
   const passwordInput = document.getElementById("password");
