@@ -8,82 +8,112 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="queries.css" />
     <link rel="stylesheet" href="background.css" />
+    <link rel="stylesheet" href="loginForm/loginForm.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   </head>
 
   <body>
-    
     <div id="overlay-container">
-      
-<div class="overlay">
-  <div class="overlay_header">
-    <div class="overlay_header_img"></div>
-    <img src="../images/Depzon.png" alt="logo-depzon" class="overlay_img" />
-    <p>Benvenuto, <span> Diego</span></p>
-  </div>
-  <div class="overlay-content">
-    <button id="toggle-register" class="register-button button">Registrati <span class="arrow">▼</span></button>
-    <div id="registration-form" class="hidden">
-      <form>
-        <div class="form-row">
-          <div class="form-group">
-            <input type="text" id="first-name" placeholder=" " readonly />
-            <label for="first-name">Nome</label>
-          </div>
-          <div class="form-group">
-            <input type="text" id="last-name" placeholder=" " readonly />
-            <label for="last-name">Cognome</label>
-          </div>
+      <div class="overlay">
+        <div class="overlay_header">
+          <div class="overlay_header_img"></div>
+          <img src="../images/Depzon.png" alt="logo-depzon" class="overlay_img" />
+          <p>Benvenuto, <span> Diego</span></p>
         </div>
-        <div class="form-row">
-          <div class="form-group">
-            <input type="text" id="email" placeholder=" " readonly />
-            <label for="email">Email</label>
+        <div class="overlay-content">
+          <button id="toggle-register" class="register-button button">Registrati <span class="arrow">▼</span></button>
+          <div id="registration-form" class="hidden">
+            <form>
+              <div class="form-row">
+                <div class="form-group">
+                  <input type="text" id="first-name" placeholder=" " readonly />
+                  <label for="first-name">Nome</label>
+                </div>
+                <div class="form-group">
+                  <input type="text" id="last-name" placeholder=" " readonly />
+                  <label for="last-name">Cognome</label>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <input type="text" id="email" placeholder=" " readonly />
+                  <label for="email">Email</label>
+                </div>
+                <div class="form-group">
+                  <input type="text" id="phone" placeholder=" " readonly />
+                  <label for="phone">Telefono</label>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <input type="text" id="card-type" placeholder=" " readonly />
+                  <label for="card-type">Tipo di Carta</label>
+                </div>
+                <div class="form-group">
+                  <input type="text" id="nationality" placeholder=" " readonly />
+                  <label for="nationality">Nazionalità</label>
+                </div>
+              </div>
+              <div class="username-password-group">
+                <div class="form-group">
+                  <input type="text" id="username" placeholder=" " />
+                  <label for="username">Username</label>
+                </div>
+                <div class="form-group password-container">
+                  <input type="password" id="password" placeholder=" " />
+                  <label for="password">Password</label>
+                  <button class="password-toggle" type="button" onclick="togglePassword()">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+              <button type="submit" class="submit-button">Submit</button>
+            </form>
           </div>
-          <div class="form-group">
-            <input type="text" id="phone" placeholder=" " readonly />
-            <label for="phone">Telefono</label>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <input type="text" id="card-type" placeholder=" " readonly />
-            <label for="card-type">Tipo di Carta</label>
-          </div>
-          <div class="form-group">
-            <input type="text" id="nationality" placeholder=" " readonly />
-            <label for="nationality">Nazionalità</label>
-          </div>
-        </div>
-        <div class="username-password-group">
-          <div class="form-group">
-            <input type="text" id="username" placeholder=" " />
-            <label for="username">Username</label>
-          </div>
-          <div class="form-group password-container">
-            <input type="password" id="password" placeholder=" " />
-            <label for="password">Password</label>
-            <button class="password-toggle" type="button" onclick="togglePassword()">
-              <i class="fas fa-eye"></i>
-            </button>
-          </div>
-        </div>
-        <button type="submit" class="submit-button">Registrati</button>
-      </form>
-    </div>
 
-    <a href="/index.html" class="continue-link"
-      >Se sei registrato, clicca su <span class="continue">continua</span> e poi Accedi in alto a destra</a
-    >
-  </div>
-</div>
-
+          <a id="continue-link" class="continue-link"
+            >Se sei registrato, clicca su <span class="continue">continua</span> e poi Accedi in alto a destra</a
+          >
+        </div>
+      </div>
     </div>
 
     <div class="background-container">
       <div class="background">
         <img src="./images/bg_gradient.png" alt="background" class="decoration decoration1" />
         <img src="./images/bg_gradient.png" alt="background" class="decoration decoration2" />
+      </div>
+    </div>
+
+    <div class="login-overlay">
+      <div class="login-form-container">
+        <div class="login-form-header">
+          <h2>Accedi</h2>
+        </div>
+        <form id="login-form">
+          <div class="form-group">
+            <input 
+              type="text" 
+              id="login-username" 
+              class="login-form-input" 
+              placeholder=" " 
+              required
+            />
+            <label for="login-username">Username</label>
+          </div>
+          <div class="form-group password-container">
+            <input 
+              type="password" 
+              id="login-password" 
+              class="login-form-input" 
+              placeholder=" " 
+              required
+            />
+            <label for="login-password">Password</label>
+          </div>
+          <button type="submit" class="login-submit-button">Accedi</button>
+          <a href="#" class="login-forgot-password-link">Hai dimenticato la password?</a>
+        </form>
       </div>
     </div>
 
@@ -96,7 +126,7 @@
             </a>
           </aside>
           <nav>
-            <a class="button hoverBtn signinBtn">Accedi</a>
+            <a class="button hoverBtn signinBtn" id="loginBtn">Accedi</a>
           </nav>
         </header>
 
@@ -318,6 +348,6 @@
       </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

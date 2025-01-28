@@ -40,10 +40,14 @@
   padding: 40px 20px;
   border-radius: 20px;
   font-style: italic;
+  position: relative;
 }
 
 .overlay_header p {
   color: var(--secondary-color);
+  position: absolute;
+  top: 108px;
+  right: 116px;
 }
 
 .overlay_header span {
@@ -60,7 +64,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(25, 25, 25);
+  background-color: white;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -85,14 +89,14 @@
 }
 
 .continue {
-  color: #ffffff;
+  color: #198b56;
 }
 
 .register-button {
+  background-color: #50d66b !important;
   margin: 20px;
   padding: 10px 20px;
   width: 80%;
-  border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 18px;
@@ -100,7 +104,7 @@
 }
 
 .register-button:hover {
-  background-color: var(--hoverCards-bkg--color);
+  background-color: var(--hoverCards-bkg--color) !important;
   color: white;
 }
 
@@ -110,7 +114,7 @@
   margin-left: 10px;
   transform: rotate(0deg);
   transition: transform 0.3s ease;
-  color: var(--desc-font--color);
+  color: var(--secondary-color);
 }
 
 .continue-link {
@@ -121,6 +125,7 @@
   font-size: 16px;
   width: 75%;
   text-align: center;
+  cursor: pointer;
 }
 
 .continue-link:hover {
@@ -148,11 +153,10 @@
   transform: scaleY(1);
 }
 
-
 .form-row {
   display: flex;
   gap: 20px;
-  margin-bottom: 15px;
+ 
 }
 
 .form-group {
@@ -161,38 +165,54 @@
 }
 
 .username-password-group {
-  margin: auto;
-  background-color: var(--hoverBtn-bkg--color);
-  border-radius: 10px;
-  padding:30px 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 100%;
+}
+
+
+.username-password-group input {
+  margin: auto;
+  background-color: #50d66b;
+  border-radius: 10px;
+  padding: 4px 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 300px;
+  max-width: 360px;
 }
 
 .password-container {
-  display: flex; 
-  align-items: center; 
-  position: relative; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .password-container input {
-  flex-grow: 1; 
-  padding-right: 40px; 
+  flex-grow: 1;
+  padding-right: 40px;
+  
 }
+
 
 .password-container button {
   position: absolute;
-  right: 10px; 
+  right: 10px;
   background: none;
-  border: none; 
-  cursor: pointer; 
+  border: none;
+  cursor: pointer;
 }
 
 .password-container i {
-  font-size: 18px; 
+  font-size: 18px;
 }
 
+.username-container {
+  margin-top: 20px;
+}
 
 input {
   width: 100%;
@@ -201,6 +221,8 @@ input {
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-bottom: 15px;
+  background-color: #cedced;
+  
 }
 
 label {
@@ -208,7 +230,7 @@ label {
   top: 10px;
   left: 15px;
   font-size: 14px;
-  color: #666;
+  color: #022007;
   pointer-events: none;
   transition: 0.2s ease all;
 }
