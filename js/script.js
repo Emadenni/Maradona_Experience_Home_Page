@@ -1,79 +1,74 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const overlay = document.querySelector(".overlay");
-  const closeButton = document.querySelector(".close-overlay");
-  const toggleRegisterButton = document.querySelector("#toggle-register");
+  const loginBtn = document.getElementById("loginBtn");
+  const loginOverlay = document.querySelector(".login-overlay");
+  const registerLink = document.getElementById("register-link");
+  const registerOverlay = document.querySelector(".overlay");
+  const toggleRegisterButton = document.getElementById("toggle-register");
   const continueLink = document.getElementById("continue-link");
-  let isOverlayClosed = false;
+  const registrationForm = document.getElementById("registration-form");
+  const arrow = document.querySelector(".register-button .arrow");
+
+  const showLoginOverlay = () => {
+    if (loginOverlay) {
+      loginOverlay.style.display = "block";
+    }
+  };
+
+  const hideLoginOverlay = () => {
+    if (loginOverlay) {
+      loginOverlay.style.display = "none";
+    }
+  };
+
+  const showRegisterOverlayHideLogin = () => {
+    if (registerOverlay && loginOverlay) {
+      registerOverlay.classList.remove("hidden");
+      loginOverlay.style.display = "none";
+    }
+  };
+
+  const hideRegisterOverlay = () => {
+    if (registerOverlay) {
+      registerOverlay.classList.add("hidden");
+    }
+  };
 
   if (continueLink) {
     continueLink.addEventListener("click", (event) => {
       event.preventDefault();
-
-      overlay.classList.add("hidden");
-      isOverlayClosed = true;
+      hideRegisterOverlay();
     });
   }
 
-  if (closeButton) {
-    closeButton.addEventListener("click", () => {
-      overlay.classList.add("hidden");
+  if (loginBtn) {
+    loginBtn.addEventListener("click", showLoginOverlay);
+  }
 
-      isOverlayClosed = true;
+  if (registerLink) {
+    registerLink.addEventListener("click", (event) => {
+      event.preventDefault();
+      showRegisterOverlayHideLogin();
     });
   }
 
   if (toggleRegisterButton) {
     toggleRegisterButton.addEventListener("click", () => {
-      const form = document.getElementById("registration-form");
-      const arrow = document.querySelector(".register-button .arrow");
+      if (registrationForm) {
+        registrationForm.classList.toggle("active");
+        registrationForm.classList.toggle("hidden");
 
-      if (form) {
-        form.classList.toggle("active");
-        form.classList.toggle("hidden");
-
-        if (form.classList.contains("active")) {
-          arrow.style.transform = "rotate(180deg)";
-        } else {
-          arrow.style.transform = "rotate(0deg)";
+        if (arrow) {
+          arrow.style.transform = registrationForm.classList.contains("active")
+            ? "rotate(180deg)"
+            : "rotate(0deg)";
         }
       }
     });
   }
 
-  if (isOverlayClosed) {
-    overlay.classList.add("hidden");
+  if (loginOverlay) {
+    loginOverlay.addEventListener("click", (event) => {
+      if (event.target === loginOverlay) hideLoginOverlay();
+    });
   }
-});
-
-
-function togglePassword() {
-  const passwordInput = document.getElementById('password');
-  const passwordToggle = document.querySelector('.password-toggle i');
-
-  if (passwordInput.type === 'password') {
-    passwordInput.type = 'text';
-    passwordToggle.classList.remove('fa-eye');
-    passwordToggle.classList.add('fa-eye-slash');
-  } else {
-    passwordInput.type = 'password';
-    passwordToggle.classList.remove('fa-eye-slash');
-    passwordToggle.classList.add('fa-eye');
-  }
-}
-
-const loginBtn = document.getElementById("loginBtn");
-const loginOverlay = document.querySelector(".login-overlay");
-
-function showLoginOverlay() {
-  loginOverlay.style.display = "block";
-}
-
-function hideLoginOverlay() {
-  loginOverlay.style.display = "none";
-}
-
-loginBtn.addEventListener("click", showLoginOverlay);
-
-loginOverlay.addEventListener("click", (event) => {
-  if (event.target === loginOverlay) hideLoginOverlay();
 });

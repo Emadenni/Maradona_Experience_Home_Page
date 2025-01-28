@@ -40,14 +40,12 @@
   padding: 40px 20px;
   border-radius: 20px;
   font-style: italic;
-  position: relative;
+
 }
 
 .overlay_header p {
   color: var(--secondary-color);
-  position: absolute;
-  top: 108px;
-  right: 116px;
+  
 }
 
 .overlay_header span {
@@ -255,4 +253,31 @@ input:not(:placeholder-shown) + label {
 
 .submit-button:hover {
   background-color: #218838;
+}
+
+
+@media (max-width: 1430px) {
+ .overlay_header {
+  margin-top: 150px;
+  padding: 20px;
+
+ }
+
+ .overlay_img {
+  max-width: 130px;
+ }
+
+ #registration-form {
+ width: 90%;
+ display: flex;
+ flex-wrap: wrap;
+
+}
+
+.overlay-content {
+  
+}
+
+
+
 }

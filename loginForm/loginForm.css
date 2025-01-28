@@ -98,3 +98,10 @@ input:not(:placeholder-shown) + label {
     margin: 10px auto;
 }
 
+.login-password-toggle {
+  margin-bottom: 16px;
+}
+
+.register-link {
+  font-size: 12px;
+}
