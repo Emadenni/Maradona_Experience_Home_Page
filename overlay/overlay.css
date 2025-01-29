@@ -24,6 +24,7 @@
   width: 100%;
   height: 100%;
   background-color: rgba(165, 167, 164, 0.4);
+
   z-index: 1000;
   backdrop-filter: blur(10px);
   padding-bottom: 150px;
@@ -43,7 +44,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
-  margin-top: 50px;
+  margin-top: 20px;
   min-width: 30%;
   height: auto;
   max-width: 80%;
@@ -64,15 +65,26 @@
   color: var(--desc-font--color);
 }
 
-.overlay-content_title {
-  font-size: 14px;
+.overlay-content_title_container h3 {
+  font-size: 20px;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  color: #007bff;
 }
 
 .overlay-content_title span {
   font-size: 28px;
   color: #007bff;
   letter-spacing: 1.1;
+}
+
+.overlay-content_title_container {
+  width: 100%;
+
+  padding: 10px;
+}
+
+.logo-maradona-experience {
+  width: 180px;
 }
 
 .overlay_img {
@@ -85,7 +97,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color: white;
+  background-color: #151316;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -107,15 +119,16 @@
 
 .name {
   color: var(--desc-font--color);
-  font-size: 26px;
+  font-size: 28px;
 }
 
 .continue {
-  color: #198b56;
+  color: var(--secondary-color);
 }
 
 .register-button {
-  background-color: #50d66b !important;
+  background-color: #00b300 !important;
+  color: white !important;
   margin: 20px;
   padding: 10px 20px;
   width: 80%;
@@ -123,6 +136,7 @@
   cursor: pointer;
   font-size: 18px;
   transition: background-color 0.3s ease;
+  letter-spacing: 1px;
 }
 
 .register-button:hover {
@@ -186,21 +200,22 @@
   flex: 1;
 }
 
-
-
 .username-password-group {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 16px;
   width: 100%;
   margin-top: 10px;
 }
 
 .username-password-group input {
- margin: 6px auto 2px auto; 
-  background-color: #50d66b;
+  margin: 6px auto 2px auto;
+  font-size: 20px;
+  background-color: #00b300;
+  color: #0d1a1a;
+  font-weight: 400;
   border-radius: 10px;
-  padding: 16px 30px 20px;
+  padding: 8px 15px ;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -240,50 +255,51 @@
   margin-top: 20px;
 }
 
- input {
+input {
   width: 100%;
-  padding: 12px;
+  padding: 8px 15px;
   font-size: 16px;
-  border: 1px solid #ccc;
+
   border-radius: 5px;
   margin-bottom: 15px;
   background-color: #cedced;
-
 }
 
 .form-row .form-group input {
-  background-color: #d2cdd4;
+  background-color: #cdd4d4;
+  border: 2px solid #007bff;
 }
 
 .form-row-mailTel {
+  height: auto;
   display: flex;
-  gap: 10px; 
+  gap: 10px;
   width: 100%;
 }
 
 .form-row-mailTel .form-group {
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
 .form-row-mailTel .form-group:first-child {
-  flex-grow: 2; 
+  flex-grow: 2;
 }
 
 .form-row-mailTel .form-group input {
-  width: 100%; 
-  height: 44px;
-  padding: 18px;
+  width: 100%;
+  
+  padding: 8px 15px;
   font-size: 16px;
   box-sizing: border-box;
 }
-
 
 label {
   position: absolute;
   top: 10px;
   left: 15px;
   font-size: 14px;
-  color: #022007;
+  color: #134713;
+  font-weight: 500;
   pointer-events: none;
   transition: 0.2s ease all;
 }
@@ -292,7 +308,7 @@ label {
 #username:not(:placeholder-shown) + label,
 #password:focus + label,
 #password:not(:placeholder-shown) + label {
-  top: -22px;
+  top: -30px;
   font-size: 14px;
   color: #007bff;
 }
@@ -300,12 +316,13 @@ label {
 .submit-button {
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #28a745;
+  background-color: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  letter-spacing: 1px;
 }
 
 .submit-button:hover {
@@ -322,25 +339,24 @@ label {
   .form-row-mailTel {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Spazio tra i campi */
+    gap: 10px;
     width: 100%;
   }
-  
+
   .form-row-mailTel .form-group {
-    flex-grow: 1; /* Imposta la base uguale */
+    flex-grow: 1;
   }
-  
+
   .form-row-mailTel .form-group:first-child {
-    flex-grow: 2; /* L'email occuperà più spazio */
+    flex-grow: 2;
   }
-  
+
   .form-row-mailTel .form-group input {
-    width: 100%; /* L'input si adatta al contenitore */
+    width: 100%;
     padding: 8px;
     font-size: 16px;
     box-sizing: border-box;
   }
-  
 }
 
 @media (max-width: 470px) {
@@ -355,7 +371,6 @@ label {
   .continue-link {
     font-size: smaller;
     line-height: 1;
-    
   }
 
   @media (max-width: 470px) {
@@ -379,7 +394,6 @@ label {
   }
 
   #username {
-   
     padding: 5px auto;
   }
 }

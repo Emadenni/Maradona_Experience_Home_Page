@@ -20,13 +20,14 @@
           <img src="./images/Depzon.png" alt="logo-depzon" class="overlay_img" />
           <p>Benvenuto, <span>Diego</span></p>
         </div>
-    
+
         <div class="overlay-content">
-          <h3 class="overlay-content_title" >Accedi per scoprire <br> <span>Maradona Experience</span></h3>
-          <button id="toggle-register" class="register-button button">
-            Registrati <span class="arrow">▼</span>
-          </button>
-    
+          <div class="overlay-content_title_container">
+            <h3  >Accedi per scoprire</h3>
+            <img src="./images/logoExperience.png" alt="logo-maradona-experience" class="logo-maradona-experience">
+          </div>
+          <button id="toggle-register" class="register-button button">Registrati <span class="arrow">▼</span></button>
+
           <div id="registration-form" class="hidden">
             <form>
               <div class="form-row">
@@ -39,7 +40,7 @@
                   <label for="last-name">Armando</label>
                 </div>
               </div>
-    
+
               <div class="form-row form-row-mailTel">
                 <div class="form-group">
                   <input type="text" id="email" placeholder=" " readonly />
@@ -50,8 +51,7 @@
                   <label for="phone">123123212</label>
                 </div>
               </div>
-              
-    
+
               <div class="form-row">
                 <div class="form-group">
                   <input type="text" id="card-type" placeholder=" " readonly />
@@ -62,7 +62,7 @@
                   <label for="nationality">Argentina</label>
                 </div>
               </div>
-    
+
               <div class="username-password-group">
                 <div class="form-group">
                   <input type="text" id="username" placeholder=" " />
@@ -76,18 +76,18 @@
                   </button>
                 </div>
               </div>
-    
+
               <button type="submit" class="submit-button">Submit</button>
             </form>
           </div>
-    
+
           <a id="continue-link" class="continue-link">
             Se sei già registrato, clicca su <span class="continue">continua</span> e poi Accedi in alto a destra
           </a>
         </div>
       </div>
     </div>
-    
+
     <div class="background-container">
       <div class="background">
         <img src="./images/bg_gradient.png" alt="background" class="decoration decoration1" />
@@ -102,38 +102,26 @@
         </div>
         <form id="login-form">
           <div class="form-group">
-            <input 
-              type="text" 
-              id="login-username" 
-              class="login-form-input" 
-              placeholder=" " 
-              required 
-            />
+            <input type="text" id="login-username" class="login-form-input" placeholder=" " required />
             <label for="login-username">Username</label>
           </div>
-    
+
           <div class="form-group password-container">
-            <input 
-              type="password" 
-              id="login-password" 
-              class="login-form-input" 
-              placeholder=" " 
-              required 
-            />
+            <input type="password" id="login-password" class="login-form-input" placeholder=" " required />
             <label for="login-password">Password</label>
             <button class="login-password-toggle" type="button" onclick="toggleLoginPassword()">
               <i class="fas fa-eye"></i>
             </button>
           </div>
-    
+
           <button type="submit" class="login-submit-button">Accedi</button>
-          
+
           <a href="#" class="login-forgot-password-link">Hai dimenticato la password?</a>
           <a href="#" id="register-link" class="register-link">Se non sei ancora registrato, clicca qui</a>
         </form>
       </div>
     </div>
-    
+
     <div class="container">
       <div class="top_content">
         <header>
