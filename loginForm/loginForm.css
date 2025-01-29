@@ -105,3 +105,21 @@ input:not(:placeholder-shown) + label {
 .register-link {
   font-size: 12px;
 }
+
+
+
+@media (max-width: 465px) {
+  .login-form-container {
+    width: 350px;
+  }
+}
+
+@media (max-width: 390px) {
+  .login-form-container {
+    width: 320px;
+  }
+
+  .register-link {
+    width: 85%;
+  }
+}

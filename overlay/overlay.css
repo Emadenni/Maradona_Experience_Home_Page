@@ -13,6 +13,7 @@
 }
 
 .overlay {
+  overflow-y: auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -25,6 +26,14 @@
   background-color: rgba(165, 167, 164, 0.4);
   z-index: 1000;
   backdrop-filter: blur(10px);
+  padding-bottom: 150px;
+  padding-top: 20px;
+  max-height: 100vh;
+  transition: justify-content 0.3s ease;
+}
+
+.overlay.active {
+  justify-content: space-between; 
 }
 
 .overlay_header {
@@ -32,7 +41,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  margin-top: 50px;
   min-width: 30%;
   height: auto;
   max-width: 80%;
@@ -40,6 +50,8 @@
   padding: 40px 20px;
   border-radius: 20px;
   font-style: italic;
+  max-width: 500px;
+  width: 90%;
 }
 
 .overlay_header p {
@@ -51,7 +63,7 @@
 }
 
 .overlay_img {
-  min-width: 20px;
+  min-width: 180px;
   max-width: 300px;
 }
 
@@ -248,23 +260,33 @@ input:not(:placeholder-shown) + label {
   background-color: #218838;
 }
 
-@media (max-width: 1430px) {
+@media (max-width: 1400px) {
   .overlay_header {
-    margin-top: 150px;
-    padding: 20px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 470px) {
+  .overlay_header {
+    height: 100px;
   }
 
   .overlay_img {
-    max-width: 130px;
+    width: 50%;
   }
 
-  #registration-form {
-    width: 90%;
-    display: flex;
-    flex-wrap: wrap;
+  .continue-link {
+    font-size: smaller;
+    line-height: 1;
+  }
+}
+
+@media (max-width: 358px) {
+  .form-group {
+    max-width: 50%;
   }
 
-  .overlay-content {
-    width: 1000px;
+  #username {
+    margin-left: -76px;
   }
 }
