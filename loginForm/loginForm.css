@@ -31,6 +31,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  gap: 8px;
 }
 
 .login-form-header h2 {
@@ -55,6 +56,7 @@
   width: 100%;
   max-width: 350px;
   position: relative;
+  
 }
 
 .password-container {
@@ -63,6 +65,7 @@
   position: relative;
   width: 100%;
   max-width: 350px;
+  
 }
 
 .login-password-toggle {
