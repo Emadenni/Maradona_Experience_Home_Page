@@ -52,14 +52,13 @@
   background-color: #cedced;
 }
 
-.form-group {
+#login-form .form-group {
   width: 100%;
   max-width: 350px;
   position: relative;
   
 }
-
-.password-container {
+#login-form .password-container {
   display: flex;
   align-items: center;
   position: relative;

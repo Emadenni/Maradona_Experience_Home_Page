@@ -190,10 +190,11 @@
   flex-direction: column;
   gap: 10px;
   width: 100%;
+  margin-top: 10px;
 }
 
 .username-password-group input {
-  margin: auto;
+ margin: 6px auto 2px auto; 
   background-color: #50d66b;
   border-radius: 10px;
   padding: 16px 30px 20px;
@@ -201,11 +202,11 @@
   flex-direction: column;
   gap: 10px;
   min-width: 300px;
-  max-width: 360px;
+  max-width: 600px;
 }
 
 .username-password-group label {
-  padding-top: 8px;
+  padding-top: 14px;
 }
 
 .password-container {
@@ -236,7 +237,7 @@
   margin-top: 20px;
 }
 
-input {
+ input {
   width: 100%;
   padding: 12px;
   font-size: 16px;
@@ -245,6 +246,8 @@ input {
   margin-bottom: 15px;
   background-color: #cedced;
 }
+
+
 
 label {
   position: absolute;
@@ -320,7 +323,7 @@ input:not(:placeholder-shown) + label {
   }
 
   #username {
-    margin-left: -30px;
+   
     padding: 5px auto;
   }
 }
