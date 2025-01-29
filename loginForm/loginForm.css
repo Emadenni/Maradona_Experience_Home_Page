@@ -17,7 +17,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
+    width: 100%;  
+    max-width: 400px;
     background-color:white;
     padding: 20px;
     border-radius: 10px;
@@ -56,6 +57,10 @@
     border-radius: 5px;
     margin-bottom: 15px;
     background-color: #cedced;
+}
+
+.login-form-input-username {
+  width: 100%;
 }
 
 .login-submit-button {
@@ -121,5 +126,20 @@ input:not(:placeholder-shown) + label {
 
   .register-link {
     width: 85%;
+  }
+}
+
+@media (max-width: 360px) {
+  .login-form-container {
+    padding: 0;
+  }
+
+  .register-link {
+    width: 85%;
+  }
+
+  login-form-input-username {
+    min-width: 100%;  
+    max-width: 400px;
   }
 }
