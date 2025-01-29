@@ -62,6 +62,16 @@
   color: var(--desc-font--color);
 }
 
+.overlay-content_title {
+  font-size: 14px;
+}
+
+.overlay-content_title span {
+  font-size: 28px;
+  color: #007bff;
+  letter-spacing: 1.1;
+}
+
 .overlay_img {
   min-width: 180px;
   max-width: 300px;

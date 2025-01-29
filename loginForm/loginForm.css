@@ -1,62 +1,57 @@
-
 .login-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); 
-    backdrop-filter: blur(8px); 
-    z-index: 999; 
-    display: none; 
-  }
-  
-  
-  .login-form-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;  
-    max-width: 400px;
-    background-color:white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000; 
-    margin: 10px auto;
-    
-  }
-  
-  #login-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-
-.overlay-background {
- backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  z-index: 999;
+  display: none;
 }
 
+.login-form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  margin: 10px auto;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.overlay-background {
+  backdrop-filter: blur(10px);
+}
 
 .login-form-header h2 {
-    padding: 20px;
+  padding: 20px;
   margin: 0;
   text-align: center;
-  color:black;
+  color: black;
 }
 
 .login-form-input {
-    
-    min-width: 250px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    background-color: #cedced;
+  min-width: 250px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  background-color: #cedced;
 }
 
 .login-form-input-username {
@@ -64,7 +59,7 @@
 }
 
 .login-submit-button {
-    margin-top: 20px auto ;
+  margin-top: 20px auto;
   padding: 10px 20px;
   background-color: #28a745;
   color: white;
@@ -72,12 +67,10 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  
 }
 
-
 .login-submit-button:hover {
-    background-color: #218838;
+  background-color: #218838;
 }
 
 .login-forgot-password-link {
@@ -100,7 +93,7 @@ input:not(:placeholder-shown) + label {
 }
 
 .form-group {
-    margin: 10px auto;
+  margin: 10px auto;
 }
 
 .login-password-toggle {
@@ -110,8 +103,6 @@ input:not(:placeholder-shown) + label {
 .register-link {
   font-size: 12px;
 }
-
-
 
 @media (max-width: 465px) {
   .login-form-container {
@@ -142,6 +133,4 @@ input:not(:placeholder-shown) + label {
   .login-form-input-password {
     width: 100%;
   }
-
- 
 }
