@@ -25,6 +25,15 @@ document.addEventListener("DOMContentLoaded", () => {
     if (registerOverlay && loginOverlay) {
       registerOverlay.classList.remove("hidden");
       loginOverlay.style.display = "none";
+  
+     
+      if (registrationForm.classList.contains("active")) {
+        registerOverlay.style.justifyContent = "space-evenly";
+        isFormOpen = true; 
+      } else {
+        registerOverlay.style.justifyContent = "center";  
+        isFormOpen = false; 
+      }
     }
   };
 

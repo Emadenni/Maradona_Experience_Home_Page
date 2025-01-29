@@ -30,6 +30,7 @@
   padding-top: 20px;
   max-height: 100vh;
   transition: justify-content 0.3s ease;
+  box-shadow: 0 4px 8px rgba(219, 213, 213, 0.2), 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .overlay.active {
@@ -52,6 +53,7 @@
   font-style: italic;
   max-width: 500px;
   width: 90%;
+  box-shadow: 0 12px 12px rgba(5, 145, 145, 0.2), 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .overlay_header p {
@@ -64,6 +66,7 @@
 
 .overlay-content_title {
   font-size: 14px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
 .overlay-content_title span {
@@ -90,6 +93,7 @@
   width: 90%;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   position: relative;
+  box-shadow: 0 12px 12px rgba(5, 145, 145, 0.2), 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .overlay-content h2 {
@@ -292,6 +296,13 @@ input:not(:placeholder-shown) + label {
   .continue-link {
     font-size: smaller;
     line-height: 1;
+  }
+
+  @media (max-width: 470px) {
+    .overlay-content_title span{
+font-size: 18px;
+line-height: 0.8;
+    }
   }
 
   #username:focus + label,
