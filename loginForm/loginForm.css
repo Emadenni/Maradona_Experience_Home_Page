@@ -133,5 +133,6 @@ input:not(:placeholder-shown) + label {
   .login-form-input-username,
   .login-form-input-password {
     width: 100%;
+    box-sizing: border-box; 
   }
 }
