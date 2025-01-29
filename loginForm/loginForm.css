@@ -114,6 +114,24 @@ input:not(:placeholder-shown) + label {
   .login-form-container {
     width: 350px;
   }
+
+  .password-container {
+    position: relative; /* Imposta il contenitore come riferimento */
+    
+    width: 80%;
+  }
+  
+  .login-password-toggle {
+    position: absolute;
+    right: 10px; /* Sposta l'icona a destra dentro il campo */
+    top: 37%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  
 }
 
 @media (max-width: 390px) {
