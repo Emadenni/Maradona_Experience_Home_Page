@@ -86,4 +86,38 @@ document.addEventListener("DOMContentLoaded", () => {
       if (event.target === loginOverlay) hideLoginOverlay();
     });
   }
+
+  
 });
+
+
+function togglePassword() {
+  var passwordField = document.getElementById("password");
+  var passwordToggleIcon = document.querySelector(".password-toggle i");
+
+  if (passwordField.type === "password") {
+    passwordField.type = "text"; 
+    passwordToggleIcon.classList.remove("fa-eye");
+    passwordToggleIcon.classList.add("fa-eye-slash");
+  } else {
+    passwordField.type = "password"; 
+    passwordToggleIcon.classList.remove("fa-eye-slash");
+    passwordToggleIcon.classList.add("fa-eye");
+  }
+}
+
+
+function toggleLoginPassword() {
+  var passwordField = document.getElementById("login-password");
+  var passwordToggleIcon = document.querySelector(".login-password-toggle i");
+
+  if (passwordField.type === "password") {
+    passwordField.type = "text"; // Mostra la password
+    passwordToggleIcon.classList.remove("fa-eye");
+    passwordToggleIcon.classList.add("fa-eye-slash");
+  } else {
+    passwordField.type = "password"; // Nasconde la password
+    passwordToggleIcon.classList.remove("fa-eye-slash");
+    passwordToggleIcon.classList.add("fa-eye");
+  }
+}

@@ -33,7 +33,7 @@
 }
 
 .overlay.active {
-  justify-content: space-between; 
+  justify-content: space-between;
 }
 
 .overlay_header {
@@ -182,12 +182,16 @@
   margin: auto;
   background-color: #50d66b;
   border-radius: 10px;
-  padding: 4px 30px 20px;
+  padding: 16px 30px 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   min-width: 300px;
   max-width: 360px;
+}
+
+.username-password-group label {
+  padding-top: 8px;
 }
 
 .password-container {
@@ -220,7 +224,7 @@
 
 input {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -279,14 +283,22 @@ input:not(:placeholder-shown) + label {
     font-size: smaller;
     line-height: 1;
   }
+
+  #username:focus + label,
+  #username:not(:placeholder-shown) + label,
+  #password:focus + label,
+  #password:not(:placeholder-shown) + label {
+    top: -30px;
+  }
 }
 
 @media (max-width: 358px) {
   .form-group {
-    max-width: 50%;
+    max-width: 80%;
   }
 
   #username {
-    margin-left: -76px;
+    margin-left: -30px;
+    padding: 5px auto;
   }
 }

@@ -138,8 +138,10 @@ input:not(:placeholder-shown) + label {
     width: 85%;
   }
 
-  login-form-input-username {
-    min-width: 100%;  
-    max-width: 400px;
+  .login-form-input-username,
+  .login-form-input-password {
+    width: 100%;
   }
+
+ 
 }
