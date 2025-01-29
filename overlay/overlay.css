@@ -296,12 +296,13 @@ input:not(:placeholder-shown) + label {
   .continue-link {
     font-size: smaller;
     line-height: 1;
+    
   }
 
   @media (max-width: 470px) {
-    .overlay-content_title span{
-font-size: 18px;
-line-height: 0.8;
+    .overlay-content_title span {
+      font-size: 18px;
+      line-height: 0.8;
     }
   }
 

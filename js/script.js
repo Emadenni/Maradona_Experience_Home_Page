@@ -25,6 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (registerOverlay && loginOverlay) {
       registerOverlay.classList.remove("hidden");
       loginOverlay.style.display = "none";
+      document.getElementById('top').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
   
      
       if (registrationForm.classList.contains("active")) {

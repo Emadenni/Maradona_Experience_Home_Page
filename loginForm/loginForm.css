@@ -97,12 +97,17 @@ input:not(:placeholder-shown) + label {
   margin: 10px auto;
 }
 
+.password-container {
+  max-width: 100%;
+}
+
 .login-password-toggle {
   margin-bottom: 16px;
 }
 
 .register-link {
   font-size: 12px;
+  text-align: center;
 }
 
 @media (max-width: 465px) {
