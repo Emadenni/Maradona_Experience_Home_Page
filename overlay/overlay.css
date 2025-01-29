@@ -178,6 +178,7 @@
 .form-row {
   display: flex;
   gap: 20px;
+  margin-bottom: 10px;
 }
 
 .form-group {
@@ -245,8 +246,29 @@
   border-radius: 5px;
   margin-bottom: 15px;
   background-color: #cedced;
+
 }
 
+.form-row-mailTel {
+  display: flex;
+  gap: 10px; /* Spazio tra i campi */
+  width: 100%;
+}
+
+.form-row-mailTel .form-group {
+  flex-grow: 1; /* Imposta la base uguale */
+}
+
+.form-row-mailTel .form-group:first-child {
+  flex-grow: 2; /* L'email occuperà più spazio */
+}
+
+.form-row-mailTel .form-group input {
+  width: 100%; /* L'input si adatta al contenitore */
+  padding: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
 
 
 label {
@@ -259,8 +281,10 @@ label {
   transition: 0.2s ease all;
 }
 
-input:focus + label,
-input:not(:placeholder-shown) + label {
+#username:focus + label,
+#username:not(:placeholder-shown) + label,
+#password:focus + label,
+#password:not(:placeholder-shown) + label {
   top: -22px;
   font-size: 14px;
   color: #007bff;
@@ -285,6 +309,31 @@ input:not(:placeholder-shown) + label {
   .overlay_header {
     height: 180px;
   }
+}
+
+@media (max-width: 540px) {
+  .form-row-mailTel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Spazio tra i campi */
+    width: 100%;
+  }
+  
+  .form-row-mailTel .form-group {
+    flex-grow: 1; /* Imposta la base uguale */
+  }
+  
+  .form-row-mailTel .form-group:first-child {
+    flex-grow: 2; /* L'email occuperà più spazio */
+  }
+  
+  .form-row-mailTel .form-group input {
+    width: 100%; /* L'input si adatta al contenitore */
+    padding: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
 }
 
 @media (max-width: 470px) {
