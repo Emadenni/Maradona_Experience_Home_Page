@@ -40,12 +40,10 @@
   padding: 40px 20px;
   border-radius: 20px;
   font-style: italic;
-
 }
 
 .overlay_header p {
   color: var(--secondary-color);
-  
 }
 
 .overlay_header span {
@@ -154,7 +152,6 @@
 .form-row {
   display: flex;
   gap: 20px;
- 
 }
 
 .form-group {
@@ -168,7 +165,6 @@
   gap: 10px;
   width: 100%;
 }
-
 
 .username-password-group input {
   margin: auto;
@@ -192,9 +188,7 @@
 .password-container input {
   flex-grow: 1;
   padding-right: 40px;
-  
 }
-
 
 .password-container button {
   position: absolute;
@@ -220,7 +214,6 @@ input {
   border-radius: 5px;
   margin-bottom: 15px;
   background-color: #cedced;
-  
 }
 
 label {
@@ -255,29 +248,23 @@ input:not(:placeholder-shown) + label {
   background-color: #218838;
 }
 
-
 @media (max-width: 1430px) {
- .overlay_header {
-  margin-top: 150px;
-  padding: 20px;
+  .overlay_header {
+    margin-top: 150px;
+    padding: 20px;
+  }
 
- }
+  .overlay_img {
+    max-width: 130px;
+  }
 
- .overlay_img {
-  max-width: 130px;
- }
+  #registration-form {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+  }
 
- #registration-form {
- width: 90%;
- display: flex;
- flex-wrap: wrap;
-
-}
-
-.overlay-content {
-  
-}
-
-
-
+  .overlay-content {
+    width: 1000px;
+  }
 }
