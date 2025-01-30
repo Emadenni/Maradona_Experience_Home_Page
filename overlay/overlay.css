@@ -219,7 +219,7 @@
   background-color: #00b300;
   font-weight: 400;
   border-radius: 10px;
-  padding: 16px 15px;
+  padding: 17px 15px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -261,7 +261,7 @@
 }
 
 .password-toggle {
-  margin-top: 8px;
+  margin-top: 5px;
 }
 
 .username-container {
