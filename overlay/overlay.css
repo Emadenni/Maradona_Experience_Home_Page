@@ -70,6 +70,7 @@
   color: #ced1d3;
   font-style: italic;
   letter-spacing: 1.4;
+  text-decoration: overline #007bff;
 }
 
 .overlay-content_title_container {
@@ -343,6 +344,7 @@ label {
 @media (max-width: 1400px) {
   .overlay_header {
     height: 180px;
+    padding-top: 50px;
   }
 }
 
