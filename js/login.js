@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ username, password }),
+          body: JSON.stringify({ email: username, password: password }),
         });
 
         let data;
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (response.ok) {
           sessionStorage.setItem("token", data.token);
           alert("Login riuscito!");
-          window.location.href = "dashboard.html";
+          window.location.href = "tournaments.html";
         } else {
           alert("Errore: " + (data.message || "Credenziali errate"));
         }

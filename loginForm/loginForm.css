@@ -109,6 +109,28 @@
   text-decoration: underline;
 }
 
+#login-form label {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 16px;
+  color: #007bff;
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.2s ease all;
+}
+
+
+#login-username:focus + label,
+#login-username:not(:placeholder-shown) + label,
+#login-password:focus + label,
+#login-password:not(:placeholder-shown) + label {
+  top: -20px;
+  font-size: 14px;
+  color: #007bff;
+}
+
+
 
 @media (max-width: 465px) {
   .login-form-container {
