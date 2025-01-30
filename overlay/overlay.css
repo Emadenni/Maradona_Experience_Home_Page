@@ -346,15 +346,16 @@ label {
  
   margin: auto;
   margin-top:20px ;
-  width: 60%;
+  width: 100%;
 }
 
 .terms-conditions_box .terms-conditions_box_label  {
   position: static;
   display: inline-block;
-  width: 300px;
+  width: 100%;
   font-size: 16px;
   color: #00b300;
+  margin: auto;
 }
 
 .terms-conditions_box .terms-conditions_box_label a {
