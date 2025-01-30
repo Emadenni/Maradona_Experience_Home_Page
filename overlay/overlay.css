@@ -99,13 +99,13 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   position: relative;
   box-shadow: 0 12px 12px rgba(5, 145, 145, 0.2), 0 6px 20px rgba(0, 0, 0, 0.1);
- /*  background-image: url(../images/bg_gradient.png);
+/*   background-image: url(../images/bg_gradient.png);
   background-position:left;
-  background-size: auto;
+  background-size: contain;
   background-repeat:no-repeat; */
   background-image: url(../images/bg_gradient.png);
   background-position:left;
-  background-size:1000px;
+  background-size:1500px;
   background-repeat:no-repeat;
 }
 
@@ -160,7 +160,7 @@
   color: #007bff;
   text-decoration: none;
   font-size: 16px;
-  width: 95%;
+  width: 80%;
   text-align: center;
   cursor: pointer;
 }
