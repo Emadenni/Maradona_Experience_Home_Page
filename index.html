@@ -100,7 +100,8 @@
     <div class="login-overlay">
       <div class="login-form-container">
         <div class="login-form-header">
-          <h2>Accedi</h2>
+          <h2>Accedi ai tornei</h2>
+          <button id="close-btn-login" class="close-btn">x</button>
         </div>
         <form id="login-form">
           <div class="form-group">
@@ -153,7 +154,7 @@
       <main class="main_content">
         <section class="cards_container">
           <article class="card card1">
-            <a href="https://maradonaexperience.depzon.com/" class="card_link">
+            <a href="#" class="card_link" id="card-link-tournaments">
               <div class="card_content_top">
                 <p>Scopri i nostri tornei</p>
                 <span class="arrow">🡥</span>
@@ -170,7 +171,7 @@
           </article>
 
           <article class="card card2">
-            <a href="/index.html" class="card_link">
+            <a href="#" class="card_link">
               <div class="card_content_top">
                 <p>Partecipa alle lotterie</p>
                 <span class="arrow">🡥</span>
@@ -187,7 +188,7 @@
           </article>
 
           <article class="card card3">
-            <a href="/index.html" class="card_link">
+            <a href="#" class="card_link">
               <div class="card_content_top">
                 <p>Vinci tanti premi</p>
                 <span class="arrow">🡥</span>
@@ -203,6 +204,8 @@
             </a>
           </article>
         </section>
+
+        
 
         <section class="tournament_container" id="anchor">
           <h4 class="tournament_container_title">I tornei</h4>
@@ -355,7 +358,7 @@
       </footer>
     </div>
 
-    <script src="js/script.js"></script>
-    <script src="js/login.js"></script>
+    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/login.js"></script>
   </body>
 </html>

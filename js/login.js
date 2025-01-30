@@ -1,4 +1,5 @@
 const API_URL = "https://reqres.in/api/login";
+const loginOverlay = document.querySelector(".login-overlay");
 
 document.addEventListener("DOMContentLoaded", () => {
   const loginForm = document.getElementById("login-form");
