@@ -107,10 +107,6 @@
   background-position:top;
   background-size: 310px;
   background-repeat:no-repeat;
-/*   background-image: url(../images/bg_gradient.png);
-  background-position:left;
-  background-size:1500px;
-  background-repeat:no-repeat; */
 }
 
 .overlay-content h2 {
@@ -213,13 +209,13 @@
   margin-top: 10px;
 }
 
-.username-password-group input {
+.username-password-group input  {
   margin: 6px auto 2px auto;
-  font-size: 22px;
-  background-color: #00b300;
+  font-size: 16px;
+  background-color: #00b300 !important;
   font-weight: 400;
   border-radius: 10px;
-  padding: 17px 15px;
+  padding: 20px 10px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -344,6 +340,30 @@ label {
   font-size: 14px;
   margin: 20px auto 24px auto;
   
+}
+
+.terms-conditions_box {
+ 
+  margin: auto;
+  margin-top:20px ;
+  width: 60%;
+}
+
+.terms-conditions_box .terms-conditions_box_label  {
+  position: static;
+  display: inline-block;
+  width: 300px;
+  font-size: 16px;
+  color: #00b300;
+}
+
+.terms-conditions_box .terms-conditions_box_label a {
+  color: #007bff;
+}
+
+.terms-conditions_box #terms-conditions {
+  margin: 0;
+  height: 16px;
 }
 
 @media (max-width: 1400px) {
