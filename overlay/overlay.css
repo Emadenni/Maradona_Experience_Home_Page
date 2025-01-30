@@ -67,13 +67,14 @@
 
 .overlay-content_title_container h3 {
   font-size: 16px;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  text-shadow: 0px 1px 1px rgba(10, 124, 144, 0.417);
   color: #007bff;
 }
 
 .overlay-content_title_container {
   width: 100%;
   padding: 10px;
+
 }
 
 .logo-maradona-experience {
@@ -134,7 +135,7 @@
 }
 
 .register-button:hover {
-  background-color: var(--hoverCards-bkg--color) !important;
+  background-color: rgb(15, 175, 15) !important;
   color: white;
 }
 
@@ -204,21 +205,25 @@
 
 .username-password-group input {
   margin: 6px auto 2px auto;
-  font-size: 20px;
+  font-size: 22px ;
   background-color: #00b300;
-  color: #0d1a1a;
   font-weight: 400;
   border-radius: 10px;
-  padding: 8px 15px;
+  padding: 16px 15px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   min-width: 300px;
   max-width: 600px;
+  border:solid 0.3px white ;
 }
 
 .username-password-group label {
   padding-top: 14px;
+  color: #ffffff;
+  letter-spacing: 1.4;
+  font-style: italic;
+  font-size: 16px ;
 }
 
 .password-container {
@@ -321,6 +326,12 @@ label {
 
 .submit-button:hover {
   background-color: #218838;
+}
+
+.form_cta {
+  color: white;
+  font-style: italic;
+  font-size: 14px;
 }
 
 @media (max-width: 1400px) {
