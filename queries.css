@@ -510,6 +510,7 @@
 
 @media screen and (max-width: 480px)  {
   .custom-alert {
- bottom: 260px;
+ bottom: 220px;
+ width: 60%;
   }
 }

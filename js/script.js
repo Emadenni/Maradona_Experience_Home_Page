@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  const showRegisterOverlayHideLogin = () => {
+  function showRegisterOverlayHideLogin() {
     if (registerOverlay && loginOverlay) {
       registerOverlay.classList.remove("hidden");
       loginOverlay.style.display = "none";
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         isFormOpen = false;
       }
     }
-  };
+  }
 
   function updateLoginButton() {
     const token = sessionStorage.getItem("token");
@@ -52,12 +52,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  const hideRegisterOverlay = () => {
+  function hideRegisterOverlay() {
     if (registerOverlay) {
       registerOverlay.classList.add("hidden");
       registerOverlay.style.justifyContent = "center";
     }
-  };
+  }
 
   function logout() {
     sessionStorage.removeItem("token");
@@ -65,121 +65,119 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.reload();
   }
 
-  // Funzione per creare un messaggio personalizzato in una posizione definita
   function showCustomAlert(message) {
     const alertBox = document.createElement("div");
     alertBox.classList.add("custom-alert");
+
+    const overlay = document.createElement("div");
+    overlay.classList.add("alert-overlay");
+
+    document.body.classList.add("no-scroll");
+
     alertBox.innerHTML = `
-      
       <button class="close-alert close-btn">X</button>
       <img src="./images/logoExperience.png" class="logo-maradona-experience">
       <p>${message}</p>
     `;
-    document.body.appendChild(alertBox);
 
+    document.body.appendChild(overlay);
+    document.body.appendChild(alertBox);
 
     alertBox.querySelector(".close-alert").addEventListener("click", () => {
       alertBox.remove();
+      overlay.remove();
+      document.body.classList.remove("no-scroll");
     });
   }
 
   function handleEvent(selector, eventType, callback) {
-    switch (selector) {
-      case "#continue-link":
-        document.querySelector(selector).addEventListener(eventType, (event) => {
-          event.preventDefault();
-          hideRegisterOverlay();
-        });
-        break;
-
-      case "#loginBtn":
-        document.querySelector(selector).addEventListener(eventType, showLoginOverlay);
-        break;
-
-      case "#register-link":
-        document.querySelector(selector).addEventListener(eventType, (event) => {
-          event.preventDefault();
-          showRegisterOverlayHideLogin();
-        });
-        break;
-
-      case "#toggle-register":
-        document.querySelector(selector).addEventListener(eventType, () => {
-          if (registrationForm) {
-            registrationForm.classList.toggle("active");
-            registrationForm.classList.toggle("hidden");
-
-            if (registrationForm.classList.contains("active")) {
-              registerOverlay.style.justifyContent = "space-evenly";
-              isFormOpen = true;
-            } else {
-              registerOverlay.style.justifyContent = "center";
-              isFormOpen = false;
-            }
-
-            if (arrow) {
-              arrow.style.transform = registrationForm.classList.contains("active") ? "rotate(180deg)" : "rotate(0deg)";
-            }
-          }
-        });
-        break;
-
-      case ".login-overlay":
-        document.querySelector(selector).addEventListener(eventType, (event) => {
-          if (event.target === loginOverlay) hideLoginOverlay();
-        });
-        break;
-
-      case "#card-link-tournaments":
-        document.querySelector(selector).addEventListener(eventType, (event) => {
-          event.preventDefault();
-          const token = sessionStorage.getItem("token");
-          if (token) {
-            window.location.href = "tournaments.html";
-          } else {
-            showLoginOverlay();
-          }
-        });
-        break;
-
-      case "#close-btn-login":
-        document.querySelector(selector).addEventListener(eventType, (event) => {
-          event.preventDefault();
-          hideLoginOverlay();
-        });
-        break;
-
-      case ".card2":
-        document.querySelector(selector).addEventListener(eventType, (event) => {
-          event.preventDefault();
-          showCustomAlert(
-            "Le lotterie non sono ancora disponibili, ma restate sintonizzati! 🎉 Presto avrete la possibilità di partecipare e vincere fantastici premi."
-          );
-        });
-        break;
-      case ".card3":
-        document.querySelector(selector).addEventListener(eventType, (event) => {
-          event.preventDefault();
-          showCustomAlert(
-            "I giochi non sono ancora disponibili, ma restate sintonizzati! 🎉 Presto avrete la possibilità di partecipare e vincere fantastici premi."
-          );
-        });
-        break;
-
-      default:
-        console.log(`No action defined for ${selector}`);
+    const element = document.querySelector(selector);
+    if (element) {
+      element.addEventListener(eventType, callback);
     }
   }
 
   updateLoginButton();
 
-  handleEvent("#continue-link", "click");
-  handleEvent("#loginBtn", "click");
-  handleEvent("#register-link", "click");
-  handleEvent("#toggle-register", "click");
-  handleEvent(".login-overlay", "click");
-  handleEvent("#card-link-tournaments", "click");
-  handleEvent("#close-btn-login", "click");
-  handleEvent(".card2", "click");
-  handleEvent(".card3", "click");
+  handleEvent("#continue-link", "click", (event) => {
+    event.preventDefault();
+    hideRegisterOverlay();
+  });
+
+  handleEvent("#loginBtn", "click", showLoginOverlay);
+
+  handleEvent("#register-link", "click", (event) => {
+    event.preventDefault();
+    showRegisterOverlayHideLogin();
+  });
+
+  handleEvent("#toggle-register", "click", () => {
+    if (registrationForm) {
+      registrationForm.classList.toggle("active");
+      registrationForm.classList.toggle("hidden");
+
+      if (registrationForm.classList.contains("active")) {
+        registerOverlay.style.justifyContent = "space-evenly";
+        isFormOpen = true;
+      } else {
+        registerOverlay.style.justifyContent = "center";
+        isFormOpen = false;
+      }
+
+      if (arrow) {
+        arrow.style.transform = registrationForm.classList.contains("active") ? "rotate(180deg)" : "rotate(0deg)";
+      }
+    }
+  });
+
+  handleEvent(".login-overlay", "click", (event) => {
+    if (event.target === loginOverlay) hideLoginOverlay();
+  });
+
+  handleEvent("#card-link-tournaments", "click", (event) => {
+    event.preventDefault();
+    const token = sessionStorage.getItem("token");
+    if (token) {
+      window.location.href = "tournaments.html";
+    } else {
+      showLoginOverlay();
+    }
+  });
+
+  handleEvent("#close-btn-login", "click", (event) => {
+    event.preventDefault();
+    hideLoginOverlay();
+  });
+
+  handleEvent(".card2", "click", (event) => {
+    event.preventDefault();
+    showCustomAlert("Le lotterie non sono ancora disponibili, ma restate sintonizzati! 🎉 Presto avrete la possibilità di partecipare e vincere fantastici premi.");
+  });
+
+  handleEvent(".card3", "click", (event) => {
+    event.preventDefault();
+    showCustomAlert("I giochi non sono ancora disponibili, ma restate sintonizzati! 🎉 Presto avrete la possibilità di partecipare e vincere fantastici premi.");
+  });
+
+ 
+  function togglePassword(fieldId, iconClass) {
+    const passwordField = document.getElementById(fieldId);
+    const passwordToggleIcon = document.querySelector(iconClass);
+
+    if (passwordField && passwordToggleIcon) {
+      switch (passwordField.type) {
+        case "password":
+          passwordField.type = "text";
+          passwordToggleIcon.classList.replace("fa-eye", "fa-eye-slash");
+          break;
+        case "text":
+          passwordField.type = "password";
+          passwordToggleIcon.classList.replace("fa-eye-slash", "fa-eye");
+          break;
+      }
+    }
+  }
+
+  handleEvent(".password-toggle", "click", () => togglePassword("password", ".password-toggle i"));
+  handleEvent(".login-password-toggle", "click", () => togglePassword("login-password", ".login-password-toggle i"));
 });

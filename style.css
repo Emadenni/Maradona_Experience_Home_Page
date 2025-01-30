@@ -156,6 +156,26 @@ header {
   border: solid 1px white;
 }
 
+.alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 999; 
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.close-alert {
+  color: #077708 !important;
+  font-weight: 900;
+}
+
 @keyframes pulseGlow {
   0%,
   100% {
