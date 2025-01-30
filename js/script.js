@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
           event.preventDefault();
           const token = sessionStorage.getItem("token");
           if (token) {
-            window.location.href = "/tournaments.html";
+            window.location.href = "tournaments.html";
           } else {
             showLoginOverlay();
           }
