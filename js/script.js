@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const loginBtn = document.getElementById("loginBtn");
+  const logoutBtn = document.getElementById("logoutBtn");
   const loginOverlay = document.querySelector(".login-overlay");
   const registerLink = document.getElementById("register-link");
   const registerOverlay = document.querySelector(".overlay");
@@ -65,6 +66,12 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.reload();
   }
 
+  function logoutFromTournamentsPage() {
+    sessionStorage.removeItem("token");
+    updateLoginButton();
+    window.location.href = "index.html";
+  }
+
   function showCustomAlert(message) {
     const alertBox = document.createElement("div");
     alertBox.classList.add("custom-alert");
@@ -94,17 +101,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const element = document.querySelector(selector);
     if (element) {
       element.addEventListener(eventType, callback);
+    } else {
+      console.log(`Elemento ${selector} non trovato.`);
     }
   }
 
   updateLoginButton();
 
+  // Gestione degli eventi
   handleEvent("#continue-link", "click", (event) => {
     event.preventDefault();
     hideRegisterOverlay();
   });
 
   handleEvent("#loginBtn", "click", showLoginOverlay);
+
+  handleEvent("#logoutBtn", "click", logoutFromTournamentsPage); // Corretto qui
 
   handleEvent("#register-link", "click", (event) => {
     event.preventDefault();
@@ -151,15 +163,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   handleEvent(".card2", "click", (event) => {
     event.preventDefault();
-    showCustomAlert("Le lotterie non sono ancora disponibili, ma restate sintonizzati! 🎉 Presto avrete la possibilità di partecipare e vincere fantastici premi.");
+    showCustomAlert(
+      "Le lotterie non sono ancora disponibili, ma restate sintonizzati! 🎉 Presto avrete la possibilità di partecipare e vincere fantastici premi."
+    );
   });
 
   handleEvent(".card3", "click", (event) => {
     event.preventDefault();
-    showCustomAlert("I giochi non sono ancora disponibili, ma restate sintonizzati! 🎉 Presto avrete la possibilità di partecipare e vincere fantastici premi.");
+    showCustomAlert(
+      "I giochi non sono ancora disponibili, ma restate sintonizzati! 🎉 Presto avrete la possibilità di partecipare e vincere fantastici premi."
+    );
   });
 
- 
+  // Funzione per il toggle della password
   function togglePassword(fieldId, iconClass) {
     const passwordField = document.getElementById(fieldId);
     const passwordToggleIcon = document.querySelector(iconClass);
