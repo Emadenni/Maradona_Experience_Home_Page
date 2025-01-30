@@ -100,7 +100,7 @@
   position: relative;
   box-shadow: 0 12px 12px rgba(5, 145, 145, 0.2), 0 6px 20px rgba(0, 0, 0, 0.1);
   background-image: url(../images/bg_gradient.png);
-  background-position:center;
+  background-position:top;
   background-size: 400px;
   background-repeat:no-repeat;
 /*   background-image: url(../images/bg_gradient.png);
