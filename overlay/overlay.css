@@ -334,7 +334,8 @@ label {
   color: white;
   font-style: italic;
   font-size: 14px;
-  padding: 10px;
+  margin: 20px auto 24px auto;
+  
 }
 
 @media (max-width: 1400px) {
