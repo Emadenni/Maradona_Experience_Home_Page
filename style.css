@@ -44,8 +44,6 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-
-
 .banner_container {
   position: relative;
   width: 100%;
@@ -84,9 +82,8 @@ header {
 }
 
 .hidden {
- visibility: hidden;
+  visibility: hidden;
 }
-
 
 .logoDepzon {
   max-width: 175px;
@@ -145,13 +142,18 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
- text-align: center;
- max-width: 400px;
- z-index: 1000;
- background-color: black;
- color: var(--secondary-color);
- padding: 20px;
- border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  z-index: 1000;
+  background-color: black;
+  color: var(--secondary-color);
+  padding: 20px;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 350px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: solid 1px white;
 }
 
 @keyframes pulseGlow {
@@ -237,36 +239,33 @@ header {
 
 .discoverMoreBtn {
   display: inline-block;
-  width: 60%; 
+  width: 60%;
   max-width: 300px;
-  padding: 15px 20px; 
-  margin: 20px auto; 
+  padding: 15px 20px;
+  margin: 20px auto;
   border: none;
   border-radius: 50px;
-  background-color: var(--secondary-color); 
-  color: var(--main-color); 
+  background-color: var(--secondary-color);
+  color: var(--main-color);
   font-size: 1rem;
   font-weight: 700;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  outline: none; 
-  transition: background-color 0.3s ease, transform 0.3s ease; 
+  outline: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   z-index: 97;
   position: relative;
 }
 
-
 .discoverMoreBtn:hover {
   background-color: var(--hoverBtn-bkg--color);
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }
-
 
 .discoverMoreBtn:active {
-  transform: scale(0.98); 
+  transform: scale(0.98);
 }
-
 
 .discoverMoreBtn:focus {
   outline: none;
@@ -731,678 +730,14 @@ footer ul {
   width: 2rem;
   margin-top: 1rem;
 }
-/* @media (max-width: 1340px) {
-  .big_cards_container_box {
-    flex-direction: column;
-    max-width: 50%;
-    justify-content: center;
-    align-items: center;
-  }
 
-  .banner_container {
-    max-width: 80%;
-  }
-
-  .rules_container {
-    max-width: 80%;
-  }
-
-  .big_card p {
-    font-size: 1.3rem;
-    margin-bottom: 30px;
-    max-width: 86%;
-  }
-
-  .big_card2 p {
-    font-size: 1.3rem;
-    margin-bottom: 30px;
-    max-width: 86%;
-  }
-
-  .buy_registerBtn {
-    bottom: 1.7rem;
-  }
-}
-  
-
-@media (max-width: 1290px) {
-  .cards_container {
-    flex-direction: column;
-    max-width: 100%;
-  }
-
-  .tournament_container {
-    width: 76%;
-  }
-
-  .banner_container {
-    max-width: 80%;
-  }
+.logo-maradona-experience-medium {
+  width: 120px;
+  margin-top: 0px;
 }
 
-@media (max-width: 1284px) {
-  .banner_container {
-    width: 70%;
-  }
-
-  .banner_container_top {
-    max-width: 100%;
-  }
-
-  .banner_container_top p {
-    text-align: center;
-  }
+.container2 {
+  background-image: url(/images/bg_gradient.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
-  
-
-@media (max-width: 1205px) {
-  header {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .big_cards_container {
-    margin-bottom: 4rem;
-  }
-
-  .tournament_container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .tournament_container h4 {
-    font-size: var(--h4-font-size-small);
-    font-weight: 600;
-    flex: 1;
-    margin-bottom: 2rem;
-  }
-
-  .tournament_container_desc {
-    text-align: center;
-    margin-left: 0;
-  }
-
-  .discoverRulesBtn1 {
-    align-self: center;
-  }
-
-  .rules_container {
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
-    align-items: center;
-}
- 
-  .rules_container h4 {
-    align-self: center;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 40px;
-  }
-
-  .rules_container p {
-    max-width: 80%;
-  }
-
-  .rules_container_right_up,
-  .rules_container_right_down {
-    margin-left: 0;
-  }
-}
-  
-
-@media (max-width: 1100px) {
-  .banner_container_bottom {
-    flex-direction: column;
-  }
-
-  .banner_container_bottom p {
-    font-size: smaller;
-  }
-
-  .banner_container_top {
-    width: 80rem;
-
-    text-align: center;
-  }
-
-  .banner_container_top h4 {
-    width: 100%;
-  }
-
-  .banner_container_top p {
-    width: 100%;
-  }
-
-  .banner_container {
-    padding: 10rem;
-    width: 50%;
-    margin: 50px auto 130px auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-center;
-    gap: 0;
-  }
-
-  .discoverRulesBtn2 {
-    align-self: center;
-  }
-
-  .tournament_container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .tournament_container p {
-    max-width: 50rem;
-  }
-
-  .rules_container p {
-    max-width: 70%;
-  }
-
-  .big_card {
-    width: 80%;
-  }
-}
-
-@media (max-width: 900px) {
-  .banner_container {
-    padding: 5rem;
-    width: 50%;
-  }
-
-  .tournament_container p {
-    width: 100%;
-    flex-wrap: wrap;
-    max-width: 40rem;
-  }
-}
- 
-
-@media (max-width: 750px) {
-  .tournament_container p {
-    max-width: 34rem;
-  }
-
-  .banner_container {
-    width: 36%;
-  }
-
-  .banner_container_top {
-    width: 86rem;
-    text-align: center;
-  }
-
-  .banner_container_top p {
-    font-size: 1rem;
-    width: 1rem;
-    margin-left: -50px;
-  }
-
-  .big_cards_container h4 {
-    font-size: 2rem;
-  }
-}
-  
-
-@media (max-width: 700px) {
-  footer {
-    width: 100%;
-    margin: 3.125rem auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.325rem;
-    color: white;
-    padding: 1.25rem;
-    background-color: var(--footer-bkg-color);
-  }
-
-  .footer_accepted-payments {
-    gap: 1.5rem;
-    justify-content: center;
-    width: 100%;
-  }
-}
-  
-
-@media (max-width: 670px) {
-  .tournament_container p {
-    max-width: 20rem;
-  }
-
-  .rules_container p {
-    max-width: 55%;
-  }
-
-  .rules_container_right_img {
-    width: 70%;
-  }
-}
-  
-
-@media (max-width: 595px) {
-  .big_cards_container h4 {
-    font-size: 1.6rem;
-  }
-  .rules_container p {
-    max-width: 45%;
-  }
-
-  .rules_container h4 {
-    font-size: 2rem;
-  }
-
-  .rules_container_right_img {
-    width: 70%;
-  }
-
-  .banner_container {
-    width: 34%;
-  }
-
-  .banner_container_top {
-    text-align: center;
-  }
-
-  .banner_container_top h4 {
-    font-size: 1.65rem;
-  }
-  .banner_container_top p {
-    font-size: 1rem;
-    margin-left: -68px;
-  }
-
-  .hero_section {
-    max-width: 300px;
-    max-height: 485px;
-    margin: 7.125rem auto 8rem auto;
-    gap: 1.1rem;
-  }
-
-  .hero_img {
-    width: 100%;
-  }
-
-  .hero_section_title {
-    font-size: 64px;
-    top: 11.875rem;
-  }
-
-  .hero_section_text {
-    width: 38.25rem;
-    font-size: 1.3rem;
-  }
-
-  .footer_accepted-payments {
-    gap: 1rem;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .footer_accepted-payments img {
-    width: 50px;
-  }
-}
-   
-
- @media (max-width: 550px) {
-  .banner_container {
-    width: 26%;
-  }
-
-  .banner_container_top h4 {
-    font-size: 1.6rem;
-  }
-
-  .banner_container_top p {
-    min-width: 1rem;
-    width: 16rem;
-    font-size: 0.9rem;
-    margin-left: -4px;
-  }
-
-  .banner_container_bottom_desc p {
-    min-width: none;
-    width: 16rem;
-    margin-left: 104px;
-    font-size: 0.8rem;
-  }
-
-  .gold_card_img {
-    width: 60%;
-  }
-
-  .rules_container_right_img {
-    width: 50%;
-  }
-
-  .big_card {
-    max-width: 60%;
-    font-size: 1rem;
-    padding-top: 10px;
-  }
-
-  .big_card p {
-    font-size: 1rem;
-    width: 80%;
-  }
-
-  .big_card_img {
-    max-width: 80%;
-  }
-
-  .buy_registerBtn {
-    width: 70%;
-  }
-
-  .big_card_img_wrapper {
-    max-width: 90%;
-    padding: 0;
-  }
-} 
-  
-
-@media (max-width: 500px) {
-  .hero_section {
-    max-width: 260px;
-    max-height: 485px;
-    margin: 7.125rem auto 20rem auto;
-    gap: 0.6rem;
-  }
-
-  .hero_img {
-    width: 100%;
-  }
-
-  .hero_section_title {
-    font-size: 52px;
-    top: 10.5rem;
-  }
-
-  .hero_section_text {
-    width: 32.25rem;
-    font-size: 1.05rem;
-  }
-
-  .footer_accepted-payments img {
-    width: 36px;
-  }
-
-  .card {
-    width: 27%;
-  }
-
-  .banner_container {
-    width: 26%;
-  }
-
-  .banner_container_top h4 {
-    font-size: 1.3rem;
-  }
-  .banner_container_top p {
-    padding: 0 4px;
-    font-size: 0.9rem;
-    min-width: 300px;
-    margin-left: -28px;
-  }
-  .banner_container_bottom_desc p {
-    margin-left: 105px;
-    font-size: 0.9rem;
-    max-width: 300px;
-  }
-
-  .gold_card_img {
-    width: 350px;
-  }
-
-  .hero_section {
-    margin: 7.125rem auto 4rem auto;
-  }
-
-  .logoDepzon {
-    max-width: 145px;
-    transform: translate(-1rem);
-  }
-
-  .signinBtn {
-    width: 9.25em;
-    height: 2.5em;
-    padding: 8px;
-    font-size: 14px;
-  }
-
-  .rules_container h4 {
-    font-size: 1.7rem;
-  }
-
-  .rules_container p {
-    font-size: smaller;
-    margin-left: 0;
-  }
-
-  .rules_container_right {
-    margin-left: 0;
-    margin-right: 10px;
-  }
-}
- 
-
-@media (max-width: 445px) {
-  .card {
-    width: 22%;
-  }
-
-  .card_img {
-    width: 60%;
-  }
-
-  .card_content_bottom h4 {
-    font-size: 2.2rem;
-    margin-right: 10px;
-  }
-
-  .rules_container h4 {
-    font-size: 1.5rem;
-    margin-left: -20px;
-    padding: 0;
-  }
-
-  .rules_container_right {
-    margin-left: 0;
-    margin-right: 30px;
-  }
-
-  .big_cards_container h4 {
-    font-size: 1.2rem;
-  }
-
-  .cards_container {
-    margin: auto auto 4.5rem auto;
-  }
-}
-
-@media (max-width: 415px) {
-  .rules_container h4 {
-    font-size: 1.4rem;
-    margin-left: -30px;
-  }
-
-  .rules_container_right {
-    margin-left: 0;
-    margin-right: 30px;
-  }
-
-  .banner_container {
-    width: 20%;
-    padding: 60px;
-  }
-
-  .banner_container h4 {
-    font-size: 1rem;
-  }
-
-  .banner_container_top p {
-    font-size: 0.6rem;
-    min-width: 0.1rem;
-    width: 15rem;
-    margin-right: 200px;
-    margin-left: -28px;
-  }
-
-  .banner_container_bottom_desc p {
-    font-size: 0.4rem;
-  }
-
-  .gold_card_img {
-    width: 40%;
-  }
-
-  .banner_container_bottom_desc p {
-    margin-left: 97px;
-    font-size: 0.4rem;
-    max-width: 280px;
-  }
-
-  .hero_section {
-    margin: 7.125rem auto 0.8rem auto;
-    gap: 0.2rem;
-  }
-
-  .hero_img {
-    width: 90%;
-  }
-
-  .hero_section_title {
-    font-size: 46px;
-    top: 9.6rem;
-  }
-
-  .hero_section_text {
-    width: 28.25rem;
-    font-size: 0.85rem;
-  }
-
-  .cards_container {
-    margin: auto auto 2.5rem auto;
-  }
-} 
-
-@media (max-width: 400px) {
-  .big_cards_container h4 {
-    font-size: 1rem;
-  }
-
-  .big_cards_container {
-    width: 72%;
-  }
-
-  .big_card p {
-    font-size: 0.9rem;
-  }
-
-  .big_card_img {
-    width: 90%;
-  }
-
-  .buy_registerBtn {
-    width: 90%;
-  }
-
-  .discoverRulesBtn1 {
-    margin-right: 18px;
-  }
-
-  .logoDepzon {
-    max-width: 135px;
-    transform: translate(-1rem);
-  }
-
-  .signinBtn {
-    width: 8.25em;
-    height: 2.2em;
-    padding: 5px;
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 370px) {
-  .footer_accepted-payments img {
-    width: 28px;
-  }
-
-  .footer_logo {
-    width: 6rem;
-  }
-
-  .footer_links_item {
-    font-size: 0.6rem;
-  }
-
-  .footer_18img {
-    width: 18px;
-  }
-
-  .thinner_text {
-    font-size: 0.4rem;
-  }
-
-  .rules_container h4 {
-    font-size: 1.1rem;
-    margin-left: -30px;
-  }
-
-  .rules_container_right {
-    margin-left: 0;
-    margin-right: 30px;
-    font-size: 0.9rem;
-    width: 60%;
-  }
-}
-
-@media (max-width: 340px) {
-  .hero_section_text {
-    width: 24.25rem;
-    font-size: 0.75rem;
-  }
-
-  .card {
-    width: 20%;
-  }
-
-  .tournament_container_desc {
-    gap: 0.6rem;
-  }
-
-  .tournament_container_desc_p1 {
-    font-size: 0.5rem;
-    padding: 0 1.2rem 0 0rem;
-  }
-  .tournament_container_desc_p2 {
-    font-size: 0.7rem;
-    padding: 1rem;
-    padding: 0 1.2rem 0 0rem;
-  }
-
-  .tournament_container_desc {
-    padding: auto 10px;
-  }
-
-  .discoverRulesBtn1 {
-    width: 90%;
-  }
-
-  .big_cards_container {
-    width: 66%;
-  }
-
-  .rules_container {
-    max-width: 60rem;
-  }
-}
- */

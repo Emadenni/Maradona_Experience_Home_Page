@@ -77,10 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
     document.body.appendChild(alertBox);
 
-    alertBox.style.position = "fixed";
-    alertBox.style.bottom = "380px";
-    alertBox.style.left = "50%";
-    alertBox.style.transform = "translateX(-50%)";
+
     alertBox.querySelector(".close-alert").addEventListener("click", () => {
       alertBox.remove();
     });

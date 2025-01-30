@@ -1,14 +1,134 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tournaments</title>
-    <div>
-        Tournaments page here 
+    <link rel="stylesheet" href="overlay/overlay.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+    <link rel="stylesheet" href="background.css" />
+    <link rel="stylesheet" href="loginForm/loginForm.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  </head>
+
+  <body>
+    <!-- <div class="background-container">
+      <div class="background">
+        <img src="./images/bg_gradient.png" alt="background" class="decoration decoration1" />
+        <img src="./images/bg_gradient.png" alt="background" class="decoration decoration2" />
+      </div>
+    </div> -->
+
+    <div class="container2">
+      <div class="top_content">
+        <header>
+          <aside>
+            <a href="/index.html">
+              <img src="./images/Depzon.png" alt="logoDepzon" class="logoDepzon" />
+            </a>
+          </aside>
+          <aside>
+            <img src="./images/logoExperience.png" alt="logo-maradona-experience" class="logo-maradona-experience-medium">
+          </aside>
+          <nav>
+            <a class="button hoverBtn signinBtn" id="loginBtn">Accedi</a>
+          </nav>
+        </header>
+
+        <div>
+           
+        </div>
+      </div>
+
+      <main class="main_content">
+        <section class="big_cards_container">
+          <h4>
+            Vuoi partecipare ai tornei senza <br />
+            acquistare il pallone?
+          </h4>
+
+          <div class="big_cards_container_box">
+            <article class="big_card big_card1">
+              <p>
+                Semplice: fai tua la VIP Member Silver Card, un oggetto da collezione con tecnologia NFC che ti
+                permetterà di giocare utilizzando il codice che trovi sul retro.
+              </p>
+              <div class="big_card_img_wrapper">
+                <img src="./images/silver_card.png" alt="silver_card" class="big_card_img big_card_img1" />
+              </div>
+              <a href="" class="button buy_registerBtn">ACQUISTA LA SILVER CARD</a>
+            </article>
+
+            <article class="big_card big_card2">
+              <p>
+                Possiedi già una delle due card? Premi il pulsante e registrala subito sul sito di Maradona Soccerball.
+                Riceverai una email <br />
+                con tutte le istruzioni.
+              </p>
+              <div class="big_card_img_wrapper">
+                <img
+                  src="./images/smarphone_maradona_site.png"
+                  alt="smarphone_maradona_site"
+                  class="big_card_img big_card_img2"
+                />
+              </div>
+              <a
+                href="https://maradonasoccerball.com/registrazione-pallone/#registrazione"
+                class="button buy_registerBtn"
+                >REGISTRA LA SILVER CARD</a
+              >
+            </article>
+          </div>
+        </section>
+
+        <section class="tournament_container" id="anchor">
+          <h4 class="tournament_container_title">I tornei</h4>
+          <article class="tournament_container_desc">
+            <p class="tournament_container_desc_p1">
+              I tornei <strong>Maradona Experience</strong> sono tornei digitali dove gli utenti competono tra loro per
+              il miglior punteggio. L'obiettivo del gioco è pronosticare i risultati delle partite di calcio dei
+              principali campionati del mondo.
+            </p>
+            <p class="tournament_container_desc_p2">
+              Più pronostici indovini, più diamanti accumulerai e più avanzerai in <br />
+              classifica, aggiudicandoti i premi migliori.
+            </p>
+            <a class="button hoverBtn discoverRulesBtn discoverRulesBtn1" href="#anchor2"
+              >Scopri il regolamento e partecipa
+            </a>
+          </article>
+        </section>
+      </main>
+
+      <footer>
+        <img src="./images/Depzon.png" alt="logoDepzon" class="footer_logo" />
+
+        <ul class="footer_links">
+          <li><a href="" class="footer_links_item">Contatto</a></li>
+          <li><a href="" class="footer_links_item">Termini e Condizioni</a></li>
+        </ul>
+
+        <ul class="footer_accepted-payments">
+          <li><img src="./images/site-blindado.svg" alt="site-blindado_img" /></li>
+          <li><img src="./images/Mastercard.svg" alt="Mastercard" /></li>
+          <li><img src="./images/VISA.svg" alt="Visa" /></li>
+          <li><img src="./images/Paypal.svg" alt="Paypal" /></li>
+          <li><img src="./images/Discover-Card.svg" alt="Discover-Card" /></li>
+          <li><img src="./images/american-express.svg" alt="american-express" /></li>
+          <li><img src="./images/Pix.svg" alt="Pix" /></li>
+        </ul>
+
+        <p class="thinner_text">Depzon</p>
+        <p class="thinner_text">Accettiamo solo clienti di età superiore ai 18 anni.</p>
+
+        <img src="./images/18+.png" alt="18+" class="footer_18img" />
+
+        <p class="thinner_text"><span class="purple">&copy;</span> Depzon. Tutti i diritti riservati.</p>
+      </footer>
     </div>
-</head>
-<body>
-    
-</body>
+
+    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/login.js"></script>
+  </body>
 </html>
