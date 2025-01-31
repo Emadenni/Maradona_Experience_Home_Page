@@ -83,18 +83,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
     console.log('Player ID estratto dalla query string:', playerId);
   
     // Chiamata API per recuperare i dati usando l'ID del player
-    const apiUrl = `https://577198b5zf.execute-api.eu-central-1.amazonaws.com/dev/getUserInfo`; // Sostituisci con l'API reale
+    const apiUrl = `https://ksqz6pn2ha.execute-api.eu-central-1.amazonaws.com/prod/proxyVerification`; // Sostituisci con l'API reale
   
-    const headers = {
-      "Authorization": "Bearer f132d8d6fcee49efbfa8261946214621", // Token di autorizzazione
-      "Referer": "76b65cd5-1950-43bb-abc0-6e4ae405f779" // Header Referer
-    };
+  
   
     try {
       const response = await fetch(apiUrl, {
         method: 'POST',
-        mode: 'no-cors',
-        headers: headers,
         body: JSON.stringify({
           playerId: playerId, // Mandiamo l'ID del player nel body della richiesta
         })
