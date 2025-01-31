@@ -91,7 +91,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       const response = await fetch(apiUrl, {
         method: 'POST',
         body: JSON.stringify({
-          playerId: playerId, // Mandiamo l'ID del player nel body della richiesta
+          userId: playerId, // Mandiamo l'ID del player nel body della richiesta
         })
       });
   
