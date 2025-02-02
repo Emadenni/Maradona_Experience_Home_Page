@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="background.css" />
     <link rel="stylesheet" href="loginForm/loginForm.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="tournaments/tournaments.css" />
   </head>
 
   <body>
@@ -29,94 +30,64 @@
             </a>
           </aside>
           <aside>
-            <img src="./images/logoExperience.png" alt="logo-maradona-experience" class="logo-maradona-experience-medium">
+            <img
+              src="./images/logoExperience.png"
+              alt="logo-maradona-experience"
+              class="logo-maradona-experience-medium"
+            />
           </aside>
           <nav>
             <a class="button hoverBtn signinBtn" id="logoutBtn">logout</a>
           </nav>
         </header>
 
-        <div>
-           
-        </div>
+        <div></div>
       </div>
 
-      <main class="main_content">
-        <section class="big_cards_container">
+      <main class="main_content2">
+        <section class="tournaments_page_section">
+          <!--  <h2>Pronto a giocare?</h2>
           <h4>
-            Vuoi partecipare ai tornei senza <br />
-            acquistare il pallone?
-          </h4>
+            Maradona Experience <br />
+            comincia da qui!
+          </h4> -->
 
-          <div class="big_cards_container_box">
-            <article class="big_card big_card1">
-              <p>
-                Semplice: fai tua la VIP Member Silver Card, un oggetto da collezione con tecnologia NFC che ti
-                permetterà di giocare utilizzando il codice che trovi sul retro.
-              </p>
-              <div class="big_card_img_wrapper">
-                <img src="./images/silver_card.png" alt="silver_card" class="big_card_img big_card_img1" />
+          <div class="tournaments_page_cards_container">
+            
+            <article class="tournaments_page_card tournaments_page_card_gold">
+              <img
+                src="./images/gold_card3.png"
+                alt="tornei-gold"
+                class="tournaments_page_card_img tournaments_page_card_img_gold"
+              />
+              <div class="tournaments_page_card_gold_box_right">
+                <h2 class="tournaments_page_card_gold_title">
+                  Tornei <br />
+                  <span> GOLD </span>
+                </h2>
+
+                <p class="tournaments_page_card_gold_desc">
+                  Entra e partecipa ai fantastici tornei riservati ai possessori della Gold Card e del
+                  <a href="https://maradonasoccerball.com/"> Maradona Soccerball</a>
+                </p>
+                <div class="circle_div"></div>
+                <img src="./images/pallone-maradona.webp" alt="maradona_soccerball" class="maradona_soccerball">
+                
               </div>
-              <a href="" class="button buy_registerBtn">ACQUISTA LA SILVER CARD</a>
+              <button class="cta_tornei_gold">Gioca subito <span class="arrow">&#x1F885;</span></button>
             </article>
+            
 
-            <article class="big_card big_card2">
-              <p>
-                Possiedi già una delle due card? Premi il pulsante e registrala subito sul sito di Maradona Soccerball.
-                Riceverai una email <br />
-                con tutte le istruzioni.
-              </p>
-              <div class="big_card_img_wrapper">
-                <img
-                  src="./images/smarphone_maradona_site.png"
-                  alt="smarphone_maradona_site"
-                  class="big_card_img big_card_img2"
-                />
-              </div>
-              <a
-                href="https://maradonasoccerball.com/registrazione-pallone/#registrazione"
-                class="button buy_registerBtn"
-                >REGISTRA LA SILVER CARD</a
-              >
+            <article class="tournaments_page_card tournaments_page_card_silver">
+              <img
+                src="./images/silver-card-maradona2.png"
+                alt="tornei-silver"
+                class="tournaments_page_card_img tournaments_page_card_img_silver"
+              />
+
+              <h2 class="tournaments_page_card_silver_title">Tornei Silver</h2>
             </article>
           </div>
-        </section>
-
-        <section class="rules_container" id="anchor2">
-          <h4>Come funzionano i tornei?</h4>
-          <article class="rules_container_right">
-            <p class="rules_container_right_up">
-              Maradona Experience sono una serie di tornei, giochi e lotterie dedicate a Maradona. I tornei sono
-              ospitati su Depzon ed è possibile partecipare solo se si hanno la Gold card o la Silver card. Entrambe le
-              card servono come "invito" per accedere ai tornei esclusivi. Chi non ha una delle card non può partecipare
-              ai tornei.
-            </p>
-            <p class="rules_container_right_up">
-              Una volta che l'utente si è <span> REGISTRATO</span>, può <span>ISCRIVERSI</span> a tutti i tornei pagando
-              la relativa quota di iscrizione. <br />
-              Il torneo per il biliardino sarà ancora più esclusivo e potranno iscriversi gratuitamente solo i
-              possessori delle Gold card. Nessun altro potrà partecipare a questo torneo, nemmeno a pagamento.
-            </p>
-            <p class="rules_container_right_up">
-              Gli altri tornei avranno una quota di ingresso e una vincita di buoni Amazon, premi casinò o anche il
-              pallone stesso (una buona soluzione per rendere la Silver Card e i palloni correlati).
-            </p>
-            <img src="./images/monitor_tornei.png" alt="monitor_tornei" class="rules_container_right_img" />
-            <p class="rules_container_right_down">
-              Per acquistare <span>CREDITO</span>, gli utenti devono acquistare quel credito su Depzon. La Silver <br />
-              card costerà 9€ e comprenderà 5€ di credito. La Gold Card non avrà credito all'interno ma l'utente potrà
-              partecipare al torneo esclusivo del biliardino.
-            </p>
-            <p class="rules_container_right_down">
-              Ad esempio, un torneo settimanale potrebbe avere come premio una quota fissa di 100€ <br />di buoni Amazon
-              più un 20% della quota di iscrizione (ad esempio 5€).
-            </p>
-            <p class="rules_container_right_down">
-              Un torneo mensile può avere come premio il pallone, indipendentemente dagli iscritti. Se <br />
-              si raggiunge una certa quota si aggiunge un pallone per il secondo posto e poi buoni amazon o casinò a
-              scalare.
-            </p>
-          </article>
         </section>
       </main>
 
@@ -147,6 +118,7 @@
       </footer>
     </div>
 
+   
     <script type="module" src="js/script.js"></script>
     <script type="module" src="js/login.js"></script>
     <script type="module" src="js/fetchData.js"></script>
