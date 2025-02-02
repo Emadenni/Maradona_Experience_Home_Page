@@ -19,7 +19,7 @@
   align-items: center;
   padding: 1rem 1.25rem;
   margin: 10px auto 7.5rem auto;
-  backdrop-filter: (1px);
+  backdrop-filter: blur(10px);
   gap: 1.2rem;
 }
 
@@ -29,7 +29,7 @@
   min-width: 300px;
   width: 90%; /* Più largo in orizzontale */
   height: auto; /* Altezza adattabile */
-  max-height: 390px; /* Evita che diventi troppo alta */
+  max-height: 400px; /* Evita che diventi troppo alta */
   box-shadow: 10px 11px 15px 0px rgba(0, 0, 0, 0.75);
   background-color: white;
   position: relative;
@@ -43,6 +43,7 @@
 
 .tournaments_page_card_silver {
   border: solid 2px rgb(192, 192, 192, 0.9);
+  background: linear-gradient(135deg, #ecf0ee 0%, rgb(143, 157, 151) 100%);
 }
 
 .tournaments_page_card_img {
@@ -53,6 +54,7 @@
 }
 
 .tournaments_page_card_img_gold {
+
 }
 .tournaments_page_card_img_silver {
 }
@@ -69,25 +71,46 @@
   line-height: 0.9;
 }
 
-@keyframes colorChange {
-  0% {
-    color: gold;
-  }
-
-  100% {
-    color: rgb(255, 215, 0, 0.9);
-  }
+.tournaments_page_card_silver_title {
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: italic;
+  color: #142563;
+  margin-top: 1.3rem;
+  line-height: 0.9;
 }
+
 
 .tournaments_page_card_gold_title span {
   color: gold;
   font-size: 6rem;
   font-weight: 900;
   text-shadow: 5px 6px 1px #142563;
-  animation: colorChange 10s infinite;
+ 
+}
+
+.tournaments_page_card_silver_title_span {
+  color: rgb(183, 28, 28);
+  font-size: 6rem;
+  font-weight: 900;
+  text-shadow: 5px 6px 1px #142563;
+
+ 
 }
 
 .tournaments_page_card_gold_box_right {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.tournaments_page_card_silver_box_right {
   width: 100%;
   height: 100%;
   padding: 20px;
@@ -139,7 +162,8 @@
   border: outset 4px rgb(9, 62, 112);
 }
 
-.cta_tornei_gold {
+.cta_tornei_gold, .cta_tornei_silver {
+  letter-spacing: 1.3;
   position: absolute;
   height: 2.6rem;
   width: 50%;
@@ -153,4 +177,9 @@
   font-style: italic;
   color: white;
   font-size: 22px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  gap: 20px;
 }
+
