@@ -135,8 +135,20 @@
   background-position: top;
   background-size: 400px;
   background-repeat: no-repeat;
-  opacity: 0; /* Il background parte con opacità 0 */
-  transition: opacity 2s ease-in-out, background-size 2s ease-in-out; 
+  opacity: .2; /* Nasconde inizialmente l'overlay */
+  visibility: hidden; /* Impedisce che sia interattivo */
+  animation: fadeIn 1s forwards; /
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.1;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 /* .overlay-content h2 {
