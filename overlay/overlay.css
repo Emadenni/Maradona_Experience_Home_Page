@@ -15,7 +15,7 @@
 .overlay {
   overflow-y: auto;
   display: flex;
- /*  justify-content: center; */
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   position: fixed;
@@ -31,14 +31,14 @@
   max-height: 100vh;
   transition: justify-content 0.3s ease;
   box-shadow: 0 4px 8px rgba(219, 213, 213, 0.2), 0 6px 20px rgba(0, 0, 0, 0.1);
-  height: calc(var(--vh, 1vh) * 100);
+
 }
 
 .overlay_img {
   width: 50%;
   opacity: 0; 
   transform: translateX(100px);
-  animation: slideIn 1.2s ease-out forwards, arcTilt 0.6s ease-out 1.4s forwards;
+  animation: slideIn 1.2s ease-out forwards;
   transition: transform 0.1s ease, opacity 0.3s ease;
   border-radius: 10px;
 }
@@ -53,16 +53,6 @@
   }
 }
 
-@keyframes arcTilt {
-  0%, 100% {
-    transform: rotate(0deg) translateY(0);
-    transform-origin: bottom left; /* Punto di rotazione in basso a sinistra */
-  }
-  50% {
-    transform: rotate(-5deg) translateY(-10px); 
-    /* Il lato destro si alza leggermente */
-  }
-}
 
 .overlay.active {
   justify-content: space-between;

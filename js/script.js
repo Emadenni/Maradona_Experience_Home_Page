@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let spinner = document.getElementById("spinner");
   let isFormOpen = false;
 
-
   function setViewportHeight() {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -34,6 +33,15 @@ document.addEventListener("DOMContentLoaded", () => {
   
   setViewportHeight();
   
+
+
+  function showLoginOverlay() {
+    if (loginOverlay) {
+      loginOverlay.style.display = "block";
+    }
+  }
+
+
 
   function hideLoginOverlay() {
     if (loginOverlay) {
