@@ -39,6 +39,9 @@
   transition: box-shadow 0.3s ease;
 }
 
+
+
+
 .tournaments_page_card:hover {
   box-shadow: 2px 2px 2px 25px rgba(49, 26, 154, 0.1);
   scale: 1.02;

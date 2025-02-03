@@ -197,3 +197,17 @@ document.addEventListener("DOMContentLoaded", () => {
   handleEvent(".password-toggle", "click", () => togglePassword("password", ".password-toggle i"));
   handleEvent(".login-password-toggle", "click", () => togglePassword("login-password", ".login-password-toggle i"));
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const goldCard = document.querySelector(".tournaments_page_card_gold");
+  const silverCard = document.querySelector(".tournaments_page_card_silver");
+
+  goldCard.addEventListener("click", function () {
+    window.location.href = "";
+  });
+
+  // Aggiungi evento di clic per la card Silver
+  silverCard.addEventListener("click", function () {
+    window.location.href = "";
+  });
+});
