@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 .container2 {
+  background: none !important;
 }
 
 .tournaments_page_section {
@@ -44,23 +45,26 @@
 }
 
 .tournaments_page_card_gold {
-  border: solid 5px rgb(255, 215, 0, 0.4);
+  border: outset 5px rgb(255, 215, 0, 1);
   background: linear-gradient(135deg, #91d4f2 0%, white 100%);
+  overflow: hidden;
 }
 
 .tournaments_page_card_silver {
-  border: solid 4px rgba(16, 152, 173, 0.9);
-  background: linear-gradient(135deg, rgba(95, 98, 96, 0.9) 0%, #fbfefd 100%);
+  border: solid 4px rgb(86, 87, 87);
+  background: linear-gradient(135deg, rgba(236, 243, 238, 0.9) 0%, #fbfefd 100%);
+  background: linear-gradient(135deg, rgba(66, 166, 100, 0.9) 0%, #fbfefd 100%);
 }
 
 .tournaments_page_card_img {
   width: 55%; /* Occupa il 40% della card */
   height: 100%; /* Adatta l'altezza della card */
-  border-radius: 10px 0 0 10px;
+  border-radius: 8px 0 0 10px;
   object-fit: cover; /* Mantiene le proporzioni senza deformare */
 }
 
 .tournaments_page_card_img_gold {
+  border-radius: 0px 0 0 0px;
 }
 .tournaments_page_card_img_silver {
   width: 55%;
@@ -101,7 +105,7 @@
 }
 
 .tournaments_page_card_silver_title_span {
-  color: rgb(199, 24, 24);
+  color: rgb(37, 109, 85);
   font-size: 6rem;
 
   font-weight: 900;
@@ -199,9 +203,10 @@
   position: absolute;
   bottom: 44%;
   right: -9%;
- 
+
   opacity: 0.5;
 }
+
 
 .cta_tornei_gold,
 .cta_tornei_silver {
@@ -274,31 +279,42 @@
     /*  border: outset 4px rgb(7, 63, 113);*/
     opacity: 0.5;
   }
-}
+
+  
 
 @media (max-width: 795px) {
 
+  .tournaments_page_cards_container {
+ 
+    padding: 0.4rem 0;
+    margin: 100px auto 2.5rem auto;
+  
+  }
   .tournaments_page_card {
     width: 80%;
     min-height: 300px;
+   
   }
 
   .tournaments_page_card_img {
     width: 40%;
     height: 500px;
   }
-  
+
+  .tournaments_page_card_img_silver {
+    width:55%;
+  }
 }
 
 @media (max-width: 725px) {
   .maradona-img {
-    width: 60%;
+    width: 45%;
   }
-  
 }
 
 @media (max-width: 600px) {
-  .cta_tornei_silver, .cta_tornei_gold {
+  .cta_tornei_silver,
+  .cta_tornei_gold {
     width: 80%;
     transform: translate(-14%, 22%);
   }
@@ -307,18 +323,21 @@
     height: 500px;
   }
 
-  .tournaments_page_card_gold_desc, .tournaments_page_card_silver {
+  .tournaments_page_card_gold_desc,
+  .tournaments_page_card_silver {
     font-size: 1.1rem;
   }
 
-  .tournaments_page_card_gold_title,  .tournaments_page_card_silver_title {
+  .tournaments_page_card_gold_title,
+  .tournaments_page_card_silver_title {
     font-size: 2.4rem;
   }
 
-  .tournaments_page_card_gold_title span, .tournaments_page_card_silver_title  span {
+  .tournaments_page_card_gold_title span,
+  .tournaments_page_card_silver_title span {
     font-size: 4rem;
   }
-  
+
   .tournaments_page_card {
     gap: 2px;
     padding: 0;
@@ -327,62 +346,83 @@
   .tournaments_page_card_gold_desc,
   .tournaments_page_card_silver_desc {
     font-size: 0.9rem;
- 
   }
 
   .tournaments_page_card_silver_desc {
     width: 100%;
   }
-
 }
 
 @media (max-width: 600px) {
-  .tournaments_page_card_gold_title  {
+  .tournaments_page_card_gold_title {
     transform: translateX(-5%);
   }
 
   .maradona-img {
     width: 50%;
   }
-  
 }
 
 @media (max-width: 480px) {
   .circle_div {
     transform: translate(182px, 10px);
   }
+
+  .circle_div2 {
+    background-color: rgba(221, 227, 222, 1);
+    width: 304px;
+    height: 284px;
+    border-radius: 100%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    opacity: 0.5;
+  }
 }
 
 @media (max-width: 440px) {
- 
+  .tournaments_page_card_silver_box_right {
+    padding: 0px auto;
+  }
 
-  .tournaments_page_card_silver_box_right  {
-padding: 0px auto;
- }
+  .tournaments_page_card_gold_title {
+    transform: translateX(-8%);
+  }
 
- .tournaments_page_card_gold_title  {
-  transform: translateX(-8%);
+  .tournaments_page_card_gold_title,
+  .tournaments_page_card_silver_title {
+    font-size: 2rem;
+  }
 
-}
+  .tournaments_page_card_gold_title span,
+  .tournaments_page_card_silver_title span {
+    font-size: 3.5rem;
+  }
 
-.tournaments_page_card_gold_title,  .tournaments_page_card_silver_title {
-  font-size: 2rem;
-}
-
-.tournaments_page_card_gold_title span, .tournaments_page_card_silver_title  span {
-  font-size: 3.5rem;
-}
-
-.tournaments_page_card_gold_desc,
+  .tournaments_page_card_gold_desc,
   .tournaments_page_card_silver_desc {
     font-size: 0.8rem;
-
   }
 }
 
-@media (max-width: 440px)  {
+
+@media (max-width: 440px) {
   .cta_tornei_silver {
-    width: 96%;
+    width: 80%;
+    font-size: 1.1rem;
     transform: translateX(-24%);
+
   }
+
+  .tournaments_page_card_gold_title {
+    transform: translateX(-12%);
+  }
+
+  .tournaments_page_card_img_silver {
+    margin-right: -10px;
+  
+  }
+}
+
+
 }
