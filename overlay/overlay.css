@@ -13,7 +13,7 @@
 }
 
 .overlay {
-  overflow-y: auto;
+  /* overflow-y: auto; */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -26,8 +26,8 @@
   background-color: rgba(165, 167, 164, 0.4);
   z-index: 1000;
   backdrop-filter: blur(10px);
-  padding-bottom: 150px;
-  padding-top: 20px;
+ /*  padding-bottom: 150px;
+  padding-top: 20px; */
   max-height: 100vh;
   transition: justify-content 0.3s ease;
   box-shadow: 0 4px 8px rgba(219, 213, 213, 0.2), 0 6px 20px rgba(0, 0, 0, 0.1);
