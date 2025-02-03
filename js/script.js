@@ -11,16 +11,29 @@ document.addEventListener("DOMContentLoaded", () => {
   let spinner = document.getElementById("spinner");
   let isFormOpen = false;
 
-  window.addEventListener("load", () => {
-    window.scrollTo(0, 0);
-    // Un piccolo delay aiuta nei browser mobile
-  });
 
-  function showLoginOverlay() {
-    if (loginOverlay) {
-      loginOverlay.style.display = "block";
-    }
+  function setViewportHeight() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
   }
+  
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'visible') {
+      window.scrollTo(0, 0); 
+      document.body.style.display = 'none';
+      document.body.offsetHeight; 
+      document.body.style.display = ''; 
+    }
+  });
+  
+  window.addEventListener('resize', setViewportHeight);
+  window.addEventListener('orientationchange', setViewportHeight);
+  window.addEventListener('pageshow', function () {
+    window.scrollTo(0, 0);
+  });
+  
+  setViewportHeight();
+  
 
   function hideLoginOverlay() {
     if (loginOverlay) {

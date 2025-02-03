@@ -13,9 +13,9 @@
 }
 
 .overlay {
-  /* overflow-y: auto; */
+  overflow-y: auto;
   display: flex;
-  justify-content: center;
+ /*  justify-content: center; */
   flex-direction: column;
   align-items: center;
   position: fixed;
@@ -31,6 +31,7 @@
   max-height: 100vh;
   transition: justify-content 0.3s ease;
   box-shadow: 0 4px 8px rgba(219, 213, 213, 0.2), 0 6px 20px rgba(0, 0, 0, 0.1);
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 .overlay_img {
