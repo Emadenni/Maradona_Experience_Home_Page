@@ -132,33 +132,12 @@
   position: relative;
   box-shadow: 0 12px 12px rgba(5, 145, 145, 0.2), 0 6px 20px rgba(0, 0, 0, 0.1);
   background-image: url(../images/bg_gradient.png);
-  background-position: top;
-  background-size: 400px;
+  background-position: center;
+  background-size: 200px;
   background-repeat: no-repeat;
-  opacity: .2; /* Nasconde inizialmente l'overlay */
-  visibility: hidden; /* Impedisce che sia interattivo */
-  animation: fadeIn 1s forwards; /
+  
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0.1;
-    visibility: hidden;
-  }
-  100% {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-/* .overlay-content h2 {
-  color: var(--secondary-color);
-  font-size: 1rem;
-  text-align: center;
-  margin-bottom: 1rem;
-  width: 100%;
-  filter: contrast(250%);
-} */
 
 .continue {
   color: var(--secondary-color);
