@@ -11,6 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
   let spinner = document.getElementById("spinner");
   let isFormOpen = false;
 
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 50); // Un piccolo delay aiuta nei browser mobile
+  });
+
   function showLoginOverlay() {
     if (loginOverlay) {
       loginOverlay.style.display = "block";
