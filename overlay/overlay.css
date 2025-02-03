@@ -146,11 +146,6 @@
   filter: contrast(250%);
 } */
 
-.name {
-  color: #00b300;
-  font-size: 28px;
-}
-
 .continue {
   color: var(--secondary-color);
 }

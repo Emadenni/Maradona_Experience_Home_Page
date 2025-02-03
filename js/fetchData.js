@@ -88,6 +88,7 @@ window.addEventListener("DOMContentLoaded", async (event) => {
     const data = await response.json();
 
     document.getElementById("first-name").value = data.data.first_name;
+    document.getElementById("name").innerHTML = data.data.first_name;
     document.getElementById("last-name").value = data.data.last_name;
     document.getElementById("email").value = data.data.email;
     document.getElementById("phone").value = data.data.phoneNr;

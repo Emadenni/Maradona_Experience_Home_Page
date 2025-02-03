@@ -362,6 +362,14 @@ header {
 
 /*-----------------------------------------------------*/
 .arrow {
+  font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+  font-size: 1.375rem;
+  color: var(--secondary-color);
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+.arrow2 {
   font-family: "Segoe UI Symbol", "Arial Unicode MS", "Noto Sans Symbols";
   font-size: 1.375rem;
   color: var(--secondary-color);
