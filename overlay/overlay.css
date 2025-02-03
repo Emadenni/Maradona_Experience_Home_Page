@@ -33,6 +33,36 @@
   box-shadow: 0 4px 8px rgba(219, 213, 213, 0.2), 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
+.overlay_img {
+  width: 50%;
+  opacity: 0; /* Nascondi inizialmente */
+  transform: translateX(100px);
+  animation: slideIn 1.2s ease-out forwards, arcTilt 0.6s ease-out 1.4s forwards;
+  transition: transform 0.1s ease, opacity 0.3s ease;
+  border-radius: 10px;
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes arcTilt {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0);
+    transform-origin: bottom left; /* Punto di rotazione in basso a sinistra */
+  }
+  50% {
+    transform: rotate(-5deg) translateY(-10px); 
+    /* Il lato destro si alza leggermente */
+  }
+}
+
 .overlay.active {
   justify-content: space-between;
 }
@@ -70,8 +100,6 @@
   color: #ffffff;
   font-style: italic;
   letter-spacing: 1.4;
-  
- 
 }
 
 .overlay-content_title_container {
@@ -80,7 +108,7 @@
 }
 
 .logo-maradona-experience {
-  width: 120px;
+  width: 190px;
 }
 
 .overlay_img {
@@ -104,19 +132,19 @@
   position: relative;
   box-shadow: 0 12px 12px rgba(5, 145, 145, 0.2), 0 6px 20px rgba(0, 0, 0, 0.1);
   background-image: url(../images/bg_gradient.png);
-  background-position:top;
-  background-size: 310px;
-  background-repeat:no-repeat;
+  background-position: top;
+  background-size: 400px;
+  background-repeat: no-repeat;
 }
 
-.overlay-content h2 {
+/* .overlay-content h2 {
   color: var(--secondary-color);
   font-size: 1rem;
   text-align: center;
   margin-bottom: 1rem;
   width: 100%;
   filter: contrast(250%);
-}
+} */
 
 .name {
   color: #00b300;
@@ -128,21 +156,47 @@
 }
 
 .register-button {
-  background-color: #00b300 !important;
+  background: linear-gradient(135deg, #00b300, #009900) !important;
   color: white !important;
   margin: 20px;
-  padding: 10px 20px;
+  padding: 12px 25px;
   width: 80%;
-  border-radius: 5px;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 18px;
-  transition: background-color 0.3s ease;
+  font-size: 20px;
+  font-weight: 900;
   letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  animation: pulse 10s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(0, 179, 0, 0.7);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 179, 0, 1);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(0, 179, 0, 0.7);
+  }
 }
 
 .register-button:hover {
   background-color: rgb(15, 175, 15) !important;
   color: white;
+}
+
+.register-button:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .register-button .arrow {
@@ -209,7 +263,7 @@
   margin-top: 10px;
 }
 
-.username-password-group input  {
+.username-password-group input {
   margin: 6px auto 2px auto;
   font-size: 16px;
   background-color: #00b300 !important;
@@ -339,17 +393,15 @@ label {
   font-style: italic;
   font-size: 14px;
   margin: 20px auto 24px auto;
-  
 }
 
 .terms-conditions_box {
- 
   margin: auto;
-  margin-top:20px ;
+  margin-top: 20px;
   width: 100%;
 }
 
-.terms-conditions_box .terms-conditions_box_label  {
+.terms-conditions_box .terms-conditions_box_label {
   position: static;
   display: inline-block;
   width: 100%;
@@ -403,10 +455,6 @@ label {
     height: 100px;
   }
 
-  .overlay_img {
-    width: 50%;
-  }
-
   .continue-link {
     font-size: smaller;
     line-height: 1;
@@ -419,24 +467,22 @@ label {
     }
   }
 
-#login-form label {
-  position: absolute;
-  top: 10px;
-  left: 15px;
-  font-size: 16px;
-  color: #007bff;
-  font-weight: 500;
-  pointer-events: none;
-  transition: 0.2s ease all;
-}
+  #login-form label {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 16px;
+    color: #007bff;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.2s ease all;
+  }
 
-
-#login-form label::focus + label{
-  top: -130px;
-  font-size: 16px;
-  color: #007bff;
-}
-
+  #login-form label::focus + label {
+    top: -130px;
+    font-size: 16px;
+    color: #007bff;
+  }
 }
 
 @media (max-width: 358px) {
