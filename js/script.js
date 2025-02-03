@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const continueLink = document.getElementById("continue-link");
   const registrationForm = document.getElementById("registration-form");
   const arrow = document.querySelector(".register-button .arrow");
+  let spinner = document.getElementById("spinner");
   let isFormOpen = false;
 
   function showLoginOverlay() {
@@ -175,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   });
 
-  // Funzione per il toggle della password
+  
   function togglePassword(fieldId, iconClass) {
     const passwordField = document.getElementById(fieldId);
     const passwordToggleIcon = document.querySelector(iconClass);
@@ -206,7 +207,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.href = "";
   });
 
-  // Aggiungi evento di clic per la card Silver
+ 
   silverCard.addEventListener("click", function () {
     window.location.href = "";
   });
