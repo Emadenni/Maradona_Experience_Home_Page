@@ -11,10 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
   let spinner = document.getElementById("spinner");
   let isFormOpen = false;
 
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 50); // Un piccolo delay aiuta nei browser mobile
+  window.addEventListener("load", () => {
+    window.scrollTo(0, 0);
+    // Un piccolo delay aiuta nei browser mobile
   });
 
   function showLoginOverlay() {
@@ -182,7 +181,6 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   });
 
-  
   function togglePassword(fieldId, iconClass) {
     const passwordField = document.getElementById(fieldId);
     const passwordToggleIcon = document.querySelector(iconClass);
@@ -204,7 +202,6 @@ document.addEventListener("DOMContentLoaded", () => {
   handleEvent(".password-toggle", "click", () => togglePassword("password", ".password-toggle i"));
   handleEvent(".login-password-toggle", "click", () => togglePassword("login-password", ".login-password-toggle i"));
 
-  
   const goldCard = document.querySelector(".tournaments_page_card_gold");
   const silverCard = document.querySelector(".tournaments_page_card_silver");
 
@@ -212,15 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "";
   });
 
- 
   silverCard.addEventListener("click", function () {
     window.location.href = "";
   });
-
-  
-
-
 });
-
-
-
