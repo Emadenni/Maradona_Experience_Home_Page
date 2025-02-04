@@ -1,5 +1,7 @@
+import { hideRegisterOverlay } from "./script.js";
 const API_URL = "https://reqres.in/api/login";
 const loginOverlay = document.querySelector(".login-overlay");
+const registerOverlay = document.querySelector(".overlay");
 
 document.addEventListener("DOMContentLoaded", () => {
   const loginForm = document.getElementById("login-form");
@@ -30,8 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (response.ok) {
           sessionStorage.setItem("token", data.token);
           alert("Login riuscito!");
-          window.location.reload(); 
-          
+          console.log("Nascondo l'overlay"); // Aggiungi questo per vedere se viene eseguito
+
+          window.location.reload();
         } else {
           alert("Errore: " + (data.message || "Credenziali errate"));
         }
@@ -41,7 +44,4 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-
-  
 });
-

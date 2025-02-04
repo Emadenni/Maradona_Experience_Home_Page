@@ -1,4 +1,123 @@
-document.addEventListener("DOMContentLoaded", () => {
+function setViewportHeight() {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
+}
+
+function showLoginOverlay(loginOverlay) {
+  if (loginOverlay) {
+    loginOverlay.style.display = "block";
+  }
+}
+
+function hideLoginOverlay(loginOverlay) {
+  if (loginOverlay) {
+    loginOverlay.style.display = "none";
+  }
+}
+
+function showRegisterOverlayHideLogin(registerOverlay, loginOverlay, registrationForm, isFormOpen) {
+  if (registerOverlay && loginOverlay) {
+    registerOverlay.classList.remove("hidden");
+    loginOverlay.style.display = "none";
+    document.getElementById("top").scrollIntoView({ behavior: "smooth", block: "start" });
+
+    if (registrationForm.classList.contains("active")) {
+      registerOverlay.style.justifyContent = "space-evenly";
+      isFormOpen = true;
+    } else {
+      registerOverlay.style.justifyContent = "center";
+      isFormOpen = false;
+    }
+  }
+}
+
+function updateLoginButton(loginBtn) {
+  const token = sessionStorage.getItem("token");
+  if (loginBtn) {
+    if (token) {
+      loginBtn.textContent = "Logout";
+      loginBtn.removeEventListener("click", showLoginOverlay);
+      loginBtn.addEventListener("click", logout);
+    } else {
+      loginBtn.textContent = "Accedi";
+      loginBtn.removeEventListener("click", logout);
+      loginBtn.addEventListener("click", showLoginOverlay);
+    }
+  }
+}
+
+export function hideRegisterOverlay(registerOverlay) {
+  if (registerOverlay) {
+    registerOverlay.classList.add("hidden");
+    registerOverlay.style.justifyContent = "center";
+  }
+}
+
+function logout() {
+  sessionStorage.removeItem("token");
+  updateLoginButton();
+  window.location.reload();
+}
+
+function logoutFromTournamentsPage() {
+  sessionStorage.removeItem("token");
+  updateLoginButton();
+  window.location.href = "index.html";
+}
+
+function showCustomAlert(message) {
+  const alertBox = document.createElement("div");
+  alertBox.classList.add("custom-alert");
+
+  const overlay = document.createElement("div");
+  overlay.classList.add("alert-overlay");
+
+  document.body.classList.add("no-scroll");
+
+  alertBox.innerHTML = `
+    <button class="close-alert close-btn">X</button>
+    <img src="./images/logoExperience.png" class="logo-maradona-experience">
+    <p>${message}</p>
+  `;
+
+  document.body.appendChild(overlay);
+  document.body.appendChild(alertBox);
+
+  alertBox.querySelector(".close-alert").addEventListener("click", () => {
+    alertBox.remove();
+    overlay.remove();
+    document.body.classList.remove("no-scroll");
+  });
+}
+
+function handleEvent(selector, eventType, callback) {
+  const element = document.querySelector(selector);
+  if (element) {
+    element.addEventListener(eventType, callback);
+  } else {
+    console.log(`Elemento ${selector} non trovato.`);
+  }
+}
+
+function togglePassword(fieldId, iconClass) {
+  const passwordField = document.getElementById(fieldId);
+  const passwordToggleIcon = document.querySelector(iconClass);
+
+  if (passwordField && passwordToggleIcon) {
+    switch (passwordField.type) {
+      case "password":
+        passwordField.type = "text";
+        passwordToggleIcon.classList.replace("fa-eye", "fa-eye-slash");
+        break;
+      case "text":
+        passwordField.type = "password";
+        passwordToggleIcon.classList.replace("fa-eye-slash", "fa-eye");
+        break;
+    }
+  }
+}
+
+function init() {
   const loginBtn = document.getElementById("loginBtn");
   const logoutBtn = document.getElementById("logoutBtn");
   const loginOverlay = document.querySelector(".login-overlay");
@@ -11,235 +130,113 @@ document.addEventListener("DOMContentLoaded", () => {
   let spinner = document.getElementById("spinner");
   let isFormOpen = false;
 
-  function setViewportHeight() {
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-  }
+  document.addEventListener("DOMContentLoaded", () => {
+    setViewportHeight();
 
-  document.addEventListener('visibilitychange', function () {
-    if (document.visibilityState === 'visible') {
-      window.scrollTo(0, 0); 
-      document.body.style.display = 'none';
-      document.body.offsetHeight; 
-      document.body.style.display = ''; 
+    window.addEventListener("resize", setViewportHeight);
+    window.addEventListener("orientationchange", setViewportHeight);
+    window.addEventListener("pageshow", () => window.scrollTo(0, 0));
+
+ const token = sessionStorage.getItem("token");
+    if (token) {
+      hideRegisterOverlay(registerOverlay);
+      hideLoginOverlay(loginOverlay);
     }
-  });
 
-  window.addEventListener('resize', setViewportHeight);
-  window.addEventListener('orientationchange', setViewportHeight);
-  window.addEventListener('pageshow', function () {
-    window.scrollTo(0, 0);
-  });
+    updateLoginButton(loginBtn);
 
-  setViewportHeight();
-
-  function showLoginOverlay() {
-    if (loginOverlay) {
-      loginOverlay.style.display = "block";
-    }
-  }
-
-  function hideLoginOverlay() {
-    if (loginOverlay) {
-      loginOverlay.style.display = "none";
-    }
-  }
-
-  function showRegisterOverlayHideLogin() {
-    if (registerOverlay && loginOverlay) {
-      registerOverlay.classList.remove("hidden");
-      loginOverlay.style.display = "none";
-      document.getElementById("top").scrollIntoView({ behavior: "smooth", block: "start" });
-
-      if (registrationForm.classList.contains("active")) {
-        registerOverlay.style.justifyContent = "space-evenly";
-        isFormOpen = true;
-      } else {
-        registerOverlay.style.justifyContent = "center";
-        isFormOpen = false;
-      }
-    }
-  }
-
-  function updateLoginButton() {
-    const token = sessionStorage.getItem("token");
-    if (loginBtn) {
+    handleEvent("#continue-link", "click", (event) => {
+      event.preventDefault();
+      const token = sessionStorage.getItem("token");
       if (token) {
-        loginBtn.textContent = "Logout";
-        loginBtn.removeEventListener("click", showLoginOverlay);
-        loginBtn.addEventListener("click", logout);
+        showCustomAlert("Sei già loggato! Leggi il regolamento ed accedi ai tornei");
+        setTimeout(() => {
+          hideRegisterOverlay(registerOverlay);
+          hideLoginOverlay(loginOverlay);
+        }, 2000);
       } else {
-        loginBtn.textContent = "Accedi";
-        loginBtn.removeEventListener("click", logout);
-        loginBtn.addEventListener("click", showLoginOverlay);
+        hideRegisterOverlay(registerOverlay);
+        showLoginOverlay(loginOverlay);
       }
-    }
-  }
-
-  function hideRegisterOverlay() {
-    if (registerOverlay) {
-      registerOverlay.classList.add("hidden");
-      registerOverlay.style.justifyContent = "center";
-    }
-  }
-
-  function logout() {
-    sessionStorage.removeItem("token");
-    updateLoginButton();
-    window.location.reload();
-  }
-
-  function logoutFromTournamentsPage() {
-    sessionStorage.removeItem("token");
-    updateLoginButton();
-    window.location.href = "index.html";
-  }
-
-  function showCustomAlert(message) {
-    const alertBox = document.createElement("div");
-    alertBox.classList.add("custom-alert");
-
-    const overlay = document.createElement("div");
-    overlay.classList.add("alert-overlay");
-
-    document.body.classList.add("no-scroll");
-
-    alertBox.innerHTML = `
-      <button class="close-alert close-btn">X</button>
-      <img src="./images/logoExperience.png" class="logo-maradona-experience">
-      <p>${message}</p>
-    `;
-
-    document.body.appendChild(overlay);
-    document.body.appendChild(alertBox);
-
-    alertBox.querySelector(".close-alert").addEventListener("click", () => {
-      alertBox.remove();
-      overlay.remove();
-      document.body.classList.remove("no-scroll");
     });
-  }
 
-  function handleEvent(selector, eventType, callback) {
-    const element = document.querySelector(selector);
-    if (element) {
-      element.addEventListener(eventType, callback);
-    } else {
-      console.log(`Elemento ${selector} non trovato.`);
-    }
-  }
+    handleEvent("#loginBtn", "click", () => showLoginOverlay(loginOverlay));
+    handleEvent("#logoutBtn", "click", logoutFromTournamentsPage);
+    handleEvent("#register-link", "click", (event) => {
+      event.preventDefault();
+      showRegisterOverlayHideLogin(registerOverlay, loginOverlay, registrationForm, isFormOpen);
+    });
 
-  updateLoginButton();
+    handleEvent("#toggle-register", "click", () => {
+      if (registrationForm) {
+        registrationForm.classList.toggle("active");
+        registrationForm.classList.toggle("hidden");
 
-  handleEvent("#continue-link", "click", (event) => {
-    event.preventDefault();
-    const token = sessionStorage.getItem("token");
-    if (token) {
-      showCustomAlert("Sei già loggato! Leggi il regolamento ed accedi ai tornei");
-      setTimeout(() => {
-        hideRegisterOverlay();
-        hideLoginOverlay();
-      }, 2000); 
-    } else {
-      hideRegisterOverlay();
-      showLoginOverlay();
-    }
-  });
+        if (registrationForm.classList.contains("active")) {
+          registerOverlay.style.justifyContent = "space-evenly";
+          isFormOpen = true;
+        } else {
+          registerOverlay.style.justifyContent = "center";
+          isFormOpen = false;
+        }
 
-  handleEvent("#loginBtn", "click", showLoginOverlay);
+        if (arrow) {
+          arrow.style.transform = registrationForm.classList.contains("active") ? "rotate(180deg)" : "rotate(0deg)";
+        }
+      }
+    });
 
-  handleEvent("#logoutBtn", "click", logoutFromTournamentsPage);
+    handleEvent(".login-overlay", "click", (event) => {
+      if (event.target === loginOverlay) hideLoginOverlay(loginOverlay);
+    });
 
-  handleEvent("#register-link", "click", (event) => {
-    event.preventDefault();
-    showRegisterOverlayHideLogin();
-  });
-
-  handleEvent("#toggle-register", "click", () => {
-    if (registrationForm) {
-      registrationForm.classList.toggle("active");
-      registrationForm.classList.toggle("hidden");
-
-      if (registrationForm.classList.contains("active")) {
-        registerOverlay.style.justifyContent = "space-evenly";
-        isFormOpen = true;
+    handleEvent("#card-link-tournaments", "click", (event) => {
+      event.preventDefault();
+      const token = sessionStorage.getItem("token");
+      if (token) {
+        window.location.href = "tournaments.html";
       } else {
-        registerOverlay.style.justifyContent = "center";
-        isFormOpen = false;
+        showLoginOverlay(loginOverlay);
       }
-
-      if (arrow) {
-        arrow.style.transform = registrationForm.classList.contains("active") ? "rotate(180deg)" : "rotate(0deg)";
-      }
-    }
-  });
-
-  handleEvent(".login-overlay", "click", (event) => {
-    if (event.target === loginOverlay) hideLoginOverlay();
-  });
-
-  handleEvent("#card-link-tournaments", "click", (event) => {
-    event.preventDefault();
-    const token = sessionStorage.getItem("token");
-    if (token) {
-      window.location.href = "tournaments.html";
-    } else {
-      showLoginOverlay();
-    }
-  });
-
-  handleEvent("#close-btn-login", "click", (event) => {
-    event.preventDefault();
-    hideLoginOverlay();
-  });
-
-  handleEvent(".card2", "click", (event) => {
-    event.preventDefault();
-    showCustomAlert(
-      "Le lotterie non sono ancora disponibili, ma restate sintonizzati! 🎉 Presto avrete la possibilità di partecipare e vincere fantastici premi."
-    );
-  });
-
-  handleEvent(".card3", "click", (event) => {
-    event.preventDefault();
-    showCustomAlert(
-      "I giochi non sono ancora disponibili, ma restate sintonizzati! 🎉 Presto avrete la possibilità di partecipare e vincere fantastici premi."
-    );
-  });
-
-  function togglePassword(fieldId, iconClass) {
-    const passwordField = document.getElementById(fieldId);
-    const passwordToggleIcon = document.querySelector(iconClass);
-
-    if (passwordField && passwordToggleIcon) {
-      switch (passwordField.type) {
-        case "password":
-          passwordField.type = "text";
-          passwordToggleIcon.classList.replace("fa-eye", "fa-eye-slash");
-          break;
-        case "text":
-          passwordField.type = "password";
-          passwordToggleIcon.classList.replace("fa-eye-slash", "fa-eye");
-          break;
-      }
-    }
-  }
-
-  handleEvent(".password-toggle", "click", () => togglePassword("password", ".password-toggle i"));
-  handleEvent(".login-password-toggle", "click", () => togglePassword("login-password", ".login-password-toggle i"));
-
-  const goldCard = document.querySelector(".tournaments_page_card_gold");
-  const silverCard = document.querySelector(".tournaments_page_card_silver");
-
-  if (goldCard) {
-    goldCard.addEventListener("click", function () {
-      window.location.href = "";
     });
-  }
 
-  if (silverCard) {
-    silverCard.addEventListener("click", function () {
-      window.location.href = "";
+    handleEvent("#close-btn-login", "click", (event) => {
+      event.preventDefault();
+      hideLoginOverlay(loginOverlay);
     });
-  }
-});
+
+    handleEvent(".card2", "click", (event) => {
+      event.preventDefault();
+      showCustomAlert(
+        "Le lotterie non sono ancora disponibili, ma restate sintonizzati! 🎉 Presto avrete la possibilità di partecipare e vincere fantastici premi."
+      );
+    });
+
+    handleEvent(".card3", "click", (event) => {
+      event.preventDefault();
+      showCustomAlert(
+        "I giochi non sono ancora disponibili, ma restate sintonizzati! 🎉 Presto avrete la possibilità di partecipare e vincere fantastici premi."
+      );
+    });
+
+    handleEvent(".password-toggle", "click", () => togglePassword("password", ".password-toggle i"));
+    handleEvent(".login-password-toggle", "click", () => togglePassword("login-password", ".login-password-toggle i"));
+
+    const goldCard = document.querySelector(".tournaments_page_card_gold");
+    const silverCard = document.querySelector(".tournaments_page_card_silver");
+
+    if (goldCard) {
+      goldCard.addEventListener("click", function () {
+        window.location.href = "";
+      });
+    }
+
+    if (silverCard) {
+      silverCard.addEventListener("click", function () {
+        window.location.href = "";
+      });
+    }
+  });
+}
+
+init();
