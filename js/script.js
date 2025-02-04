@@ -31,7 +31,7 @@ function showRegisterOverlayHideLogin(registerOverlay, loginOverlay, registratio
   }
 }
 
-function updateLoginButton(loginBtn) {
+export function updateLoginButton(loginBtn) {
   const token = sessionStorage.getItem("token");
   if (loginBtn) {
     if (token) {
@@ -65,7 +65,7 @@ function logoutFromTournamentsPage() {
   window.location.href = "index.html";
 }
 
-function showCustomAlert(message) {
+export function showCustomAlert(message) {
   const alertBox = document.createElement("div");
   alertBox.classList.add("custom-alert");
 
