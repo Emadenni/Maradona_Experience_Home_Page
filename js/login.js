@@ -1,4 +1,4 @@
-import { hideRegisterOverlay, showCustomAlert, updateLoginButton } from "./script.js";
+import { hideRegisterOverlay, showCustomAlert, updateLoginButton, hideLoginOverlay } from "./script.js";
 const API_URL = "https://reqres.in/api/login";
 const loginOverlay = document.querySelector(".login-overlay");
 const registerOverlay = document.querySelector(".overlay");
@@ -29,13 +29,13 @@ export async function loginUser(username, password) {
     if (response.ok) {
       sessionStorage.setItem("token", data.token);
 
-      updateLoginButton(loginBtn)
-        showCustomAlert("Complimenti! Hai effettuato l'accesso!");
+      updateLoginButton(loginBtn);
+      const loginOverlay = document.querySelector(".login-overlay");
+      if (loginOverlay) {
+        hideLoginOverlay(loginOverlay)
+      }
 
-      
-
-
-      
+      showCustomAlert("Complimenti! Hai effettuato l'accesso!");
 
       return data.token; // Restituisce il token
 
@@ -47,10 +47,6 @@ export async function loginUser(username, password) {
     console.error("Errore nel login:", error);
     throw new Error("Si è verificato un errore durante il login. Riprova.");
   }
-
-
-    
-
 }
 
 // Gestione dell'evento DOMContentLoaded per il login

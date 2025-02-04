@@ -9,7 +9,7 @@ function showLoginOverlay(loginOverlay) {
   }
 }
 
-function hideLoginOverlay(loginOverlay) {
+export function hideLoginOverlay(loginOverlay) {
   if (loginOverlay) {
     loginOverlay.style.display = "none";
   }

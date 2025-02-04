@@ -36,7 +36,7 @@ function registerUser() {
     if (data.token) {
       const registerOverlay = document.querySelector(".overlay");
       const loginBtn = document.getElementById("loginBtn");
-      updateLoginButton(loginBtn)
+     
       hideRegisterOverlay(registerOverlay);
       alert('Registrazione avvenuta con successo!');
       
