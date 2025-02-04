@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   }
-  
+
   document.addEventListener('visibilitychange', function () {
     if (document.visibilityState === 'visible') {
       window.scrollTo(0, 0); 
@@ -24,24 +24,20 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.style.display = ''; 
     }
   });
-  
+
   window.addEventListener('resize', setViewportHeight);
   window.addEventListener('orientationchange', setViewportHeight);
   window.addEventListener('pageshow', function () {
     window.scrollTo(0, 0);
   });
-  
-  setViewportHeight();
-  
 
+  setViewportHeight();
 
   function showLoginOverlay() {
     if (loginOverlay) {
       loginOverlay.style.display = "block";
     }
   }
-
-
 
   function hideLoginOverlay() {
     if (loginOverlay) {
@@ -135,15 +131,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateLoginButton();
 
-  // Gestione degli eventi
   handleEvent("#continue-link", "click", (event) => {
     event.preventDefault();
-    hideRegisterOverlay();
+    const token = sessionStorage.getItem("token");
+    if (token) {
+      showCustomAlert("Sei già loggato! Leggi il regolamento ed accedi ai tornei");
+      setTimeout(() => {
+        hideRegisterOverlay();
+        hideLoginOverlay();
+      }, 2000); 
+    } else {
+      hideRegisterOverlay();
+      showLoginOverlay();
+    }
   });
 
   handleEvent("#loginBtn", "click", showLoginOverlay);
 
-  handleEvent("#logoutBtn", "click", logoutFromTournamentsPage); // Corretto qui
+  handleEvent("#logoutBtn", "click", logoutFromTournamentsPage);
 
   handleEvent("#register-link", "click", (event) => {
     event.preventDefault();
@@ -226,11 +231,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const goldCard = document.querySelector(".tournaments_page_card_gold");
   const silverCard = document.querySelector(".tournaments_page_card_silver");
 
-  goldCard.addEventListener("click", function () {
-    window.location.href = "";
-  });
+  if (goldCard) {
+    goldCard.addEventListener("click", function () {
+      window.location.href = "";
+    });
+  }
 
-  silverCard.addEventListener("click", function () {
-    window.location.href = "";
-  });
+  if (silverCard) {
+    silverCard.addEventListener("click", function () {
+      window.location.href = "";
+    });
+  }
 });

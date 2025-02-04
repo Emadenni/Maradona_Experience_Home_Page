@@ -30,7 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (response.ok) {
           sessionStorage.setItem("token", data.token);
           alert("Login riuscito!");
-          window.location.href = "tournaments.html";
+          window.location.reload(); 
+          
         } else {
           alert("Errore: " + (data.message || "Credenziali errate"));
         }
