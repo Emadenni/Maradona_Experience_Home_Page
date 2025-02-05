@@ -40,7 +40,7 @@ function registerUser() {
       hideRegisterOverlay(registerOverlay);
       alert('Registrazione avvenuta con successo!');
       
-      
+      localStorage.removeItem('playerData');
       
       setTimeout(async () => {
         const username = document.getElementById('username').value;
