@@ -106,7 +106,7 @@ export function showElevatedCard() {
         <img src="./images/smartphone_tornei.png" class="smartphone_small">
         <div class="elevatedCard_content_link">
           <a href="./tournaments.html">Tornei</a>
-          <img src="./images/Arrow_1.png" alt="arrow" class="arrow arrow-small">
+          
         </div>
       </div>
     `;
