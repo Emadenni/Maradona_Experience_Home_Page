@@ -481,6 +481,14 @@ header {
  padding-top: 28px;
 }
 
+.card_img3 {
+  scale: 1.4 !important;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  
+  
+}
+
 .card2_h4 {
  /*  font-size: 38px !important; */
 }
