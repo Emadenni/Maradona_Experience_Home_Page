@@ -1,4 +1,4 @@
-import { hideRegisterOverlay, showCustomAlert, updateLoginButton, hideLoginOverlay } from "./script.js";
+import { hideRegisterOverlay, showCustomAlert, updateLoginButton, hideLoginOverlay, showElevatedCard } from "./script.js";
 const API_URL = "https://reqres.in/api/login";
 const loginOverlay = document.querySelector(".login-overlay");
 const registerOverlay = document.querySelector(".overlay");
@@ -30,16 +30,17 @@ export async function loginUser(username, password) {
       sessionStorage.setItem("token", data.token);
 
       updateLoginButton(loginBtn);
+      
       const loginOverlay = document.querySelector(".login-overlay");
       if (loginOverlay) {
         hideLoginOverlay(loginOverlay)
       }
 
       showCustomAlert("Complimenti! Hai effettuato l'accesso!");
+      showElevatedCard();
+      return data.token; 
 
-      return data.token; // Restituisce il token
-
-      // Restituisce il token se il login ha successo
+    
     } else {
       throw new Error(data.message || "Credenziali errate");
     }

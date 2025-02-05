@@ -15,8 +15,6 @@
   --h4-font-size-large: 2.875rem;
 }
 
-
-
 #info {
   scroll-margin-top: 100px;
 }
@@ -158,14 +156,111 @@ header {
   border: solid 1px white;
 }
 
+.elevatedCardOverlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  z-index: 900;
+  text-align: center;
+  transition: opacity 0.5s ease-in-out;
+}
+
 .alert-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); 
-  z-index: 999; 
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.elevatedCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: fixed;
+  top: 10%;
+  left: 70%;
+  transform: translateX(-50%);
+  max-width: 90%;
+  width: 500px;
+  background-color: transparent;
+  z-index: 899;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideIn 0.8s ease-out forwards; 
+  cursor: pointer;
+ transition: opacity 0.5s ease-in-out;
+}
+
+.elevatedCard_content:hover {
+  background-color: var(--hoverCards-bkg--color);
+  scale: 1.02;
+  
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0); 
+    opacity: 1; 
+  }
+}
+
+.elevatedCard_content {
+  background-color: var(--cards--Bkg-color);
+  border: 1px solid white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 27%;
+}
+
+.elevatedCard_content_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.arrow-small {
+  width: 10px;
+  transition: transform 0.3s ease;
+}
+
+.arrow-small:hover,
+.arrow-mini:hover {
+  transform: translateX(5px);
+  color: var(--secondary-color);
+}
+
+.elevatedCard_content a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  margin-bottom: 2px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.elevatedCard_content a:hover {
+  color: var(--secondary-color);
+}
+
+
+.smartphone_small {
+  max-width: 60px;
+  margin-top: 8px;
 }
 
 .no-scroll {
@@ -364,7 +459,7 @@ header {
 
 /*-----------------------------------------------------*/
 .arrow {
-  font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
   font-size: 1.375rem;
   color: var(--secondary-color);
   transition: transform 0.3s ease;
@@ -372,7 +467,7 @@ header {
 }
 
 .arrow2 {
-  font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
   font-size: 1.375rem;
   color: var(--secondary-color);
   transition: transform 0.3s ease;

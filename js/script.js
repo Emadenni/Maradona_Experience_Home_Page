@@ -55,6 +55,8 @@ export function hideRegisterOverlay(registerOverlay) {
 
 function logout() {
   sessionStorage.removeItem("token");
+  document.querySelector(".elevatedCard")?.remove();
+  document.querySelector(".elevatedCardOverlay")?.remove();
   updateLoginButton();
   window.location.reload();
 }
@@ -89,6 +91,52 @@ export function showCustomAlert(message) {
     document.body.classList.remove("no-scroll");
   });
 }
+
+export function showElevatedCard() {
+  window.addEventListener("DOMContentLoaded", () => {
+    const currentPage = window.location.pathname;
+    if (!currentPage.endsWith("index.html") && currentPage !== "/") return;
+
+    const elevatedCard = document.createElement("div");
+    elevatedCard.classList.add("elevatedCard");
+
+    const elevatedCardOverlay = document.createElement("div");
+    elevatedCardOverlay.classList.add("elevatedCardOverlay");
+
+    elevatedCard.innerHTML = `
+      <div class="elevatedCard_content" id='toTheTournaments'>
+        <img src="./images/smartphone_tornei.png" class="smartphone_small">
+        <div class="elevatedCard_content_link">
+          <a href="./tournaments.html">Tornei</a>
+          <img src="./images/Arrow_1.png" alt="arrow" class="arrow arrow-small">
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(elevatedCardOverlay);
+    document.body.appendChild(elevatedCard);
+
+    elevatedCard.style.transition = "opacity 0.5s ease-in-out";
+    elevatedCard.style.opacity = "1";
+
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener("scroll", () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY) {
+        // Scroll verso il basso → nascondi la card
+        elevatedCard.style.opacity = "0";
+      } else {
+        // Scroll verso l'alto → mostra la card
+        elevatedCard.style.opacity = "1";
+      }
+
+      lastScrollY = currentScrollY;
+    });
+  });
+}
+
 
 function handleEvent(selector, eventType, callback) {
   const element = document.querySelector(selector);
@@ -137,8 +185,9 @@ function init() {
     window.addEventListener("orientationchange", setViewportHeight);
     window.addEventListener("pageshow", () => window.scrollTo(0, 0));
 
- const token = sessionStorage.getItem("token");
+    const token = sessionStorage.getItem("token");
     if (token) {
+      showElevatedCard();
       hideRegisterOverlay(registerOverlay);
       hideLoginOverlay(loginOverlay);
     }
@@ -210,6 +259,11 @@ function init() {
       showCustomAlert(
         "Le lotterie non sono ancora disponibili, ma restate sintonizzati! 🎉 Presto avrete la possibilità di partecipare e vincere fantastici premi."
       );
+    });
+
+    handleEvent("#toTheTournaments", "click",  (event) => {
+      event.preventDefault();
+      window.location.href = "./tournaments.html";
     });
 
     handleEvent(".card3", "click", (event) => {
