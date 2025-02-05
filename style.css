@@ -476,6 +476,15 @@ header {
   margin-left: 5.8rem;
 }
 
+.card_img2 {
+  
+ padding-top: 28px;
+}
+
+.card2_h4 {
+ /*  font-size: 38px !important; */
+}
+
 /*-----------------------------------------------------*/
 .arrow {
   font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
