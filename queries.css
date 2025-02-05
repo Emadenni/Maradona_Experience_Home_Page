@@ -565,6 +565,17 @@
      font-size: 34px !important;
    }
 
+   .card_img3 {
+    margin-left: 2.6rem;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+    
+  }
+
+  .card3_h4 {
+    transform: translateX(20%);
+  }
 
   .custom-alert {
     bottom: 220px;
