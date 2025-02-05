@@ -102,6 +102,7 @@ export function showElevatedCard() {
 
     elevatedCard.innerHTML = `
       <div class="elevatedCard_content" id='toTheTournaments'>
+        <div class="spotlight"></div> <!-- Riflettore -->
         <img src="./images/smartphone_tornei.png" class="smartphone_small">
         <div class="elevatedCard_content_link">
           <a href="./tournaments.html">Tornei</a>
@@ -114,24 +115,16 @@ export function showElevatedCard() {
 
     const cardContent = document.querySelector(".elevatedCard_content");
 
-    let lastScrollY = window.scrollY;
-
     window.addEventListener("scroll", () => {
-      const currentScrollY = window.scrollY;
-      console.log(currentScrollY);
-
-      if (currentScrollY > lastScrollY) {
-        // Scroll verso il basso → nascondi il contenuto
-        cardContent.classList.add("hide");
+      if (window.scrollY === 0) {
+        cardContent.classList.remove("shrink");
       } else {
-        // Scroll verso l'alto → mostra il contenuto
-        cardContent.classList.remove("hide");
+        cardContent.classList.add("shrink");
       }
-
-      lastScrollY = currentScrollY;
     });
   });
 }
+
 
 function handleEvent(selector, eventType, callback) {
   const element = document.querySelector(selector);

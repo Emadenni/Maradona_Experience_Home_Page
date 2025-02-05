@@ -217,6 +217,8 @@ header {
 }
 
 .elevatedCard_content {
+  position: relative; 
+  
   background-color: var(--cards--Bkg-color);
   border: 1px solid white;
   border-radius: 10px;
@@ -252,6 +254,11 @@ header {
   color: var(--secondary-color);
 }
 
+.elevatedCard_content.shrink {
+  transform: scale(0.6); 
+  opacity: 0.4;         
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
 .elevatedCard_content a {
   color: var(--secondary-color);
   text-decoration: none;
