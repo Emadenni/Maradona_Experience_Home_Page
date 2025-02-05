@@ -367,6 +367,7 @@
 
 @media screen and (max-width: 480px) {
   .elevatedCard {
+    z-index: 1100;
     top: 10%;
     left: 40%;
     transform: translateX(-50%);
