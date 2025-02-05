@@ -50,6 +50,10 @@ body {
   overflow: hidden;
 }
 
+.mailSupport {
+  color: red;
+}
+
 header {
   background-color: rgb(21, 19, 22, 0.9);
   position: fixed;

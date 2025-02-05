@@ -67,7 +67,7 @@ function logoutFromTournamentsPage() {
   window.location.href = "index.html";
 }
 
-export function showCustomAlert(message) {
+export function showCustomAlert(message, showCloseButton = true) {
   const alertBox = document.createElement("div");
   alertBox.classList.add("custom-alert");
 
@@ -76,8 +76,13 @@ export function showCustomAlert(message) {
 
   document.body.classList.add("no-scroll");
 
+  // Condizionale per il pulsante di chiusura
+  const closeButtonHTML = showCloseButton 
+    ? `<button class="close-alert close-btn">X</button>` 
+    : "";
+
   alertBox.innerHTML = `
-    <button class="close-alert close-btn">X</button>
+    ${closeButtonHTML}
     <img src="./images/logoExperience.png" class="logo-maradona-experience">
     <p>${message}</p>
   `;
@@ -85,12 +90,16 @@ export function showCustomAlert(message) {
   document.body.appendChild(overlay);
   document.body.appendChild(alertBox);
 
-  alertBox.querySelector(".close-alert").addEventListener("click", () => {
-    alertBox.remove();
-    overlay.remove();
-    document.body.classList.remove("no-scroll");
-  });
+  // Aggiungiamo l'event listener solo se il pulsante esiste
+  if (showCloseButton) {
+    alertBox.querySelector(".close-alert").addEventListener("click", () => {
+      alertBox.remove();
+      overlay.remove();
+      document.body.classList.remove("no-scroll");
+    });
+  }
 }
+
 
 /* export function showElevatedCard() {
   window.addEventListener("DOMContentLoaded", () => {
