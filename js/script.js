@@ -100,9 +100,6 @@ export function showElevatedCard() {
     const elevatedCard = document.createElement("div");
     elevatedCard.classList.add("elevatedCard");
 
-    const elevatedCardOverlay = document.createElement("div");
-    elevatedCardOverlay.classList.add("elevatedCardOverlay");
-
     elevatedCard.innerHTML = `
       <div class="elevatedCard_content" id='toTheTournaments'>
         <img src="./images/smartphone_tornei.png" class="smartphone_small">
@@ -113,30 +110,28 @@ export function showElevatedCard() {
       </div>
     `;
 
-    document.body.appendChild(elevatedCardOverlay);
     document.body.appendChild(elevatedCard);
 
-    elevatedCard.style.transition = "opacity 0.5s ease-in-out";
-    elevatedCard.style.opacity = "1";
+    const cardContent = document.querySelector(".elevatedCard_content");
 
     let lastScrollY = window.scrollY;
 
     window.addEventListener("scroll", () => {
       const currentScrollY = window.scrollY;
+      console.log(currentScrollY);
 
       if (currentScrollY > lastScrollY) {
-        // Scroll verso il basso → nascondi la card
-        elevatedCard.style.opacity = "0";
+        // Scroll verso il basso → nascondi il contenuto
+        cardContent.classList.add("hide");
       } else {
-        // Scroll verso l'alto → mostra la card
-        elevatedCard.style.opacity = "1";
+        // Scroll verso l'alto → mostra il contenuto
+        cardContent.classList.remove("hide");
       }
 
       lastScrollY = currentScrollY;
     });
   });
 }
-
 
 function handleEvent(selector, eventType, callback) {
   const element = document.querySelector(selector);
@@ -261,7 +256,7 @@ function init() {
       );
     });
 
-    handleEvent("#toTheTournaments", "click",  (event) => {
+    handleEvent("#toTheTournaments", "click", (event) => {
       event.preventDefault();
       window.location.href = "./tournaments.html";
     });
