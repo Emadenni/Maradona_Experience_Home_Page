@@ -4,18 +4,131 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maradona Experience</title>
+    <link rel="stylesheet" href="overlay/overlay.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="queries.css" />
     <link rel="stylesheet" href="background.css" />
+    <link rel="stylesheet" href="loginForm/loginForm.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   </head>
 
   <body>
-    <!--  <div id="viewport-size"></div> -->
+    <div id="overlay-container">
+      <div class="overlay">
+        
+        <div class="overlay_header" id="top">
+          <div class="overlay_header_img"></div>
+          <img src="./images/Depzon.png" alt="logo-depzon" class="overlay_img" />
+          <p>Benvenuto, <span id="name"></span></p>
+        </div>
+
+        <div class="overlay-content">
+          <div class="overlay-content_title_container">
+            <img src="./images/logoExperience.png" alt="logo-maradona-experience" class="logo-maradona-experience" />
+          </div>
+          <button id="toggle-register" class="register-button button">Registrati <span class="arrow">▼</span></button>
+
+          <div id="registration-form" class="hidden">
+            <form>
+              <div class="form-row">
+                <div class="form-group">
+                  <input type="text" id="first-name" placeholder=" " readonly />
+                  <label for="first-name"></label>
+                </div>
+                <div class="form-group">
+                  <input type="text" id="last-name" placeholder=" " readonly />
+                  <label for="last-name"></label>
+                </div>
+              </div>
+
+              <div class="form-row form-row-mailTel">
+                <div class="form-group">
+                  <input type="text" id="email" placeholder=" " readonly />
+                  <label for="email"></label>
+                </div>
+                <div class="form-group">
+                  <input type="text" id="phone" placeholder=" " readonly />
+                  <label for="phone"></label>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <input type="text" id="card-type" placeholder=" " readonly />
+                  <label for="card-type"></label>
+                </div>
+                <div class="form-group">
+                  <input type="text" id="nationality" placeholder=" " readonly />
+                  <label for="nationality"></label>
+                </div>
+              </div>
+
+              <p class="form_cta">Scegli uno username ed una password per completare la registrazione</p>
+
+              <div class="username-password-group">
+                <div class="form-group">
+                  <input type="text" id="username" placeholder=" " required />
+                  <label for="username">Username</label>
+                </div>
+                <div class="form-group password-container">
+                  <input type="password" id="password" placeholder=" " required />
+                  <label for="password">Password</label>
+                  <button class="password-toggle" type="button" onclick="togglePassword()">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="terms-conditions_box">
+                <label for="terms-conditions" class="terms-conditions_box_label">
+                  Accetto i <a href="#" target="_blank">Termini e Condizioni</a>
+                </label>
+                <input type="checkbox" id="terms-conditions" required />
+              </div>
+
+              <button type="submit" class="submit-button">Submit</button>
+            </form>
+          </div>
+
+          <a id="continue-link" class="continue-link">
+            Sei già registrato? <br><span class="continue">Login</span>
+          </a>
+        </div>
+      </div>
+    </div>
 
     <div class="background-container">
       <div class="background">
         <img src="./images/bg_gradient.png" alt="background" class="decoration decoration1" />
         <img src="./images/bg_gradient.png" alt="background" class="decoration decoration2" />
+      </div>
+    </div>
+
+    <div class="login-overlay">
+      <div class="login-form-container">
+        <div class="login-form-header">
+          <h2>Accedi ai tornei</h2>
+          
+        </div>
+        <form id="login-form">
+          <div class="form-group">
+            <input type="text" id="login-username" class="login-form-input" placeholder=" " required />
+            <label for="login-username">Username</label>
+          </div>
+
+          <div class="form-group password-container">
+            <input type="password" id="login-password" class="login-form-input" placeholder=" " required />
+            <label for="login-password">Password</label>
+            <button class="login-password-toggle" type="button" onclick="toggleLoginPassword()">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+
+          <button id="login-submit-button" type="submit" class="login-submit-button">Accedi</button>
+
+          <a href="#" class="login-forgot-password-link">Hai dimenticato la password?</a>
+          <a href="#" id="register-link" class="register-link">Se non sei ancora registrato, clicca qui</a>
+        </form>
       </div>
     </div>
 
@@ -28,7 +141,7 @@
             </a>
           </aside>
           <nav>
-            <a class="button hoverBtn signinBtn">Accedi</a>
+            <a class="button hoverBtn signinBtn" id="loginBtn">Accedi</a>
           </nav>
         </header>
 
@@ -41,17 +154,17 @@
             Partecipa ai giochi a tema Diego Armando <br />
             Maradona e vinci fantastici premi
           </p>
-          <a href="#anchor" class="discoverMoreBtn">Scopri</a>
+          <a href="#info" class="discoverMoreBtn">Scopri</a>
         </section>
       </div>
 
       <main class="main_content">
         <section class="cards_container">
           <article class="card card1">
-            <a href="https://maradonaexperience.depzon.com/" class="card_link">
+            <a href="javascript:void(0);" class="card_link" id="card-link-tournaments">
               <div class="card_content_top">
                 <p>Scopri i nostri tornei</p>
-                <span class="arrow">🡥</span>
+               <img src="./images/Arrow_1.png" alt="arrow" class="arrow">
               </div>
               <div class="card_content_bottom">
                 <h4>Tornei</h4>
@@ -65,10 +178,10 @@
           </article>
 
           <article class="card card2">
-            <a href="/index.html" class="card_link">
+            <a href="javascript:void(0);" class="card_link">
               <div class="card_content_top">
                 <p>Partecipa alle lotterie</p>
-                <span class="arrow">🡥</span>
+                <img src="./images/Arrow_1.png" alt="arrow" class="arrow">
               </div>
               <div class="card_content_bottom">
                 <h4>Lotterie</h4>
@@ -82,10 +195,10 @@
           </article>
 
           <article class="card card3">
-            <a href="/index.html" class="card_link">
+            <a href="javascript:void(0);" class="card_link">
               <div class="card_content_top">
                 <p>Vinci tanti premi</p>
-                <span class="arrow">🡥</span>
+                <img src="./images/Arrow_1.png" alt="arrow" class="arrow">
               </div>
               <div class="card_content_bottom">
                 <h4>Giochi</h4>
@@ -99,7 +212,7 @@
           </article>
         </section>
 
-        <section class="tournament_container" id="anchor">
+        <section class="tournament_container" id="info">
           <h4 class="tournament_container_title">I tornei</h4>
           <article class="tournament_container_desc">
             <p class="tournament_container_desc_p1">
@@ -111,7 +224,7 @@
               Più pronostici indovini, più diamanti accumulerai e più avanzerai in <br />
               classifica, aggiudicandoti i premi migliori.
             </p>
-            <a class="button hoverBtn discoverRulesBtn discoverRulesBtn1" href="#anchor2"
+            <a class="button hoverBtn discoverRulesBtn discoverRulesBtn1" href="#rules"
               >Scopri il regolamento e partecipa
             </a>
           </article>
@@ -138,7 +251,7 @@
                 pallone da calcio artistico in edizione limitata dedicato al Pibe de Oro. Scopri di più su
                 <span><a href="https://maradonasoccerball.com/">maradonasoccerball.com</a></span>
               </p>
-              <a class="button hoverBtn discoverRulesBtn discoverRulesBtn2" href="#anchor2"
+              <a class="button hoverBtn discoverRulesBtn discoverRulesBtn2" href="#rules"
                 >Scopri il regolamento e partecipa
               </a>
             </div>
@@ -185,7 +298,7 @@
           </div>
         </section>
 
-        <section class="rules_container" id="anchor2">
+        <section class="rules_container" id="rules">
           <h4>Come funzionano i tornei?</h4>
           <article class="rules_container_right">
             <p class="rules_container_right_up">
@@ -249,14 +362,10 @@
         <p class="thinner_text"><span class="purple">&copy;</span> Depzon. Tutti i diritti riservati.</p>
       </footer>
     </div>
-    <!--  <script>
-      function updateViewportSize() {
-        const viewportSize = `${window.innerWidth}px x ${window.innerHeight}px`;
-        document.getElementById("viewport-size").textContent = viewportSize;
-      }
 
-      window.addEventListener("resize", updateViewportSize);
-      updateViewportSize();
-    </script> -->
+    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/login.js"></script>
+    <script type="module" src="js/fetchData.js"></script>
+    <script type="module" src="js/registration.js"></script>
   </body>
 </html>
