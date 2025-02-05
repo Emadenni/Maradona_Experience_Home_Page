@@ -103,7 +103,7 @@ export function showElevatedCard() {
     elevatedCard.innerHTML = `
       <div class="elevatedCard_content" id='toTheTournaments'>
         <div class="spotlight"></div> <!-- Riflettore -->
-        <img src="./images/smartphone_tornei.png" class="smartphone_small">
+        <img src="/images/smartphone_tornei.png" class="smartphone_small">
         <div class="elevatedCard_content_link">
           <a href="./tournaments.html">Tornei</a>
           
