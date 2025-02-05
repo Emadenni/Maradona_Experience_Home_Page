@@ -29,15 +29,15 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   max-width: 100vw;
-  min-height: 100%;   /* Cambiato da height a min-height */
+  min-height: 100%; /* Cambiato da height a min-height */
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
-
 
 body {
   background-color: var(--main-color);
@@ -155,7 +155,16 @@ header {
   transform: translateX(-50%);
   border: solid 1px white;
 }
-
+.alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+/* 
 .elevatedCardOverlay {
   display: flex;
   justify-content: center;
@@ -166,15 +175,7 @@ header {
   transition: opacity 0.5s ease-in-out;
 }
 
-.alert-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-}
+
 
 .elevatedCard {
   display: flex;
@@ -276,7 +277,7 @@ header {
   max-width: 60px;
   margin-top: 8px;
 }
-
+ */
 .no-scroll {
   overflow: hidden;
   height: 100vh;

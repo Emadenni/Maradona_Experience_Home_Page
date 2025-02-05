@@ -313,11 +313,17 @@
       width: 80px;
     }
 
-    .cta_tornei_silver,
+   
     .cta_tornei_gold {
       width: 80%;
-      transform: translate(-14%, 22%);
+      transform: translate(-18%, 22%);
     }
+    
+    .cta_tornei_silver{
+      width: 90%;
+      transform: translate(-22%, 22%);
+    }
+
     .tournaments_page_card_img {
       width: 50%;
       height: 500px;
@@ -408,11 +414,11 @@
     }
   }
 
-  @media (max-width: 440px) {
+  
     .cta_tornei_silver {
       width: 80%;
       font-size: 1.1rem;
-      transform: translateX(-24%);
+      transform: translateX(-18%);
     }
 
     .tournaments_page_card_gold_title {
@@ -423,4 +429,4 @@
       margin-right: -10px;
     }
   }
-}
+

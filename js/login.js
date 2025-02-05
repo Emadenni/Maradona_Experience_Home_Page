@@ -1,4 +1,4 @@
-import { hideRegisterOverlay, showCustomAlert, updateLoginButton, hideLoginOverlay, showElevatedCard } from "./script.js";
+import { hideRegisterOverlay, showCustomAlert, updateLoginButton, hideLoginOverlay } from "./script.js";
 const API_URL = "https://reqres.in/api/login";
 const loginOverlay = document.querySelector(".login-overlay");
 const registerOverlay = document.querySelector(".overlay");
@@ -37,7 +37,7 @@ export async function loginUser(username, password) {
       }
 
       showCustomAlert("Complimenti! Hai effettuato l'accesso!");
-      showElevatedCard();
+  /*     showElevatedCard(); */
       return data.token; 
 
     

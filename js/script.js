@@ -92,7 +92,7 @@ export function showCustomAlert(message) {
   });
 }
 
-export function showElevatedCard() {
+/* export function showElevatedCard() {
   window.addEventListener("DOMContentLoaded", () => {
     const currentPage = window.location.pathname;
     if (!currentPage.endsWith("index.html") && currentPage !== "/") return;
@@ -124,7 +124,7 @@ export function showElevatedCard() {
     });
   });
 }
-
+ */
 
 function handleEvent(selector, eventType, callback) {
   const element = document.querySelector(selector);
@@ -175,7 +175,7 @@ function init() {
 
     const token = sessionStorage.getItem("token");
     if (token) {
-      showElevatedCard();
+/*       showElevatedCard(); */
       hideRegisterOverlay(registerOverlay);
       hideLoginOverlay(loginOverlay);
     }
@@ -237,11 +237,7 @@ function init() {
       }
     });
 
-    handleEvent("#close-btn-login", "click", (event) => {
-      event.preventDefault();
-      hideLoginOverlay(loginOverlay);
-    });
-
+   
     handleEvent(".card2", "click", (event) => {
       event.preventDefault();
       showCustomAlert(

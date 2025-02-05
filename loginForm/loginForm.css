@@ -35,9 +35,7 @@
 }
 
 .login-form-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   padding-bottom: 28px;
   gap: 58px;
   line-height: 1;
@@ -57,18 +55,14 @@
   justify-content: center;
   align-items: center;
   align-self: flex-start;
-  
- 
 }
 
 .close-btn:hover {
   background-color: #f0f0f0;
 }
 
-
 .login-form-header h2 {
   font-family: 20px;
-  margin-left: 68px;
   text-align: center;
   color: black;
 }
@@ -88,7 +82,6 @@
   width: 100%;
   max-width: 350px;
   position: relative;
-  
 }
 #login-form .password-container {
   display: flex;
@@ -96,7 +89,6 @@
   position: relative;
   width: 100%;
   max-width: 350px;
-  
 }
 
 .login-password-toggle {
@@ -152,7 +144,6 @@
   transition: 0.2s ease all;
 }
 
-
 #login-username:focus + label,
 #login-username:not(:placeholder-shown) + label,
 #login-password:focus + label,
@@ -161,8 +152,6 @@
   font-size: 14px;
   color: #007bff;
 }
-
-
 
 @media (max-width: 465px) {
   .login-form-container {
