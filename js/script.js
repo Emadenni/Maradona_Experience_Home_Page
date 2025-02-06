@@ -271,6 +271,7 @@ function init() {
 
     const goldCard = document.querySelector(".tournaments_page_card_gold");
     const silverCard = document.querySelector(".tournaments_page_card_silver");
+    const masterCard = document.querySelector(".tournaments_page_card_master");
 
     if (goldCard) {
       goldCard.addEventListener("click", function () {
@@ -280,6 +281,12 @@ function init() {
 
     if (silverCard) {
       silverCard.addEventListener("click", function () {
+        window.location.href = "";
+      });
+    }
+ 
+    if (masterCard) {
+      masterCard.addEventListener("click", function () {
         window.location.href = "";
       });
     }

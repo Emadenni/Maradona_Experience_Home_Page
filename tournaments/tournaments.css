@@ -167,6 +167,7 @@
   font-style: italic;
   color: #142563;
   margin-top: 3rem;
+  margin-left: 30px;
   line-height: 0.9;
   z-index: 10;
 }
@@ -197,6 +198,7 @@
   font-size: 5.5rem;
   font-weight: 900;
   text-shadow: 2px 4px 1px #26442c;
+ 
 }
 
 .maradona-img {
@@ -300,7 +302,7 @@
 }
 
 .cta_tornei_gold:hover,
-.cta_tornei_silver:hover, .cta_tornei_master {
+.cta_tornei_silver:hover, .cta_tornei_master:hover {
   background-color: #1b1b17;
 
   color: yellow;
