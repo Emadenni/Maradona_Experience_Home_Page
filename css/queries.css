@@ -1,3 +1,5 @@
+/*----------main page queries---------*/
+
 @media (max-width: 1530px) {
   .rules_container {
     flex-wrap: nowrap;
@@ -37,22 +39,9 @@
   .tournament_container h4 {
     margin-bottom: 1rem;
   }
-
-  .elevatedCard {
-    top: 10%;
-    left: 64%;
-    transform: translateX(-50%);
-    scale: 0.9;
-  }
 }
 
 @media (max-width: 1024px) {
-  .elevatedCard {
-    top: 10%;
-    left: 60%;
-    transform: translateX(-50%);
-  }
-
   .discoverRulesBtn2 {
     width: 100%;
     margin: auto;
@@ -188,23 +177,7 @@
   }
 }
 
-@media screen and (max-width: 920px) {
-  .elevatedCard {
-    top: 10%;
-    left: 54%;
-    transform: translateX(-50%);
-    scale: 0.8;
-  }
-}
-
 @media screen and (max-width: 768px) {
-  .elevatedCard {
-    top: 10%;
-    left: 52%;
-    transform: translateX(-50%);
-    scale: 0.7;
-  }
-
   header {
     padding-right: 1rem;
   }
@@ -214,7 +187,7 @@
     margin: 6rem auto;
   }
   .hero_section_title {
-    font-size: 2.85srem;
+    font-size: 2.85rem;
   }
   .hero_section_text {
     font-size: 0.8rem;
@@ -293,9 +266,6 @@
     flex: 1 1 100%;
     min-height: 420px;
     font-size: larger;
-  }
-
-  .big_card {
     max-width: 38rem;
   }
 
@@ -353,13 +323,6 @@
 }
 
 @media screen and (max-width: 660px) {
-  .elevatedCard {
-    top: 10%;
-    left: 40%;
-    transform: translateX(-50%);
-    scale: 0.7;
-  }
-
   .card2_h4 {
     font-size: 42px !important;
     margin-left: 6rem;
@@ -367,14 +330,6 @@
 }
 
 @media screen and (max-width: 480px) {
-  .elevatedCard {
-    z-index: 1100;
-    top: 10%;
-    left: 40%;
-    transform: translateX(-50%);
-    scale: 0.6;
-  }
-
   .smartphone_small {
     max-width: 40px;
     margin-top: 8px;
@@ -563,7 +518,7 @@
   .card_img2 {
     transform: translateX(10%);
   }
- 
+
   .card_img3 {
     margin-left: 2.6rem;
     padding-top: 30px;
