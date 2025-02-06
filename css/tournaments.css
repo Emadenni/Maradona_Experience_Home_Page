@@ -613,6 +613,11 @@ filter: blur(4px) ;
 
   @media (max-width: 440px) {
 
+    .logo-maradona-experience-medium {
+      width: 70px !important;
+      margin-right: 28px;
+    }
+
     .tournaments_page_card_gold_title  {
       transform: translateX(-18%);
     }
