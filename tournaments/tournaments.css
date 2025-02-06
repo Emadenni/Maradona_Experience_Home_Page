@@ -194,9 +194,9 @@
 
 
 .tournaments_page_card_master_title span {
-  color: #010c05;
+ 
   color: #6b0909;
-  /*   color: #5da0bf; */
+ 
   font-size: 5.5rem;
   font-weight: 900;
   text-shadow: 2px 2px 1px #26442c;
@@ -403,8 +403,7 @@ filter: blur(4px) ;
     position: absolute;
     bottom: 44%;
     right: -20%;
-    /*  border: outset 4px rgb(7, 63, 113);*/
-    opacity: 0.5;
+   opacity: 0.5;
   }
 
   @media (max-width: 795px) {
