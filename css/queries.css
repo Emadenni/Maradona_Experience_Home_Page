@@ -33,6 +33,10 @@
   header {
     padding-left: 2rem;
   }
+
+  .card_img3{
+ scale: 1.1 !important ;
+  }
 }
 
 @media (max-width: 1274px) {
@@ -66,13 +70,16 @@
   .card {
     flex: 1 1 45%;
   }
+
   .card_content_bottom {
     margin-left: 4.5rem;
     padding: 0 1.5rem;
   }
+
   .card_content_bottom h4 {
     margin: 0 -3.5rem 1.6rem 0;
   }
+
   .card_img {
     margin-left: 3.5rem;
   }
@@ -186,9 +193,11 @@
     max-width: 100%;
     margin: 6rem auto;
   }
+
   .hero_section_title {
     font-size: 2.85rem;
   }
+
   .hero_section_text {
     font-size: 0.8rem;
     padding: 20px;
@@ -198,6 +207,7 @@
     width: 100%;
     font-size: 16px;
   }
+
   .hero_img {
     width: 50%;
   }
@@ -206,13 +216,16 @@
     flex: 1 1 80%;
     margin: 0.5rem 0;
   }
+
   .card_content_bottom {
     margin-left: 5rem;
     padding: 0 1rem;
   }
+
   .card_content_bottom h4 {
     margin: 0 0 1rem 0;
   }
+
   .card_img {
     margin-left: 1rem;
   }
@@ -380,10 +393,12 @@
     margin-left: 3rem;
     padding: 0 0.5rem;
   }
+
   .card_content_bottom h4 {
     font-size: var(--h4-font-size-small);
     margin: 0 0 1rem 0;
   }
+
   .card_img {
     margin-left: 0rem;
     width: 50%;
@@ -444,93 +459,26 @@
   }
 
   .gold_card_img {
-    max-width: 14rem;
+    max-width: 15rem;
   }
 
-  .big_card {
-    flex: 1 1 100%;
-    min-height: 300px;
-    padding: 0 0.2rem;
+  .footer_logo {
+    width: 6rem;
   }
 
-  .big_card p {
-    font-size: 14px;
-    width: 100%;
-  }
-
-  .rules_container {
-    padding: 2.5rem 0 1.25rem 1rem;
-  }
-
-  .rules_container h4 {
-    width: 100%;
-    font-size: 1.6rem;
-    text-align: center;
-  }
-
-  .rules_container_right_up,
-  .rules_container_right_down {
-    font-size: 1.2rem;
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .rules_container_right_img {
-    width: 100%;
-    height: auto;
-  }
-
-  footer {
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 1rem;
+  .footer_18img {
+    width: 1.4rem;
   }
 
   .footer_links {
-    gap: 1rem;
+    gap: 1.25rem;
   }
 
   .footer_accepted-payments {
     gap: 1rem;
   }
 
-  .footer_logo {
-    width: 5rem;
-  }
-
-  .footer_18img {
-    width: 1.2rem;
-  }
-
   .thinner_text {
-    font-size: 0.75rem;
-  }
-
-  .rules_container {
-    flex-direction: column;
-  }
-
-  .card2_h4 {
-    font-size: 37px !important;
-    transform: translateX(3%);
-  }
-
-  .card_img2 {
-    transform: translateX(10%);
-  }
-
-  .card_img3 {
-    margin-left: 2.6rem;
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-
-  .card3_h4 {
-    transform: translateX(20%);
-  }
-
-  .custom-alert {
-    bottom: 220px;
-    width: 60%;
+    font-size: 0.7rem;
   }
 }
