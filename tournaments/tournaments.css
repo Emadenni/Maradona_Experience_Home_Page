@@ -39,9 +39,6 @@
   transition: box-shadow 0.3s ease;
 }
 
-
-
-
 .tournaments_page_card:hover {
   box-shadow: 2px 2px 2px 25px rgba(49, 26, 154, 0.1);
   scale: 1.02;
@@ -133,6 +130,79 @@
   justify-content: space-around;
 }
 
+.tournaments_page_card_master {
+  background-color: transparent;
+  background-image: url(../images/imgCardMaster.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  min-height: 380px;
+  border: solid 4px rgb(255, 0, 0, 0.5);
+  display: flex !important;
+}
+
+.tournaments_page_card_master_box_left {
+  flex: 0 0 55%;
+  padding: 50px;
+  min-height: 200px;
+}
+
+.tournaments_page_card_master_box_right {
+  flex: 1;
+  z-index: 10px;
+  background-color: rgba(171, 167, 167, 0.6);
+  background-color: rgba(131, 164, 116, 0.5);
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+ gap: 0.2rem; 
+}
+
+.tournaments_page_card_master_title {
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: italic;
+  color: #142563;
+  margin-top: 3rem;
+  margin-left: 30px;
+  line-height: 0.9;
+  z-index: 10;
+}
+
+.tournaments_page_card_master_desc {
+  width: 80%;
+  margin: 14px 0px 10px 44px;
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 1.29rem;
+  text-align: right;
+  z-index: 10;
+  
+  color: #162354;
+  z-index: 10;
+}
+
+.tournaments_page_card_master_desc span {
+  color: #010f06;
+  
+}
+
+
+.tournaments_page_card_master_title span {
+ 
+  color: #6b0909;
+ 
+  font-size: 5.5rem;
+  font-weight: 900;
+  text-shadow: 2px 2px 1px #26442c;
+ 
+}
+
 .maradona-img {
   width: 45%;
   height: 100%;
@@ -211,7 +281,7 @@
 }
 
 .cta_tornei_gold,
-.cta_tornei_silver {
+.cta_tornei_silver, .cta_tornei_master {
   letter-spacing: 1.3;
   position: absolute;
   height: 2.6rem;
@@ -234,10 +304,20 @@
 }
 
 .cta_tornei_gold:hover,
-.cta_tornei_silver:hover {
+.cta_tornei_silver:hover, .cta_tornei_master:hover {
   background-color: #1b1b17;
-  
+
   color: yellow;
+}
+
+.logo-depzon-background {
+  width: 100%;
+
+  position: absolute;
+  top: 12%;
+  opacity: 0.28;
+  transform: rotate(20deg);
+filter: blur(4px) ;
 }
 
 @media (max-width: 1800px) {
@@ -250,24 +330,69 @@
   }
 }
 
+@media (max-width: 1465px) {
+ .logo-depzon-background {
+ width: 1000px;
+ right: -5%;  
+ }
+  }
+
+
 @media (max-width: 1335px) {
+  .logo-depzon-background {
+    width: 1300px;
+    right: -5%;
+    top: 2%;  
+    }
+
   .tournaments_page_card {
     width: 70%;
   }
-}
-@media (max-width: 1335px) {
+
   .tournaments_page_card {
     width: 80%;
   }
 }
+
+@media (max-width: 1200px) {
+  .logo-depzon-background {
+    width: 1020px;
+    right: -19%;
+    top: 10%;  
+    }
+  }
+
 @media (max-width: 900px) {
+
+  .tournaments_page_card_master_box_right {
+   padding: 0px 20px;
+  }
+
+  .logo-depzon-background {
+    width: 920px;
+    right: -19%;
+    top: 16%;  
+    }
+  }
   .tournaments_page_card {
     width: 85%;
   }
 
   .tournaments_page_card_gold_desc,
-  .tournaments_page_card_silver_desc {
+  .tournaments_page_card_silver_desc,
+  .tournaments_page_card_master_desc {
     font-size: 1.1rem;
+  }
+
+
+  .tournaments_page_card_gold_title {
+    margin-left: 10px;
+  }
+  .tournaments_page_card_silver_title {
+    margin-left: 24px;
+  }
+  .tournaments_page_card_master_title span {
+    font-size: 4.8rem;
   }
 
   .circle_div {
@@ -278,11 +403,30 @@
     position: absolute;
     bottom: 44%;
     right: -20%;
-    /*  border: outset 4px rgb(7, 63, 113);*/
-    opacity: 0.5;
+   opacity: 0.5;
   }
 
   @media (max-width: 795px) {
+
+
+    .tournaments_page_card_gold_title {
+      margin-left: 18px;
+    }
+    .tournaments_page_card_master {
+      height: 684.5px;
+    }
+
+    .tournaments_page_card_master_desc {
+      padding-right: 20px;
+    }
+  
+
+    .logo-depzon-background {
+      width: 800px;
+      right: -19%;
+      top: 16%;  
+      }
+    
     .tournaments_page_cards_container {
       padding: 0.4rem 0;
       margin: 100px auto 2.5rem auto;
@@ -298,14 +442,38 @@
     }
 
     .tournaments_page_card_img_silver {
-      width: 55%;
-    }
+      width: 40%;
+  }
+  .tournaments_page_card_master_box_left {
+    width: 100%;
+    flex: 0 0 40%;
+  }
   }
 
   @media (max-width: 725px) {
     .maradona-img {
       width: 45%;
     }
+
+    .logo-depzon-background {
+      width: 770px;
+      right: -19%;
+      top: 24%;  
+      }
+
+      .tournaments_page_card_master_desc {
+        transform: translate(5px);
+       
+      }
+
+      .tournaments_page_card_master_title span {
+        font-size: 3.8rem;
+      }
+
+     
+
+     
+    
   }
 
   @media (max-width: 600px) {
@@ -313,13 +481,12 @@
       width: 80px;
     }
 
-   
     .cta_tornei_gold {
       width: 80%;
       transform: translate(-18%, 22%);
     }
-    
-    .cta_tornei_silver{
+
+    .cta_tornei_silver, .cta_tornei_master {
       width: 90%;
       transform: translate(-22%, 22%);
     }
@@ -330,18 +497,28 @@
     }
 
     .tournaments_page_card_gold_desc,
-    .tournaments_page_card_silver {
+    .tournaments_page_card_silver,
+    .tournaments_page_card_master_desc {
       font-size: 1.1rem;
     }
 
     .tournaments_page_card_gold_title,
-    .tournaments_page_card_silver_title {
+    .tournaments_page_card_silver_title,
+    .tournaments_page_card_master_title {
       font-size: 2.4rem;
+    }
+
+    .tournaments_page_card_master_title {
+      margin-left: 0;
     }
 
     .tournaments_page_card_gold_title span,
     .tournaments_page_card_silver_title span {
       font-size: 4rem;
+    }
+
+    .tournaments_page_card_gold_title {
+      margin-left: 22px;
     }
 
     .tournaments_page_card {
@@ -350,29 +527,69 @@
     }
 
     .tournaments_page_card_gold_desc,
-    .tournaments_page_card_silver_desc {
-      font-size: 0.9rem;
+    .tournaments_page_card_silver_desc,
+    .tournaments_page_card_master_desc {
+      font-size: 1rem;
+      line-height: 1;
     }
 
     .tournaments_page_card_silver_desc {
-      width: 100%;
+      width: 90%;
     }
+
+    .tournaments_page_card_master_desc {
+      width: 90%;
+      padding-right: 16px;
+      margin-left: 20px;
+    }
+
+    
+    .tournaments_page_card_gold_desc {
+      width: 90%;
+      padding-right: 10px;
+      margin-left: 20px;
+    }
+
+    .tournaments_page_card_master_title span, .tournaments_page_card_gold_title span {
+      font-size: 3rem;
+    }
+
     .tournaments_page_card_gold_title {
-      transform: translateX(-5%);
+      transform: translateX(4%);
     }
 
     .maradona-img {
       width: 50%;
     }
+
+    .tournaments_page_card_master_box_left {
+      width: 100%;
+      flex: 0 0 50%;
+      font-size: 0.9rem;
+    
+    }
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 500px) {
+    .tournaments_page_card_master_desc {
+      width: 92%;
+      padding-right: 18px;
+     line-height: 1.2;
+    }
 
+    .tournaments_page_card_master_title span {
+      font-size: 2.6rem;
+    }
+    }
+
+  
+
+  @media (max-width: 480px) {
     .logo-maradona-experience-medium {
       width: 70px;
-     margin-right: 28px;
+      margin-right: 28px;
     }
-    
+
     .circle_div {
       transform: translate(182px, 10px);
     }
@@ -387,9 +604,25 @@
       left: 50%;
       opacity: 0.5;
     }
+
+    .tournaments_page_card_gold_title {
+      transform: translateX(-4%);
+      text-align: right;
+    }
   }
 
   @media (max-width: 440px) {
+
+    .tournaments_page_card_gold_title  {
+      transform: translateX(-18%);
+    }
+
+    .tournaments_page_card_master_desc {
+      max-width: 98%;
+      padding-right: 28px;
+     margin-left: 12px;
+    }
+    
     .tournaments_page_card_silver_box_right {
       padding: 0px auto;
     }
@@ -401,32 +634,66 @@
     .tournaments_page_card_gold_title,
     .tournaments_page_card_silver_title {
       font-size: 2rem;
+      line-height: 0.9;
     }
 
-    .tournaments_page_card_gold_title span,
-    .tournaments_page_card_silver_title span {
+    
+    .tournaments_page_card_silver_title span  {
       font-size: 3.5rem;
+      
+    }
+
+    .tournaments_page_card_master_title span {
+      font-size: 2.3rem;
+      margin-left: -10px;
     }
 
     .tournaments_page_card_gold_desc,
-    .tournaments_page_card_silver_desc {
-      font-size: 0.8rem;
+    .tournaments_page_card_silver_desc{
+      font-size: 0.85rem;
+      line-height: 1.2;
     }
-  }
 
+    .tournaments_page_card_gold_desc {
+      padding-right: 17px;
+    }
+
+    .tournaments_page_card_master_desc  {
+      padding-right: 5px;
+      font-size: 0.90rem;
+       line-height: 1.2;
+    }
   
-    .cta_tornei_silver {
-      width: 80%;
-      font-size: 1.1rem;
-      transform: translateX(-18%);
-    }
 
-    .tournaments_page_card_gold_title {
-      transform: translateX(-12%);
-    }
-
-    .tournaments_page_card_img_silver {
-      margin-right: -10px;
-    }
+  .cta_tornei_silver, .cta_tornei_master {
+    width: 80%;
+    font-size: 1.1rem;
+    transform: translateX(-18%);
   }
+
+  .tournaments_page_card_gold_title {
+    transform: translateX(-12%);
+  }
+
+  .tournaments_page_card_img_silver {
+    margin-right: -10px;
+  }
+}
+
+@media (max-width: 415px) {
+  .cta_tornei_master {
+    width: 88%;
+  }
+
+  .tournaments_page_card_gold_desc {
+    padding-right: 28px;
+  }
+
+  .tournaments_page_card_gold_title  {
+    transform: translateX(-21%);
+  }
+}
+
+
+
 
