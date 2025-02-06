@@ -1,13 +1,11 @@
-import { hideRegisterOverlay, showCustomAlert, updateLoginButton, hideLoginOverlay } from "./script.js";
+import { showCustomAlert, updateLoginButton, hideLoginOverlay } from "./script.js";
 const API_URL = "https://reqres.in/api/login";
 const loginOverlay = document.querySelector(".login-overlay");
 const registerOverlay = document.querySelector(".overlay");
 const loginBtn = document.getElementById("loginBtn");
 
-// login.js
-
-// Funzione di login
 export async function loginUser(username, password) {
+  /*-----------------Mock API------------ */
   const API_URL = "https://reqres.in/api/login";
 
   try {
@@ -30,17 +28,15 @@ export async function loginUser(username, password) {
       sessionStorage.setItem("token", data.token);
 
       updateLoginButton(loginBtn);
-      
+
       const loginOverlay = document.querySelector(".login-overlay");
       if (loginOverlay) {
-        hideLoginOverlay(loginOverlay)
+        hideLoginOverlay(loginOverlay);
       }
 
       showCustomAlert("Complimenti! Hai effettuato l'accesso!");
-  /*     showElevatedCard(); */
-      return data.token; 
 
-    
+      return data.token;
     } else {
       throw new Error(data.message || "Credenziali errate");
     }
@@ -50,7 +46,6 @@ export async function loginUser(username, password) {
   }
 }
 
-// Gestione dell'evento DOMContentLoaded per il login
 document.addEventListener("DOMContentLoaded", () => {
   const loginForm = document.getElementById("login-form");
 
@@ -62,10 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const password = document.getElementById("login-password").value;
 
       try {
-        const token = await loginUser(username, password); // Usa la funzione di login
-        console.log("Token ricevuto:", token);
+        const token = await loginUser(username, password);
       } catch (error) {
-        alert(error.message); // Mostra l'errore se c'è
+        alert(error.message);
       }
     });
   }
