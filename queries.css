@@ -52,7 +52,7 @@
     left: 60%;
     transform: translateX(-50%);
   }
-  
+
   .discoverRulesBtn2 {
     width: 100%;
     margin: auto;
@@ -186,7 +186,6 @@
   .thinner_text {
     font-size: 0.85rem;
   }
-
 }
 
 @media screen and (max-width: 920px) {
@@ -196,7 +195,6 @@
     transform: translateX(-50%);
     scale: 0.8;
   }
-
 }
 
 @media screen and (max-width: 768px) {
@@ -206,7 +204,6 @@
     transform: translateX(-50%);
     scale: 0.7;
   }
-
 
   header {
     padding-right: 1rem;
@@ -364,10 +361,9 @@
   }
 
   .card2_h4 {
-     font-size: 42px !important;
-     margin-left: 6rem;
-   }
-
+    font-size: 42px !important;
+    margin-left: 6rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -377,8 +373,6 @@
     left: 40%;
     transform: translateX(-50%);
     scale: 0.6;
-    
-   
   }
 
   .smartphone_small {
@@ -562,15 +556,18 @@
   }
 
   .card2_h4 {
-     font-size: 34px !important;
-   }
+    font-size: 37px !important;
+    transform: translateX(3%);
+  }
 
-   .card_img3 {
+  .card_img2 {
+    transform: translateX(10%);
+  }
+ 
+  .card_img3 {
     margin-left: 2.6rem;
     padding-top: 30px;
     padding-bottom: 30px;
-    
-    
   }
 
   .card3_h4 {
