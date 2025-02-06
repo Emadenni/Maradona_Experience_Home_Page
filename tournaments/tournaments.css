@@ -503,6 +503,10 @@ filter: blur(4px) ;
       font-size: 2.4rem;
     }
 
+    .tournaments_page_card_master_title {
+      margin-left: 0;
+    }
+
     .tournaments_page_card_gold_title span,
     .tournaments_page_card_silver_title span {
       font-size: 4rem;
