@@ -15,14 +15,6 @@
   --h4-font-size-large: 2.875rem;
 }
 
-#info {
-  scroll-margin-top: 100px;
-}
-
-#rules {
-  scroll-margin-top: 40px;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -32,7 +24,7 @@
 html,
 body {
   max-width: 100vw;
-  min-height: 100%; /* Cambiato da height a min-height */
+  min-height: 100%;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
@@ -44,28 +36,21 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.banner_container {
-  position: relative;
-  width: 100%;
+#info {
+  scroll-margin-top: 100px;
+}
+
+#rules {
+  scroll-margin-top: 40px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.no-scroll {
   overflow: hidden;
-}
-
-.mailSupport {
-  color: red;
-}
-
-header {
-  background-color: rgb(21, 19, 22, 0.9);
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  width: 100vw;
-  padding: 0.625em 2vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 100;
+  height: 100vh;
 }
 
 .container {
@@ -78,15 +63,22 @@ header {
   align-items: center;
 }
 
-.top_content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-bottom: 8.25em;
+.container2 {
+  background-image: url(/images/bg_gradient.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-.hidden {
-  visibility: hidden;
+/*---------global elements------*/
+
+
+.logo-maradona-experience-medium {
+  width: 120px;
+  margin-top: 0px;
+}
+
+.mailSupport {
+  color: red;
 }
 
 .logoDepzon {
@@ -94,13 +86,7 @@ header {
   transform: translate(-1rem);
 }
 
-.signinBtn {
-  transform: translateZ(0);
-  will-change: transform;
-  pointer-events: auto !important;
-  touch-action: manipulation !important;
-  -webkit-tap-highlight-color: transparent !important;
-}
+/*---------Buttons---------------*/
 
 .button {
   display: inline-block;
@@ -115,6 +101,11 @@ header {
 }
 
 .signinBtn {
+  transform: translateZ(0);
+  will-change: transform;
+  pointer-events: auto !important;
+  touch-action: manipulation !important;
+  -webkit-tap-highlight-color: transparent !important;
   width: 11.25em;
   height: 2.5em;
   padding: 8px;
@@ -141,191 +132,96 @@ header {
   pointer-events: none;
 }
 
-.custom-alert {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.discoverMoreBtn {
+  width: 60%;
+  max-width: 300px;
+  padding: 15px 20px;
+  margin: 20px auto;
+  border: none;
+  border-radius: 50px;
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+  font-size: 1rem;
+  font-weight: 700;
   text-align: center;
-  max-width: 400px;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 97;
+  position: relative;
+}
+
+.discoverMoreBtn:hover {
+  background-color: var(--hoverBtn-bkg--color);
+  transform: scale(1.05);
+}
+
+.discoverMoreBtn:active {
+  transform: scale(0.98);
+}
+
+.discoverMoreBtn:focus {
+  outline: none;
+}
+
+.discoverRulesBtn1 {
+  width: 40%;
+  height: 46px;
+  font-size: 0.89rem;
+  padding: 12px;
+}
+
+.discoverRulesBtn2 {
+  width: 70%;
+  height: 44px;
+  font-size: 0.84rem;
+  padding: 13px;
+}
+
+.buy_registerBtn {
   z-index: 1000;
-  background-color: black;
-  color: var(--secondary-color);
-  padding: 20px;
-  border-radius: 10px;
-  position: fixed;
-  bottom: 350px;
+  width: 88%;
+  padding: 0.35rem 1rem;
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  transition: transform 0.3s, background-color 0.3s;
+  position: absolute;
+  bottom: 2.6rem;
   left: 50%;
   transform: translateX(-50%);
-  border: solid 1px white;
 }
-.alert-overlay {
+
+.buy_registerBtn:hover {
+  background-color: rgba(223, 223, 122, 0.9);
+}
+
+/*----------------TOP CONTENT-----------*/
+
+.top_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 8.25em;
+}
+
+header {
+  background-color: rgb(21, 19, 22, 0.9);
   position: fixed;
   top: 0;
+  right: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-}
-/* 
-.elevatedCardOverlay {
+  width: 100vw;
+  padding: 0.625em 2vw;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: transparent;
-  z-index: 900;
-  text-align: center;
-  transition: opacity 0.5s ease-in-out;
-}
-
-
-
-.elevatedCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  position: fixed;
-  top: 10%;
-  left: 70%;
-  transform: translateX(-50%);
-  max-width: 90%;
-  width: 500px;
-  background-color: transparent;
-  z-index: 899;
-  border-radius: 10px;
-  opacity: 0;
-  transform: translateX(-100%);
-  animation: slideIn 0.8s ease-out forwards; 
-  cursor: pointer;
- transition: opacity 0.5s ease-in-out;
- 
-}
-
-.elevatedCard_content:hover {
-  background-color: var(--hoverCards-bkg--color);
-  scale: 1.02;
-  
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0); 
-    opacity: 1; 
-  }
-}
-
-.elevatedCard_content {
-  position: relative; 
-  
-  background-color: var(--cards--Bkg-color);
-  border: 1px solid white;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 27%;
-  opacity: 1;
-}
-
-.elevatedCard_content.hide {
-  opacity: 0.2; 
-  pointer-events: none;
-}
-
-.elevatedCard_content_link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-}
-
-.arrow-small {
-  width: 10px;
-  transition: transform 0.3s ease;
-}
-
-.arrow-small:hover,
-.arrow-mini:hover {
-  transform: translateX(5px);
-  color: var(--secondary-color);
-}
-
-.elevatedCard_content.shrink {
-  transform: scale(0.6); 
-  opacity: 0.4;         
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-.elevatedCard_content a {
-  color: var(--secondary-color);
-  text-decoration: none;
-  margin-bottom: 2px;
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
-}
-
-.elevatedCard_content a:hover {
-  color: var(--secondary-color);
-}
-
-
-.smartphone_small {
-  max-width: 60px;
-  margin-top: 8px;
-}
- */
-.no-scroll {
-  overflow: hidden;
-  height: 100vh;
-}
-
-.close-alert {
-  color: #077708 !important;
-  font-weight: 900;
-}
-
-@keyframes pulseGlow {
-  0%,
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3), 0 0 16px rgba(52, 152, 219, 0.2);
-  }
-  50% {
-    transform: scale(1.03);
-    box-shadow: 0 0 12px rgba(52, 152, 219, 0.5), 0 0 24px rgba(52, 152, 219, 0.4);
-  }
-}
-
-@keyframes pulseGlowTitle {
-  0%,
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3), 0 0 16px rgba(52, 152, 219, 0.2);
-  }
-  50% {
-    transform: scale(1.1);
-    box-shadow: 0 0 12px rgba(52, 152, 219, 0.5), 0 0 24px rgba(52, 152, 219, 0.4);
-  }
-}
-
-@keyframes glowEffect {
-  0%,
-  100% {
-    opacity: 0;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.1);
-  }
+  justify-content: space-between;
+  z-index: 100;
 }
 
 .hero_section {
@@ -373,40 +269,8 @@ header {
   color: var(--secondary-color);
 }
 
-.discoverMoreBtn {
-  display: inline-block;
-  width: 60%;
-  max-width: 300px;
-  padding: 15px 20px;
-  margin: 20px auto;
-  border: none;
-  border-radius: 50px;
-  background-color: var(--secondary-color);
-  color: var(--main-color);
-  font-size: 1rem;
-  font-weight: 700;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  z-index: 97;
-  position: relative;
-}
-
-.discoverMoreBtn:hover {
-  background-color: var(--hoverBtn-bkg--color);
-  transform: scale(1.05);
-}
-
-.discoverMoreBtn:active {
-  transform: scale(0.98);
-}
-
-.discoverMoreBtn:focus {
-  outline: none;
-}
-/*------------------------------*/
+/*-------------MAIN CONTENT-----------------*/
+/*-------------cards container----------------*/
 
 .main_content {
   flex: 1;
@@ -477,19 +341,34 @@ header {
 }
 
 .card_img2 {
-  
- padding-top: 28px;
+  padding-top: 28px;
 }
 
 .card_img3 {
   scale: 1.4 !important;
   padding-top: 30px;
   padding-bottom: 30px;
-  
-  
 }
 
-/*-----------------------------------------------------*/
+.card_img {
+  height: auto;
+  width: 73%;
+  margin-top: 0.4rem;
+  margin-right: 3.4rem;
+}
+
+.card_content_top {
+  margin-top: 2.25rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0px;
+}
+
+.card_content_top p {
+  font-weight: 600;
+}
+
 .arrow {
   font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
   font-size: 1.375rem;
@@ -511,41 +390,7 @@ header {
   scale: 1.4;
 }
 
-.card_img {
-  /* height: 18.75rem; */
-  height: auto;
-  width: 73%;
-  margin-top: 0.4rem;
-  margin-right: 3.4rem;
-}
-
-.card_content_top {
-  margin-top: 2.25rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 0px;
-}
-
-.card_content_top p {
-  font-weight: 600;
-}
-
-/*---------------*/
-
-.discoverRulesBtn1 {
-  width: 40%;
-  height: 46px;
-  font-size: 0.89rem;
-  padding: 12px;
-}
-
-.discoverRulesBtn2 {
-  width: 70%;
-  height: 44px;
-  font-size: 0.84rem;
-  padding: 13px;
-}
+/*------Tournaments box index---------*/
 
 .tournament_container {
   max-width: 84%;
@@ -586,9 +431,12 @@ header {
   line-height: 1.05;
 }
 
-/*--------------------------------------------*/
+/*------------------Banner--------------------------*/
 
 .banner_container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
   border-radius: 14px;
   background-color: rgba(255, 255, 255, 0.03);
   max-width: 84%;
@@ -661,7 +509,7 @@ header {
   margin-top: -2rem;
 }
 
-/*----------------------------------------------*/
+/*-------------------Big Cards container---------------------------*/
 
 .big_cards_container {
   display: flex;
@@ -737,28 +585,6 @@ header {
   white-space: normal;
 }
 
-.buy_registerBtn {
-  z-index: 1000;
-  width: 88%;
-  padding: 0.35rem 1rem;
-  background-color: var(--secondary-color);
-  color: var(--main-color);
-  text-align: center;
-  font-size: 1rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 20px;
-  transition: transform 0.3s, background-color 0.3s;
-  position: absolute;
-  bottom: 2.6rem;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.buy_registerBtn:hover {
-  background-color: rgba(223, 223, 122, 0.9);
-}
-
 .big_card:hover {
   background-color: var(--hoverCards-bkg--color);
   box-shadow: 8px 8px 8px rgba(175, 172, 172, 0.1);
@@ -766,7 +592,7 @@ header {
   border: none;
 }
 
-/*-------------------------------------------------------*/
+/*----------------------Rules Container---------------------------------*/
 
 .rules_container {
   margin: auto;
@@ -819,7 +645,7 @@ header {
   object-fit: cover;
 }
 
-/*--------------------------------*/
+/*------------Footer--------------------*/
 
 footer {
   position: relative;
@@ -889,13 +715,75 @@ footer ul {
   margin-top: 1rem;
 }
 
-.logo-maradona-experience-medium {
-  width: 120px;
-  margin-top: 0px;
+/*-------------Custom Alert-----------*/
+
+.custom-alert {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 400px;
+  z-index: 1000;
+  background-color: black;
+  color: var(--secondary-color);
+  padding: 20px;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 350px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: solid 1px white;
+}
+.alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
 }
 
-.container2 {
-  background-image: url(/images/bg_gradient.png);
-  background-repeat: no-repeat;
-  background-size: contain;
+.close-alert {
+  color: #077708 !important;
+  font-weight: 900;
+}
+
+/*------------animations----------*/
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3), 0 0 16px rgba(52, 152, 219, 0.2);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 0 12px rgba(52, 152, 219, 0.5), 0 0 24px rgba(52, 152, 219, 0.4);
+  }
+}
+
+@keyframes pulseGlowTitle {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3), 0 0 16px rgba(52, 152, 219, 0.2);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgba(52, 152, 219, 0.5), 0 0 24px rgba(52, 152, 219, 0.4);
+  }
+}
+
+@keyframes glowEffect {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
 }
