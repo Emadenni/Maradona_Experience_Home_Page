@@ -57,10 +57,10 @@
 }
 
 .tournaments_page_card_img {
-  width: 55%; /* Occupa il 40% della card */
-  height: 100%; /* Adatta l'altezza della card */
+  width: 55%; 
+  height: 100%; 
   border-radius: 8px 0 0 10px;
-  object-fit: cover; /* Mantiene le proporzioni senza deformare */
+  object-fit: cover; 
 }
 
 .tournaments_page_card_img_gold {

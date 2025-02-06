@@ -76,7 +76,6 @@ export function showCustomAlert(message, showCloseButton = true) {
 
   document.body.classList.add("no-scroll");
 
-  // Condizionale per il pulsante di chiusura
   const closeButtonHTML = showCloseButton 
     ? `<button class="close-alert close-btn">X</button>` 
     : "";
@@ -90,7 +89,7 @@ export function showCustomAlert(message, showCloseButton = true) {
   document.body.appendChild(overlay);
   document.body.appendChild(alertBox);
 
-  // Aggiungiamo l'event listener solo se il pulsante esiste
+
   if (showCloseButton) {
     alertBox.querySelector(".close-alert").addEventListener("click", () => {
       alertBox.remove();
@@ -101,48 +100,13 @@ export function showCustomAlert(message, showCloseButton = true) {
 }
 
 
-/* export function showElevatedCard() {
-  window.addEventListener("DOMContentLoaded", () => {
-    const currentPage = window.location.pathname;
-    if (!currentPage.endsWith("index.html") && currentPage !== "/") return;
-
-    const elevatedCard = document.createElement("div");
-    elevatedCard.classList.add("elevatedCard");
-
-    elevatedCard.innerHTML = `
-      <div class="elevatedCard_content" id='toTheTournaments'>
-        <div class="spotlight"></div> <!-- Riflettore -->
-        <img src="/images/smartphone_tornei.png" class="smartphone_small">
-        <div class="elevatedCard_content_link">
-          <a href="./tournaments.html">Tornei</a>
-          
-        </div>
-      </div>
-    `;
-
-    document.body.appendChild(elevatedCard);
-
-    const cardContent = document.querySelector(".elevatedCard_content");
-
-    window.addEventListener("scroll", () => {
-      if (window.scrollY === 0) {
-        cardContent.classList.remove("shrink");
-      } else {
-        cardContent.classList.add("shrink");
-      }
-    });
-  });
-}
- */
-
 function handleEvent(selector, eventType, callback) {
   const element = document.querySelector(selector);
   if (element) {
     element.addEventListener(eventType, callback);
-  } else {
-    console.log(`Elemento ${selector} non trovato.`);
   }
 }
+
 
 function togglePassword(fieldId, iconClass) {
   const passwordField = document.getElementById(fieldId);
@@ -172,7 +136,7 @@ function init() {
   const continueLink = document.getElementById("continue-link");
   const registrationForm = document.getElementById("registration-form");
   const arrow = document.querySelector(".register-button .arrow");
-  let spinner = document.getElementById("spinner");
+
   let isFormOpen = false;
 
   document.addEventListener("DOMContentLoaded", () => {
@@ -184,7 +148,6 @@ function init() {
 
     const token = sessionStorage.getItem("token");
     if (token) {
-/*       showElevatedCard(); */
       hideRegisterOverlay(registerOverlay);
       hideLoginOverlay(loginOverlay);
     }
@@ -274,20 +237,20 @@ function init() {
     const masterCard = document.querySelector(".tournaments_page_card_master");
 
     if (goldCard) {
-      goldCard.addEventListener("click", function () {
-        window.location.href = "";
+      goldCard.addEventListener("click", function () {     
+        window.location.href = "";                        //Link for cards in tournaments page
       });
     }
 
     if (silverCard) {
       silverCard.addEventListener("click", function () {
-        window.location.href = "";
+        window.location.href = "";                        //Link for cards in tournaments page
       });
     }
  
     if (masterCard) {
       masterCard.addEventListener("click", function () {
-        window.location.href = "";
+        window.location.href = "";                        //Link for cards in tournaments page
       });
     }
   });

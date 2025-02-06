@@ -1,0 +1,45 @@
+Notes 
+
+ -------FETCH DATA------
+ 
+ In the fetchData module, you’ll find two functions: one is commented out and the other is active. 
+ The commented one is the final function, which extracts the parameter from the URL's query string. 
+ The second function is identical, except that it extracts the parameter from a test URL. 
+ You can safely remove it if you don't need to test and just activate the first one.
+ 
+  ---Flow----
+
+-If a user arrives via a link received in the email, ALL their data will be retrieved and saved in the local storage when the page is loaded. 
+ONLY a part of this data will be used to fill in the registration form.
+
+-If a user has already arrived on the page via the email link and used it to register,
+ they will receive an alert inviting them to log in, and the data will not be retrieved.
+
+ -If a user arrives on the page with just the base URL, 
+ they will receive a message saying that they can only register using the link received via email,
+ or log in if they are already registered.
+
+*******************************************************************************************************************************************************
+ -------REGISTRATION------
+  ---Flow----
+
+-The data is retrieved from the local storage to populate the registration form,
+while the username and password are taken from the form input.
+
+-As soon as the registration is completed (in this case, to the mock API), a success alert is shown,
+ and a request is made to the endpoint of my API, which flags the user as 'IsUsed' so that the data cannot be fetched again.
+
+-After this, the data is removed from the local storage.
+
+-Finally, the call for the login is made. And the user is logged in automatically after the registration. 
+
+I haven’t implemented any kind of validation
+
+
+*******************************************************************************************************************************************************
+
+ -------LOGIN------
+
+ Nothing special with Login. I used a Mock Api for testing purpose. The token received is suppsoed to be saved in the session storage this time. 
+
+ Even in this case I haven’t implemented any kind of validation at all. 
