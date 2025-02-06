@@ -199,7 +199,7 @@
   /*   color: #5da0bf; */
   font-size: 5.5rem;
   font-weight: 900;
-  text-shadow: 2px 6px 1px #26442c;
+  text-shadow: 2px 2px 1px #26442c;
  
 }
 
@@ -662,7 +662,7 @@ filter: blur(4px) ;
     .tournaments_page_card_master_desc  {
       padding-right: 5px;
       font-size: 0.90rem;
-      line-height: 1.2;
+       line-height: 1.2;
     }
   
 
