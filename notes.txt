@@ -2,22 +2,21 @@ Notes
 
  -------FETCH DATA------
  
- In the fetchData module, you’ll find two functions: one is commented out and the other is active. 
- The commented one is the final function, which extracts the parameter from the URL's query string. 
- The second function is identical, except that it extracts the parameter from a test URL. 
- You can safely remove it if you don't need to test and just activate the first one.
- 
+ In the fetchData module, you’ll find two functions: 
+ The first one is the final one  and then ther is another one that I commented out that I used for testing 
+ (I couldn't have dynamic parameters in local host).
+  
   ---Flow----
 
 -If a user arrives via a link received in the email, ALL their data will be retrieved and saved in the local storage when the page is loaded. 
 ONLY a part of this data will be used to fill in the registration form.
 
 -If a user has already arrived on the page via the email link and used it to register,
- they will receive an alert inviting them to log in, and the data will not be retrieved.
+ they will receive an alert inviting them to log in (the registration form won´t be avaible), and the data will not be retrieved.
 
- -If a user arrives on the page with just the base URL, 
+ -If a user arrives on the page with just the base URL without parameter in the query string (and if he is not already logged in) the registration form won´t be avaible, 
  they will receive a message saying that they can only register using the link received via email,
- or log in if they are already registered.
+ or invitation to login if they are already registered.
 
 *******************************************************************************************************************************************************
  -------REGISTRATION------
@@ -33,7 +32,7 @@ while the username and password are taken from the form input.
 
 -Finally, the call for the login is made. And the user is logged in automatically after the registration. 
 
-I haven’t implemented any kind of validation
+I haven’t implemented any kind of validation, only required fields. 
 
 
 *******************************************************************************************************************************************************
@@ -42,4 +41,48 @@ I haven’t implemented any kind of validation
 
  Nothing special with Login. I used a Mock Api for testing purpose. The token received is suppsoed to be saved in the session storage this time. 
 
- Even in this case I haven’t implemented any kind of validation at all. 
+ Even in this case I haven’t implemented any kind of validation at all but form inputs have attribute "required". 
+
+ *******************************************************************************************************************************************************
+
+ ---------MISSING LINKS------------
+
+ I wrote comments in the code where link href is missing but I'll make a check list down here too:
+
+ - Index.html - class="button buy_registerBtn - Link to the place where they can but the Silver Card 
+ - Index.html - class="login-forgot-password-link - Link to where they can restore their password
+ - Index.html - class="terms-conditions_box_label" - Terms and conditions
+ - Index.html - Footer - Terms and conditions and contacts links 
+ - Tournaments.html - Footer - Terms and conditions and contacts links 
+ - Script.js - The 3 listener at the ends of the page missing the redirection link of the tournaments cards.
+
+ *******************************************************************************************************************************************************
+
+ ----------TESTING DATA ---------------
+
+ Here 2 fake user ids that you can use for test if you need: 
+
+ - 233333355454545454545 
+ - 88877766695242
+
+ *******************************************************************************************************************************************************
+
+ ---------DATA STRUCTURE----------------
+
+ I leave one exemple of data response from the endpoint /proxyVerification that will be stored in the local storage:
+
+ {
+    "success": true,
+    "message": "User data retrieved successfully",
+    "data": {
+        "phoneNr": "1234567890",
+        "registration_nr": "A1A1A1A60000",
+        "last_name": "Maradona",
+        "serial_nr": 60000,
+        "registeredAt": "2024-11-26T09:22:20.627Z",
+        "first_name": "Diego",
+        "email": "emanuele.dng@libero.it",
+        "cardType": "Gold Card",
+        "country": "Italy"
+    }
+}
