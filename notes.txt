@@ -12,9 +12,9 @@ Notes
 ONLY a part of this data will be used to fill in the registration form.
 
 -If a user has already arrived on the page via the email link and used it to register,
- they will receive an alert inviting them to log in, and the data will not be retrieved.
+ they will receive an alert inviting them to log in (the registration form won´t be avaible), and the data will not be retrieved.
 
- -If a user arrives on the page with just the base URL without parameter in the query string (and if he is not already logged in), 
+ -If a user arrives on the page with just the base URL without parameter in the query string (and if he is not already logged in) the registration form won´t be avaible, 
  they will receive a message saying that they can only register using the link received via email,
  or invitation to login if they are already registered.
 
