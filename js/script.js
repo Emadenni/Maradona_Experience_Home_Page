@@ -6,12 +6,14 @@ function setViewportHeight() {
 function showLoginOverlay(loginOverlay) {
   if (loginOverlay) {
     loginOverlay.style.display = "block";
+    document.body.classList.add("no-scroll");
   }
 }
 
 export function hideLoginOverlay(loginOverlay) {
   if (loginOverlay) {
     loginOverlay.style.display = "none";
+
   }
 }
 
@@ -20,6 +22,7 @@ function showRegisterOverlayHideLogin(registerOverlay, loginOverlay, registratio
     registerOverlay.classList.remove("hidden");
     loginOverlay.style.display = "none";
     document.getElementById("top").scrollIntoView({ behavior: "smooth", block: "start" });
+  
 
     if (registrationForm.classList.contains("active")) {
       registerOverlay.style.justifyContent = "space-evenly";

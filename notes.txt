@@ -55,3 +55,34 @@ I haven’t implemented any kind of validation, only required fields.
  - Index.html - Footer - Terms and conditions and contacts links 
  - Tournaments.html - Footer - Terms and conditions and contacts links 
  - Script.js - The 3 listener at the ends of the page missing the redirection link of the tournaments cards.
+
+ *******************************************************************************************************************************************************
+
+ ----------TESTING DATA ---------------
+
+ Here 2 fake user ids that you can use for test if you need: 
+
+ - 233333355454545454545 
+ - 88877766695242
+
+ *******************************************************************************************************************************************************
+
+ ---------DATA STRUCTURE----------------
+
+ I leave one exemple of data response from the endpoint /proxyVerification that will be stored in the local storage:
+
+ {
+    "success": true,
+    "message": "User data retrieved successfully",
+    "data": {
+        "phoneNr": "1234567890",
+        "registration_nr": "A1A1A1A60000",
+        "last_name": "Maradona",
+        "serial_nr": 60000,
+        "registeredAt": "2024-11-26T09:22:20.627Z",
+        "first_name": "Diego",
+        "email": "emanuele.dng@libero.it",
+        "cardType": "Gold Card",
+        "country": "Italy"
+    }
+}
